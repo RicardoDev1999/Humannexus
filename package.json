@@ -1,0 +1,18 @@
+{
+  "name": "humannexus",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build-css": "npx tailwindcss -o dist/output.css --minify",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "postcss-import": "^14.1.0",
+    "tailwindcss": "^3.0.24"
+  },
+  "dependencies": {
+    "flowbite": "^1.4.4"
+  }
+}
