@@ -1,0 +1,1856 @@
+[
+    {
+        "node": {
+            "__typename": "GraphSidecar",
+            "id": "2867617072021395347",
+            "shortcode": "CfL0oihrleT",
+            "dimensions": {
+                "height": 1080,
+                "width": 1080
+            },
+            "display_url": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/289809504_548966953348116_8415263268878623204_n.jpg?stp=dst-jpg_e15_fr_s1080x1080&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=100&_nc_ohc=nWurCBhCh9UAX-CtKNR&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT8lj11pUm5bkwwKcMyqBU2EcjwCotjVPzugI_K7qYn8lg&oe=62BDD61B&_nc_sid=8fd12b",
+            "edge_media_to_tagged_user": {
+                "edges": []
+            },
+            "fact_check_overall_rating": null,
+            "fact_check_information": null,
+            "gating_info": null,
+            "sharing_friction_info": {
+                "should_have_sharing_friction": false,
+                "bloks_app_url": null
+            },
+            "media_overlay_info": null,
+            "media_preview": null,
+            "owner": {
+                "id": "12763251766",
+                "username": "clinica_humannexus"
+            },
+            "is_video": false,
+            "has_upcoming_event": false,
+            "accessibility_caption": "Photo by Humannexus on June 24, 2022. May be an image of 1 person and text that says '#Fisioterapia Gonçalo Massano Equipa Fisioterapeutas Humannexus CEFALEIAS 0 que são e como prevenir? HUMA'.",
+            "edge_media_to_caption": {
+                "edges": [
+                    {
+                        "node": {
+                            "text": "As cefaleias são dos sintomas mais frequentes da população em geral e a sua principal origem relaciona-se com o aumento da tensão dos músculos da cervical, derivado ao stress, ansiedade ou posições incorrectas mantidas no tempo. \n\nEstes factores originam dor na região cervical e dor de cabeça, estando por vezes associadas náuseas, distúrbios da visão e sensibilidade à luz.\nExistem várias formas de prevenir este tipo sintomas, tais como:\n\n- Boa qualidade do sono\n- Prática regular de actividade física\n- Realizar alongamentos nos músculos cervicais no dia-a-dia\n- Desenvolver uma postura correcta na prática profissional\n- Colocar calor na região cervical\n- Ingerir água no dia-a-dia\n\nCaso os sintomas sejam persistentes, procure um profissional de saúde para uma avaliação mais minuciosa!\n.\n.\n.\n.⠀⠀⠀⠀⠀⠀⠀⠀\n#humannexus #bemestar #health #performance #desportiva #fisioterapia #qualidadedevida #nutricao #enfermagem #psicologia"
+                        }
+                    }
+                ]
+            },
+            "edge_media_to_comment": {
+                "count": 0
+            },
+            "comments_disabled": false,
+            "taken_at_timestamp": 1656066615,
+            "edge_liked_by": {
+                "count": 21
+            },
+            "edge_media_preview_like": {
+                "count": 21
+            },
+            "location": null,
+            "nft_asset_info": null,
+            "thumbnail_src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/289809504_548966953348116_8415263268878623204_n.jpg?stp=dst-jpg_e35_s640x640_sh0.08&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=100&_nc_ohc=nWurCBhCh9UAX-CtKNR&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT9gS3QbvzR-eFMliib2M1SdYVVRLRvLbB2WmxBzdZx2YA&oe=62BDD61B&_nc_sid=8fd12b",
+            "thumbnail_resources": [
+                {
+                    "src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/289809504_548966953348116_8415263268878623204_n.jpg?stp=dst-jpg_e15_s150x150&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=100&_nc_ohc=nWurCBhCh9UAX-CtKNR&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT9FXAQy_Y_Da0UWwhwKlr-0ZWNhQgcxwPhkIlOsxl9YNg&oe=62BDD61B&_nc_sid=8fd12b",
+                    "config_width": 150,
+                    "config_height": 150
+                },
+                {
+                    "src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/289809504_548966953348116_8415263268878623204_n.jpg?stp=dst-jpg_e15_s240x240&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=100&_nc_ohc=nWurCBhCh9UAX-CtKNR&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT823D6dfF68iiniJc9keoSQv6Uj70bQYlyoxqk_HKZ2ug&oe=62BDD61B&_nc_sid=8fd12b",
+                    "config_width": 240,
+                    "config_height": 240
+                },
+                {
+                    "src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/289809504_548966953348116_8415263268878623204_n.jpg?stp=dst-jpg_e15_s320x320&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=100&_nc_ohc=nWurCBhCh9UAX-CtKNR&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT_iaJRp-BrpHCmqfPUxW8nZB6CbGxaP8d-Z4esDBYBKFg&oe=62BDD61B&_nc_sid=8fd12b",
+                    "config_width": 320,
+                    "config_height": 320
+                },
+                {
+                    "src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/289809504_548966953348116_8415263268878623204_n.jpg?stp=dst-jpg_e15_s480x480&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=100&_nc_ohc=nWurCBhCh9UAX-CtKNR&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT-zN-jDnODCnhWntEjtKaK2jPc5Wztgj1H45naCbqLuJw&oe=62BDD61B&_nc_sid=8fd12b",
+                    "config_width": 480,
+                    "config_height": 480
+                },
+                {
+                    "src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/289809504_548966953348116_8415263268878623204_n.jpg?stp=dst-jpg_e35_s640x640_sh0.08&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=100&_nc_ohc=nWurCBhCh9UAX-CtKNR&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT9gS3QbvzR-eFMliib2M1SdYVVRLRvLbB2WmxBzdZx2YA&oe=62BDD61B&_nc_sid=8fd12b",
+                    "config_width": 640,
+                    "config_height": 640
+                }
+            ],
+            "coauthor_producers": [],
+            "pinned_for_users": [],
+            "edge_sidecar_to_children": {
+                "edges": [
+                    {
+                        "node": {
+                            "__typename": "GraphImage",
+                            "id": "2867617062684941801",
+                            "shortcode": "CfL0oZ1L13p",
+                            "dimensions": {
+                                "height": 1080,
+                                "width": 1080
+                            },
+                            "display_url": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/289809504_548966953348116_8415263268878623204_n.jpg?stp=dst-jpg_e15_fr_s1080x1080&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=100&_nc_ohc=nWurCBhCh9UAX-CtKNR&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT8lj11pUm5bkwwKcMyqBU2EcjwCotjVPzugI_K7qYn8lg&oe=62BDD61B&_nc_sid=8fd12b",
+                            "edge_media_to_tagged_user": {
+                                "edges": []
+                            },
+                            "fact_check_overall_rating": null,
+                            "fact_check_information": null,
+                            "gating_info": null,
+                            "sharing_friction_info": {
+                                "should_have_sharing_friction": false,
+                                "bloks_app_url": null
+                            },
+                            "media_overlay_info": null,
+                            "media_preview": "ACoq6JmCDLHA96xxeMJGB6Zq9dbHXB5x2FY0hbcTjr+NZyfY0gnrdaGhvGd/fGKkWfIKkcGs9HJGDU1Tc1sP8kKMLnaOg9Panb/eqc07R8Csw3hzTSuS3Y6nGc7T1/z+tV2nAbkHhif5YHU9Ov8AKoVkxUUp3EYGSfSlcdu5YEqDkZ/hHTsDn170x71F+XDDIx29c/4+tUJkljAJBAPTNVzMFIaRQwP+fzqlcWhecFjndlT3Pb8qpGGPP/16nWGO4XMT7fxJH4jqKrHSZ/VfzP8AhQl5jbXa5qYrQg/dJuAySf0rOathQMURXUib6FHUnDx4HVTmseJY3Xy3zg9x2Oa6oKPQUuAKuxClbQ5SLTnik3q2V9s5xWiA3o35Gtuiiw+a2yP/2Q==",
+                            "owner": {
+                                "id": "12763251766",
+                                "username": "clinica_humannexus"
+                            },
+                            "is_video": false,
+                            "has_upcoming_event": false,
+                            "accessibility_caption": "Photo by Humannexus on June 24, 2022. May be an image of 1 person and text that says '#Fisioterapia Gonçalo Massano Equipa Fisioterapeutas Humannexus CEFALEIAS 0 que são e como prevenir? HUMA'."
+                        }
+                    },
+                    {
+                        "node": {
+                            "__typename": "GraphImage",
+                            "id": "2867617062684939380",
+                            "shortcode": "CfL0oZ1L1R0",
+                            "dimensions": {
+                                "height": 1080,
+                                "width": 1080
+                            },
+                            "display_url": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/289704668_156816813533438_8498476476176939838_n.jpg?stp=dst-jpg_e15_fr_s1080x1080&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=102&_nc_ohc=RBkklAUVcQwAX_0iQCi&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT_Oj7trdgYOFCvlehC8i1HAjcuUwo_ubkCM1sFQ3ZX-pQ&oe=62BCAB99&_nc_sid=8fd12b",
+                            "edge_media_to_tagged_user": {
+                                "edges": []
+                            },
+                            "fact_check_overall_rating": null,
+                            "fact_check_information": null,
+                            "gating_info": null,
+                            "sharing_friction_info": {
+                                "should_have_sharing_friction": false,
+                                "bloks_app_url": null
+                            },
+                            "media_overlay_info": null,
+                            "media_preview": "ACoq6CRscc568DPtVETMGOSxHPGP/rVoM4HvWa4LE9s+lSykh+/ndluPbtTvMOMZbH0H+FRqvbJ/OpVGO5P1pFWGqMHGWwegI4H41NmoXcrVYzGmLY0JASPl/p/WqbA9xz7gf41OT74qCQg8g7j+H+FIYzA9P0X/ABo3YI/wH+NMcMoz0B/3f8KaHGQWxj1+X/CmBaG4nknHuB/Soyi/5NKqLIPkbp/nmm/ZH9R+dAX8i1ipApQbhk5PQHt+X6VGatgcUImRVuB8vUnBz1qoiKRtOcevpWvgUuKoVzJS2KNkHIqzz71doosFz//Z",
+                            "owner": {
+                                "id": "12763251766",
+                                "username": "clinica_humannexus"
+                            },
+                            "is_video": false,
+                            "has_upcoming_event": false,
+                            "accessibility_caption": "Photo by Humannexus on June 24, 2022. May be an image of 1 person and text that says 'Existem várias formas de prevenir este tipo sintomas, tais como: Boa qualidade do sono Prática regular de actividade física Realizar alongamentos nos músculos cervicais no dia-a-dia Desenvolver uma postura correcta na prático profissional Colocar calor na região cervical Ingerir água no dia-a-dia HUMANEXUS'."
+                        }
+                    },
+                    {
+                        "node": {
+                            "__typename": "GraphImage",
+                            "id": "2867617062684758605",
+                            "shortcode": "CfL0oZ1LJJN",
+                            "dimensions": {
+                                "height": 1080,
+                                "width": 1080
+                            },
+                            "display_url": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/289769493_3264840250501827_1837647798441463920_n.jpg?stp=dst-jpg_e15_fr_s1080x1080&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=103&_nc_ohc=Rb3mEXWbUy0AX9gSZQn&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT_mxgaa5CtmDWZRZeL-uuqaFy3VrA0PYiVZ5gq8A2HT4A&oe=62BD4A76&_nc_sid=8fd12b",
+                            "edge_media_to_tagged_user": {
+                                "edges": []
+                            },
+                            "fact_check_overall_rating": null,
+                            "fact_check_information": null,
+                            "gating_info": null,
+                            "sharing_friction_info": {
+                                "should_have_sharing_friction": false,
+                                "bloks_app_url": null
+                            },
+                            "media_overlay_info": null,
+                            "media_preview": "ACoq6SqYmO41I7Lk5UnPf1/Ws1lGc7CPp/8ArqWUkaG7nPenCTIx2NUVx/dOR0/zmnYUDG0/5/GkUWdgAwOlLmqTkLxsP+fxpvnGmK5flGf4tvtxzVTI5y/8qnJOOACfeo23noo/z+FIYzcP738v8+1N8zBxu/lQ6yLztA9M0zeQQWUEf59qdguS9T9/cM+3p7U0ov8Ak0qJ5g4IX6HP6dqb9kf1H50BfyLWKcsYRcgE59z0ppq2BxQiZFW4RSvGeDnqaqJGhG05575PFa+BS4qhXMlLYxnIORVnn3q7RRYLn//Z",
+                            "owner": {
+                                "id": "12763251766",
+                                "username": "clinica_humannexus"
+                            },
+                            "is_video": false,
+                            "has_upcoming_event": false,
+                            "accessibility_caption": "Photo by Humannexus on June 24, 2022. May be an image of 1 person and text that says 'As cefaleias são dos sintomas mais frequentes da população em geral e a sua principal origem relaciona-se com o aumento da tensão dos músculos da cervical HUMANEXUS'."
+                        }
+                    },
+                    {
+                        "node": {
+                            "__typename": "GraphImage",
+                            "id": "2867617062684944291",
+                            "shortcode": "CfL0oZ1L2ej",
+                            "dimensions": {
+                                "height": 1080,
+                                "width": 1080
+                            },
+                            "display_url": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/289554504_554989606129665_6374155483299372120_n.jpg?stp=dst-jpg_e15_fr_s1080x1080&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=109&_nc_ohc=b-tM3EqX4v4AX903koK&tn=w5aoGXTTnGFnc2lf&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT8_n4YPQJ0K6ZQR_-pjurZ8I4QT3Bae3HGNV04hKvxnsg&oe=62BDC557&_nc_sid=8fd12b",
+                            "edge_media_to_tagged_user": {
+                                "edges": []
+                            },
+                            "fact_check_overall_rating": null,
+                            "fact_check_information": null,
+                            "gating_info": null,
+                            "sharing_friction_info": {
+                                "should_have_sharing_friction": false,
+                                "bloks_app_url": null
+                            },
+                            "media_overlay_info": null,
+                            "media_preview": "ACoq6WqQmO45qy8gUZNZrOCScj86llpFvdzmnB8jB6VUEi9CRUnmL6j86RRJsA4HSlzUBl/u84quZjTFcvSnjAIBPqM1T3e4H/AasDIOcn6cUx1Y/wARJ+gpARBvcc9Pl/z703zecZHP+zT3jkUZJPP0qPJGCxJH4UwJQwJ4YEHpxjFNKL/k0oiEg+VyP8+lN+yP6g/jQF/ItYqdSUXIG4k/pUBq2BxQhSILlsr9DVNArDaeh7+lauBS4qibmUtuUbIORVjn3q7RRYLn/9k=",
+                            "owner": {
+                                "id": "12763251766",
+                                "username": "clinica_humannexus"
+                            },
+                            "is_video": false,
+                            "has_upcoming_event": false,
+                            "accessibility_caption": "Photo by Humannexus on June 24, 2022. May be an image of 1 person and text that says 'Caso os sintomas sejam persistentes, procure um profissional de saúde para uma avaliação mais minuciosa HUMANEXUS'."
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "node": {
+            "__typename": "GraphImage",
+            "id": "2866284401551487339",
+            "shortcode": "CfHFnobuDFr",
+            "dimensions": {
+                "height": 1080,
+                "width": 1080
+            },
+            "display_url": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/289575545_5737326359625586_1198767461406578296_n.jpg?stp=dst-jpg_e15_fr_s1080x1080&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=110&_nc_ohc=RFHaN84YUk8AX_eHZff&tn=w5aoGXTTnGFnc2lf&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT8OR3-Msn4EbBChYo6xJft0m2FhYgYtkz6Uu2tYeeUOug&oe=62BC7346&_nc_sid=8fd12b",
+            "edge_media_to_tagged_user": {
+                "edges": []
+            },
+            "fact_check_overall_rating": null,
+            "fact_check_information": null,
+            "gating_info": null,
+            "sharing_friction_info": {
+                "should_have_sharing_friction": false,
+                "bloks_app_url": null
+            },
+            "media_overlay_info": null,
+            "media_preview": "ACoq145kZC46DP6VTi1NJMnG0AZ/D14/WoxGcfIcA01LRUztABbrj88AE8UybspzX8qSko4Kk8AYIA9xj9QasQasXOJFA4bBHsM8j39qw3XbwOvTNSRRtK20ZJPp/npUlG02qImNyNyM9v8AP8qZ/aMPqfyobTlIy2ScYPJxn1/zx7VR+wH1/SmNtX02EN/MMYIAHoOv502C8czqzEnJAP0PFSW8ULvhiQPfofbOa0otLijfeCTjkA4x/wDXoJM6+nVG2RhcjqcA/h/jTbO7dW+bkKGOOBnCk4yKrXQ2TOvT5j+vNX9NtGch3+6M44+9wQfwpDJJL6RhlRsX8+f8Kh+0yeq1pSWCMeOB6D+npWYdPmzwVIqtDNX6jd+F27duO5Gf0rXtJt0a8HjI/LNZ2oEhUPfb/WtixH7lfx/maL3Lv0OfQmOTzCN3JJDDORn371s3M6yW7MnTYcHpj/DFVr0Dzj9B/KrNgoMLgjIy3H4CgS3sZ9jqLf6uXn0b+h/ofzrQ832rFYDd/wAA/pXRADFSWf/Z",
+            "owner": {
+                "id": "12763251766",
+                "username": "clinica_humannexus"
+            },
+            "is_video": false,
+            "has_upcoming_event": false,
+            "accessibility_caption": "Photo by Humannexus on June 22, 2022.",
+            "edge_media_to_caption": {
+                "edges": [
+                    {
+                        "node": {
+                            "text": "𝑷𝒊𝒍𝒂𝒕𝒆𝒔 𝑪𝒍í𝒏𝒊𝒄𝒐\n\nPara que possas continuar a ter uma solução vantajosa de praticar exercício físico sob orientação terapêutica e personalizada, aproveita as últimas vagas que temos disponíveis 🙏🏼\n\nAinda temos vagas disponíveis nos seguintes horários 👇🏼\n\n2a e 4a às 19:30h - 1 vaga\n3a e 5a às 10h - 3 vagas\n3a às 19:30h - 2 vagas\nSábado às 10h - 1 vaga\nSábado às 11h - 3 vagas\n\nVamos treinar juntos? 🙏🏼\n.\n.\n.\n.⠀⠀⠀⠀⠀⠀⠀⠀\n#humannexus #bemestar #health #performance #desportiva #fisioterapia #qualidadedevida #nutricao #enfermagem #psicologia"
+                        }
+                    }
+                ]
+            },
+            "edge_media_to_comment": {
+                "count": 0
+            },
+            "comments_disabled": false,
+            "taken_at_timestamp": 1655907748,
+            "edge_liked_by": {
+                "count": 14
+            },
+            "edge_media_preview_like": {
+                "count": 14
+            },
+            "location": null,
+            "nft_asset_info": null,
+            "thumbnail_src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/289575545_5737326359625586_1198767461406578296_n.jpg?stp=dst-jpg_e35_s640x640_sh0.08&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=110&_nc_ohc=RFHaN84YUk8AX_eHZff&tn=w5aoGXTTnGFnc2lf&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT_69FbfIZBtg4eIkVtYiLpQV9fLUuGRq2Bh4Mt9f4tImQ&oe=62BC7346&_nc_sid=8fd12b",
+            "thumbnail_resources": [
+                {
+                    "src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/289575545_5737326359625586_1198767461406578296_n.jpg?stp=dst-jpg_e15_s150x150&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=110&_nc_ohc=RFHaN84YUk8AX_eHZff&tn=w5aoGXTTnGFnc2lf&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT8zcgW08UfvlDDQF9Io0t7DKW2WsO3IQ2ahfVoINPlbVA&oe=62BC7346&_nc_sid=8fd12b",
+                    "config_width": 150,
+                    "config_height": 150
+                },
+                {
+                    "src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/289575545_5737326359625586_1198767461406578296_n.jpg?stp=dst-jpg_e15_s240x240&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=110&_nc_ohc=RFHaN84YUk8AX_eHZff&tn=w5aoGXTTnGFnc2lf&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT-SCgyMsdN2LsdVGwknAmQkjEmh1thKuOLE9N8cIr__WA&oe=62BC7346&_nc_sid=8fd12b",
+                    "config_width": 240,
+                    "config_height": 240
+                },
+                {
+                    "src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/289575545_5737326359625586_1198767461406578296_n.jpg?stp=dst-jpg_e15_s320x320&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=110&_nc_ohc=RFHaN84YUk8AX_eHZff&tn=w5aoGXTTnGFnc2lf&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT8WoDzXkWCX1YLQf21UUE1Z5ZCnwXxhPAjXfx3VG6WSFQ&oe=62BC7346&_nc_sid=8fd12b",
+                    "config_width": 320,
+                    "config_height": 320
+                },
+                {
+                    "src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/289575545_5737326359625586_1198767461406578296_n.jpg?stp=dst-jpg_e15_s480x480&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=110&_nc_ohc=RFHaN84YUk8AX_eHZff&tn=w5aoGXTTnGFnc2lf&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT8xgWBJlTLPEYoiw5-F9J3VkSNShNM6-kDVXvlqx0-L1w&oe=62BC7346&_nc_sid=8fd12b",
+                    "config_width": 480,
+                    "config_height": 480
+                },
+                {
+                    "src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/289575545_5737326359625586_1198767461406578296_n.jpg?stp=dst-jpg_e35_s640x640_sh0.08&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=110&_nc_ohc=RFHaN84YUk8AX_eHZff&tn=w5aoGXTTnGFnc2lf&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT_69FbfIZBtg4eIkVtYiLpQV9fLUuGRq2Bh4Mt9f4tImQ&oe=62BC7346&_nc_sid=8fd12b",
+                    "config_width": 640,
+                    "config_height": 640
+                }
+            ],
+            "coauthor_producers": [],
+            "pinned_for_users": []
+        }
+    },
+    {
+        "node": {
+            "__typename": "GraphSidecar",
+            "id": "2863993090118346778",
+            "shortcode": "Ce-8oqXrWga",
+            "dimensions": {
+                "height": 407,
+                "width": 612
+            },
+            "display_url": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/289300480_172697951880707_7729076547371302296_n.jpg?stp=dst-jpg_e15&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=111&_nc_ohc=Nbf01hfRMGkAX_1bkca&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT972evKV7PvuxfS6JcdX1cmHFpYGnVLjwaKgAU_q0sVLg&oe=62BD7D94&_nc_sid=8fd12b",
+            "edge_media_to_tagged_user": {
+                "edges": []
+            },
+            "fact_check_overall_rating": null,
+            "fact_check_information": null,
+            "gating_info": null,
+            "sharing_friction_info": {
+                "should_have_sharing_friction": false,
+                "bloks_app_url": null
+            },
+            "media_overlay_info": null,
+            "media_preview": null,
+            "owner": {
+                "id": "12763251766",
+                "username": "clinica_humannexus"
+            },
+            "is_video": false,
+            "has_upcoming_event": false,
+            "accessibility_caption": "Photo by Humannexus on June 19, 2022. May be an image of 1 person.",
+            "edge_media_to_caption": {
+                "edges": [
+                    {
+                        "node": {
+                            "text": "𝘾𝙤𝙣𝙨𝙪𝙡𝙩𝙖 𝙋𝙤𝙙𝙤𝙡𝙤𝙜𝙞𝙖\n\nPorque a saúde dos seus pés e a sua influência no organismo também é importante, no próximo dia 21 de junho o Dr. Hélder Neves está de volta à nossa clínica para as habituais consultas de podologia 🧠\n\nAlém de tratar, pode prevenir lesões como micoses nas unhas e entre os dedos, unhas encravadas, calos, calosidades e verrugas 🦶🏼\n\nPreocupe-se com os seus pés e não adie a sua saúde! 👣\n.\n.\n.\n.⠀⠀⠀⠀⠀⠀⠀⠀\n#humannexus #bemestar #health #performance #desportiva #fisioterapia #qualidadedevida #nutricao #enfermagem #psicologia"
+                        }
+                    }
+                ]
+            },
+            "edge_media_to_comment": {
+                "count": 0
+            },
+            "comments_disabled": false,
+            "taken_at_timestamp": 1655634603,
+            "edge_liked_by": {
+                "count": 19
+            },
+            "edge_media_preview_like": {
+                "count": 19
+            },
+            "location": null,
+            "nft_asset_info": null,
+            "thumbnail_src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/289300480_172697951880707_7729076547371302296_n.jpg?stp=c102.0.407.407a_dst-jpg_e15&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=111&_nc_ohc=Nbf01hfRMGkAX_1bkca&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT89cd_iUifwwu0RqPmQQowg4PHiwS9vmFtplv-qArGPEw&oe=62BD7D94&_nc_sid=8fd12b",
+            "thumbnail_resources": [
+                {
+                    "src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/289300480_172697951880707_7729076547371302296_n.jpg?stp=c102.0.407.407a_dst-jpg_e15_s150x150&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=111&_nc_ohc=Nbf01hfRMGkAX_1bkca&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT9VP2npd8xn0InM5axdWOb-1SfHf8SJGntx0W8OkDTjZQ&oe=62BD7D94&_nc_sid=8fd12b",
+                    "config_width": 150,
+                    "config_height": 150
+                },
+                {
+                    "src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/289300480_172697951880707_7729076547371302296_n.jpg?stp=c102.0.407.407a_dst-jpg_e15_s240x240&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=111&_nc_ohc=Nbf01hfRMGkAX_1bkca&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT-QE9SSLzsrOmmlryNPRlbHxE-6wTTIeE5uOuI6dH7Atw&oe=62BD7D94&_nc_sid=8fd12b",
+                    "config_width": 240,
+                    "config_height": 240
+                },
+                {
+                    "src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/289300480_172697951880707_7729076547371302296_n.jpg?stp=c102.0.407.407a_dst-jpg_e15_s320x320&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=111&_nc_ohc=Nbf01hfRMGkAX_1bkca&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT_3wl005xuQg5WLMatpMzOz0heoWmM3Kg5vA3wzFpi3Zw&oe=62BD7D94&_nc_sid=8fd12b",
+                    "config_width": 320,
+                    "config_height": 320
+                },
+                {
+                    "src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/289300480_172697951880707_7729076547371302296_n.jpg?stp=c102.0.407.407a_dst-jpg_e15_s480x480&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=111&_nc_ohc=Nbf01hfRMGkAX_1bkca&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT_osgRUPeFFl1FbxllaKF8jNOPQTtc26XYkxSEIJd01kw&oe=62BD7D94&_nc_sid=8fd12b",
+                    "config_width": 480,
+                    "config_height": 480
+                },
+                {
+                    "src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/289300480_172697951880707_7729076547371302296_n.jpg?stp=c102.0.407.407a_dst-jpg_e15&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=111&_nc_ohc=Nbf01hfRMGkAX_1bkca&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT89cd_iUifwwu0RqPmQQowg4PHiwS9vmFtplv-qArGPEw&oe=62BD7D94&_nc_sid=8fd12b",
+                    "config_width": 640,
+                    "config_height": 640
+                }
+            ],
+            "coauthor_producers": [],
+            "pinned_for_users": [],
+            "edge_sidecar_to_children": {
+                "edges": [
+                    {
+                        "node": {
+                            "__typename": "GraphImage",
+                            "id": "2863993083524905791",
+                            "shortcode": "Ce-8okOrXs_",
+                            "dimensions": {
+                                "height": 407,
+                                "width": 612
+                            },
+                            "display_url": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/289300480_172697951880707_7729076547371302296_n.jpg?stp=dst-jpg_e15&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=111&_nc_ohc=Nbf01hfRMGkAX_1bkca&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT972evKV7PvuxfS6JcdX1cmHFpYGnVLjwaKgAU_q0sVLg&oe=62BD7D94&_nc_sid=8fd12b",
+                            "edge_media_to_tagged_user": {
+                                "edges": []
+                            },
+                            "fact_check_overall_rating": null,
+                            "fact_check_information": null,
+                            "gating_info": null,
+                            "sharing_friction_info": {
+                                "should_have_sharing_friction": false,
+                                "bloks_app_url": null
+                            },
+                            "media_overlay_info": null,
+                            "media_preview": "ACoc6KkzVMsR0NAkJ70uYrlLnWkquspHWpck+1O4mrDulGaZIBjPpUGT6mgRK0WOnNQHg1fNRsORSsUpFIjA6Ent/jUiFweTkYz+NW2FLinYTdysxYjpimc+lW8U3FAj/9k=",
+                            "owner": {
+                                "id": "12763251766",
+                                "username": "clinica_humannexus"
+                            },
+                            "is_video": false,
+                            "has_upcoming_event": false,
+                            "accessibility_caption": "Photo by Humannexus on June 19, 2022. May be an image of 1 person."
+                        }
+                    },
+                    {
+                        "node": {
+                            "__typename": "GraphImage",
+                            "id": "2863993083499893866",
+                            "shortcode": "Ce-8okNL9Rq",
+                            "dimensions": {
+                                "height": 810,
+                                "width": 1080
+                            },
+                            "display_url": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/288896592_874366106856597_52831988480899837_n.jpg?stp=dst-jpg_e15_fr_s1080x1080&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=109&_nc_ohc=SK6P2QVZpLEAX-66Dyj&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT8kEFBbad4TtUCQ-mi9XejhRZ0WskJ5nE8Z6DOp4JTAaQ&oe=62BC3924&_nc_sid=8fd12b",
+                            "edge_media_to_tagged_user": {
+                                "edges": []
+                            },
+                            "fact_check_overall_rating": null,
+                            "fact_check_information": null,
+                            "gating_info": null,
+                            "sharing_friction_info": {
+                                "should_have_sharing_friction": false,
+                                "bloks_app_url": null
+                            },
+                            "media_overlay_info": null,
+                            "media_preview": "ACog16cDWVNqCxHGCcHFT2t2LgHAII6ikM0M0hNVmuEVtrMAT0Gec1KGzQAySZI/vsFz6nFM86M/xL+YrL1OHe+7jOPzx/8AXrJFvIedp59qB2NO5tJJZCRgKf8APSq6weS3znAB4wTkjp0HT1yfpW7WfeRqVzjDbuvsTQIoySAsNnQHIPv6/wCGcmp4ZZFbcjKxPqc//XFUAJInwOD19iK1IYoQfOTg9wex/wA//Wpt3BE8pLACU/Mefl4x7AnP5moPKX/a/wC+jUU9wF5PXqB6n/Cs/Eh5z196Q9T/2Q==",
+                            "owner": {
+                                "id": "12763251766",
+                                "username": "clinica_humannexus"
+                            },
+                            "is_video": false,
+                            "has_upcoming_event": false,
+                            "accessibility_caption": "Photo by Humannexus on June 19, 2022. May be an image of 1 person and indoor."
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "node": {
+            "__typename": "GraphSidecar",
+            "id": "2861773551884467915",
+            "shortcode": "Ce3D-ITrn7L",
+            "dimensions": {
+                "height": 1080,
+                "width": 1080
+            },
+            "display_url": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/288205878_1512924239167379_6894920368440525640_n.jpg?stp=dst-jpg_e15_fr_s1080x1080&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=111&_nc_ohc=Za1MRyt10noAX9Ia2qc&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT-A8R8ndwNgshoNQIPJXJyyvhHgQQPw7wWdncpxffgmwQ&oe=62BCF11C&_nc_sid=8fd12b",
+            "edge_media_to_tagged_user": {
+                "edges": []
+            },
+            "fact_check_overall_rating": null,
+            "fact_check_information": null,
+            "gating_info": null,
+            "sharing_friction_info": {
+                "should_have_sharing_friction": false,
+                "bloks_app_url": null
+            },
+            "media_overlay_info": null,
+            "media_preview": null,
+            "owner": {
+                "id": "12763251766",
+                "username": "clinica_humannexus"
+            },
+            "is_video": false,
+            "has_upcoming_event": false,
+            "accessibility_caption": "Photo by Humannexus on June 16, 2022. May be an image of 1 person, food and text that says 'DICAS DO DIOGO Nutricionista Humannexus ANEMIA POR DÉFICE DE FERRO HUMAVE'.",
+            "edge_media_to_caption": {
+                "edges": [
+                    {
+                        "node": {
+                            "text": "Anemia por défice de ferro\n\nA anemia ferropénica afeta cerca de 12% da população mundial, maioritariamente mulheres em idade fértil e crianças. Manifesta-se através de sintomas como fadiga, fraqueza irritabilidade ou vertigem.\n\nComo tal importa minimizar esta situação patológica através de um bom aporte nutricional de ferro, devidamente conjugado com a ingestão de Vitamina C, de modo a favorecer principalmente a absorção de ferro de origem vegetal. \n\nAlimentos ricos em Ferro:\n- gema de ovo\n- carne de vaca\n- atum\n- vegetais de folhas verde\n- sementes de abóbora e girassol\n\nFontes de Vitamina C:\n- Citrinos\n- Kiwi\n- Tomate\n- Brócolos\n- Morangos\n\nPorque é na conjugação de uma alimentação equilibrada que a nossa saúde fica a ganhar!\n.\n.\n.\n.⠀⠀⠀⠀⠀⠀⠀⠀\n#humannexus #bemestar #health #performance #desportiva #fisioterapia #qualidadedevida #nutricao #enfermagem #psicologia"
+                        }
+                    }
+                ]
+            },
+            "edge_media_to_comment": {
+                "count": 0
+            },
+            "comments_disabled": false,
+            "taken_at_timestamp": 1655370013,
+            "edge_liked_by": {
+                "count": 16
+            },
+            "edge_media_preview_like": {
+                "count": 16
+            },
+            "location": null,
+            "nft_asset_info": null,
+            "thumbnail_src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/288205878_1512924239167379_6894920368440525640_n.jpg?stp=dst-jpg_e35_s640x640_sh0.08&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=111&_nc_ohc=Za1MRyt10noAX9Ia2qc&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT9-_34Op6f9z-h7qF-zKk1S8LQL1zAJFNIjJnttVohhgQ&oe=62BCF11C&_nc_sid=8fd12b",
+            "thumbnail_resources": [
+                {
+                    "src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/288205878_1512924239167379_6894920368440525640_n.jpg?stp=dst-jpg_e15_s150x150&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=111&_nc_ohc=Za1MRyt10noAX9Ia2qc&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT_jfZJ-6yYtDmNG_NXtgWFDdLcbHtyn4znMpWfyUBKZAw&oe=62BCF11C&_nc_sid=8fd12b",
+                    "config_width": 150,
+                    "config_height": 150
+                },
+                {
+                    "src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/288205878_1512924239167379_6894920368440525640_n.jpg?stp=dst-jpg_e15_s240x240&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=111&_nc_ohc=Za1MRyt10noAX9Ia2qc&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT__bA5-8XUUD651XIidB2ldTqEWnfFLGntipOD_wBOp8w&oe=62BCF11C&_nc_sid=8fd12b",
+                    "config_width": 240,
+                    "config_height": 240
+                },
+                {
+                    "src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/288205878_1512924239167379_6894920368440525640_n.jpg?stp=dst-jpg_e15_s320x320&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=111&_nc_ohc=Za1MRyt10noAX9Ia2qc&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT--g1UOJaerYppD520fgWq3zxNljQlpuF-W3ZCWljtD-w&oe=62BCF11C&_nc_sid=8fd12b",
+                    "config_width": 320,
+                    "config_height": 320
+                },
+                {
+                    "src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/288205878_1512924239167379_6894920368440525640_n.jpg?stp=dst-jpg_e15_s480x480&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=111&_nc_ohc=Za1MRyt10noAX9Ia2qc&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT9g3jdNaWTl3CFjiFtlG4FBaNlkAk_W9WpmKORSX-yOtA&oe=62BCF11C&_nc_sid=8fd12b",
+                    "config_width": 480,
+                    "config_height": 480
+                },
+                {
+                    "src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/288205878_1512924239167379_6894920368440525640_n.jpg?stp=dst-jpg_e35_s640x640_sh0.08&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=111&_nc_ohc=Za1MRyt10noAX9Ia2qc&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT9-_34Op6f9z-h7qF-zKk1S8LQL1zAJFNIjJnttVohhgQ&oe=62BCF11C&_nc_sid=8fd12b",
+                    "config_width": 640,
+                    "config_height": 640
+                }
+            ],
+            "coauthor_producers": [],
+            "pinned_for_users": [],
+            "edge_sidecar_to_children": {
+                "edges": [
+                    {
+                        "node": {
+                            "__typename": "GraphImage",
+                            "id": "2861773542698807687",
+                            "shortcode": "Ce3D9_wLHGH",
+                            "dimensions": {
+                                "height": 1080,
+                                "width": 1080
+                            },
+                            "display_url": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/288205878_1512924239167379_6894920368440525640_n.jpg?stp=dst-jpg_e15_fr_s1080x1080&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=111&_nc_ohc=Za1MRyt10noAX9Ia2qc&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT-A8R8ndwNgshoNQIPJXJyyvhHgQQPw7wWdncpxffgmwQ&oe=62BCF11C&_nc_sid=8fd12b",
+                            "edge_media_to_tagged_user": {
+                                "edges": []
+                            },
+                            "fact_check_overall_rating": null,
+                            "fact_check_information": null,
+                            "gating_info": null,
+                            "sharing_friction_info": {
+                                "should_have_sharing_friction": false,
+                                "bloks_app_url": null
+                            },
+                            "media_overlay_info": null,
+                            "media_preview": "ACoqrmIy9Dj2xn8qryQuGIAzjuDxWjBGzHKnBUZqV7Ns4LDJ9c+3f3zxU2NFNr9NDJMTpgnoKEVnOTV6aAxAE85JH5YqIGlYhq7uIeB6+g/qabz6mpMZo20rF3Ldvg5ySvTp6k1YZBlRubknPI4wM/zFVbfYM+Z+HX+lPDR5OQOpxxxjHy9vX+XNWQPeJWIDMT6En2JJ/kP/AK9VpoljAxnknqQcY+nr1q1m39B+R/z1qgwGTjpQAi06kpaQwo+lOU0n8dTcGhSpFRk4qXvUE/WojJu6EKrZp9Vm4I+lSA1oJM//2Q==",
+                            "owner": {
+                                "id": "12763251766",
+                                "username": "clinica_humannexus"
+                            },
+                            "is_video": false,
+                            "has_upcoming_event": false,
+                            "accessibility_caption": "Photo by Humannexus on June 16, 2022. May be an image of 1 person, food and text that says 'DICAS DO DIOGO Nutricionista Humannexus ANEMIA POR DÉFICE DE FERRO HUMAVE'."
+                        }
+                    },
+                    {
+                        "node": {
+                            "__typename": "GraphImage",
+                            "id": "2861773542715751999",
+                            "shortcode": "Ce3D9_xLv4_",
+                            "dimensions": {
+                                "height": 1080,
+                                "width": 1080
+                            },
+                            "display_url": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/288007017_1016465305723252_127810121594286109_n.jpg?stp=dst-jpg_e15_fr_s1080x1080&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=104&_nc_ohc=IjQbT_XzeP4AX9yYl5W&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT8r0q5tntpejlzUoMNXj5Co760TmuvsSNj6dQ9ZwaWB0A&oe=62BDB0E1&_nc_sid=8fd12b",
+                            "edge_media_to_tagged_user": {
+                                "edges": []
+                            },
+                            "fact_check_overall_rating": null,
+                            "fact_check_information": null,
+                            "gating_info": null,
+                            "sharing_friction_info": {
+                                "should_have_sharing_friction": false,
+                                "bloks_app_url": null
+                            },
+                            "media_overlay_info": null,
+                            "media_preview": "ACoq13Qycg49qrMpz0wfrV4CkZe9TY1U2intYc9cU5FL8mp8UoNKxm1d3A8e/oP6mmc+pqTGaXFKxVxrLu/hB+pxTfL5HygfifwqYUVZJTZAB0Xr60BPRRj/AHvSrPlr6D8qAoHA4FICBEII+UfXJqzSUtAxaKVaT+KpuDQpXFRk4qXvUM/WojJsQK2akqs3UfSpK1Emf//Z",
+                            "owner": {
+                                "id": "12763251766",
+                                "username": "clinica_humannexus"
+                            },
+                            "is_video": false,
+                            "has_upcoming_event": false,
+                            "accessibility_caption": "Photo by Humannexus on June 16, 2022. May be an image of food and text that says 'A anemia ferropénica afeta cerca de 12% da população mundial'."
+                        }
+                    },
+                    {
+                        "node": {
+                            "__typename": "GraphImage",
+                            "id": "2861773542673748201",
+                            "shortcode": "Ce3D9_urhDp",
+                            "dimensions": {
+                                "height": 1080,
+                                "width": 1080
+                            },
+                            "display_url": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/288667124_720461362342365_3378874774703333254_n.jpg?stp=dst-jpg_e15_fr_s1080x1080&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=109&_nc_ohc=REX38M5N9Z8AX-Ltobs&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT95b_P_jfZV6plx5WxSO2VtQpt0nBEBzMap9neqP-0WrQ&oe=62BCC8CB&_nc_sid=8fd12b",
+                            "edge_media_to_tagged_user": {
+                                "edges": []
+                            },
+                            "fact_check_overall_rating": null,
+                            "fact_check_information": null,
+                            "gating_info": null,
+                            "sharing_friction_info": {
+                                "should_have_sharing_friction": false,
+                                "bloks_app_url": null
+                            },
+                            "media_overlay_info": null,
+                            "media_preview": "ACoq13Qycg49qrMpz0wfrV4CkZamxqptFPaw564pyKX5NT4pQaVjNq7uB49/Qf1NM59TUmM0uKVirg2CMHB9AeKhKD+6v/fVT7QeozTPLX0H5VZJCygdl/76/Ooyo9F/769OtTFGPZD+BpwiH8QGfYUgGxAdcAE++anpgQDoAMU+gYtFKtJ/FU3BoUrioycVL3qGfrURk2IFbNSVWbqPpUlaiTP/2Q==",
+                            "owner": {
+                                "id": "12763251766",
+                                "username": "clinica_humannexus"
+                            },
+                            "is_video": false,
+                            "has_upcoming_event": false,
+                            "accessibility_caption": "Photo by Humannexus on June 16, 2022. May be an image of food and text that says 'Manifesta-se através de sintomas como fadiga, fraqueza irritabilidade OU vertigem.'."
+                        }
+                    },
+                    {
+                        "node": {
+                            "__typename": "GraphImage",
+                            "id": "2861773542740824936",
+                            "shortcode": "Ce3D9_yrZNo",
+                            "dimensions": {
+                                "height": 1080,
+                                "width": 1080
+                            },
+                            "display_url": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/288185771_1456393521440177_8788080369479485589_n.jpg?stp=dst-jpg_e15_fr_s1080x1080&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=105&_nc_ohc=UKLkIRzXN6IAX8FCcCF&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT_-bnSgRpfDOG-Ol721UXriVbFis4OjT6gFOFJnm6kHDA&oe=62BD9962&_nc_sid=8fd12b",
+                            "edge_media_to_tagged_user": {
+                                "edges": []
+                            },
+                            "fact_check_overall_rating": null,
+                            "fact_check_information": null,
+                            "gating_info": null,
+                            "sharing_friction_info": {
+                                "should_have_sharing_friction": false,
+                                "bloks_app_url": null
+                            },
+                            "media_overlay_info": null,
+                            "media_preview": "ACoq13Qycg49qrMpz0wfrVpiV5yAPemM3Q5XmpsaqbRDtYc9cU5FL8ml3n1X9aUSn1X9aVjNq7uTHj39B/U0zn1NIrFuAVP0zU2KVirikFsYIH4ZqEt2LD/vnvTyCDnJ57AA1FuPTLnH+yKskaSOmR0/u/rTd3HUc9Pl/OpcngZbn2/SmZb1b/vmgCSMHg5GPpipqhGW7sPwAqakMWilWk/iqbg0KVxUZOKl71DP1qIybECtmpKrN1H0qStRJn//2Q==",
+                            "owner": {
+                                "id": "12763251766",
+                                "username": "clinica_humannexus"
+                            },
+                            "is_video": false,
+                            "has_upcoming_event": false,
+                            "accessibility_caption": "Photo by Humannexus on June 16, 2022. May be an image of food and text that says 'Como tal importa minimizar esta situação patológica através de um bom aporte nutricional de ferro devidamente conjugado com a ingestão de Vitamina c'."
+                        }
+                    },
+                    {
+                        "node": {
+                            "__typename": "GraphImage",
+                            "id": "2861773542673762097",
+                            "shortcode": "Ce3D9_urkcx",
+                            "dimensions": {
+                                "height": 1080,
+                                "width": 1080
+                            },
+                            "display_url": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/288069757_759360028581345_6444574133112184438_n.jpg?stp=dst-jpg_e15_fr_s1080x1080&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=109&_nc_ohc=H2HAhbSzcIUAX_TVk1F&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT8sET7lmSS6PmH57oENQ-egJHCGd4bxtlx-y8FJ-NOIIQ&oe=62BC1611&_nc_sid=8fd12b",
+                            "edge_media_to_tagged_user": {
+                                "edges": []
+                            },
+                            "fact_check_overall_rating": null,
+                            "fact_check_information": null,
+                            "gating_info": null,
+                            "sharing_friction_info": {
+                                "should_have_sharing_friction": false,
+                                "bloks_app_url": null
+                            },
+                            "media_overlay_info": null,
+                            "media_preview": "ACoq13Qycg49qrMpz0wfrVwoT0OPpUUileSxP0A/pU2NVNoh2sOeuKcil+TQWx3b/vmngknGT+XT9KVjNq7uSnj39B/U0zn1NPCn1z+VOxSsVceDmmsme5H0prjI6Z9s4/Wodh/uk/8AA6skHBBx85weuRTtnOcn86Tbn+E88/e70wIf7pxjH3qQFhadUMaYOcEceuf8/WpqBi0Uq0n8VTcGhn2dQOgNJwowKm71DP1qIybECtmpKrN1H0qStRJn/9k=",
+                            "owner": {
+                                "id": "12763251766",
+                                "username": "clinica_humannexus"
+                            },
+                            "is_video": false,
+                            "has_upcoming_event": false,
+                            "accessibility_caption": "Photo by Humannexus on June 16, 2022. May be an image of food and text that says 'Alimentos ricos em Ferro: Gema de ovo Carne de vaca Atum Vegetais de folhas verde Sementes de abóbora e girassol'."
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "node": {
+            "__typename": "GraphImage",
+            "id": "2855256005223684536",
+            "shortcode": "Cef6DV-KJm4",
+            "dimensions": {
+                "height": 1080,
+                "width": 1080
+            },
+            "display_url": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/286386480_431995222082195_2348354134031908865_n.jpg?stp=dst-jpg_e15_fr_s1080x1080&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=111&_nc_ohc=BC8tzWCPHHoAX9HypwQ&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT-eNqf-voTKIB7nnHZFwH3j8_p3ovFoGpFCpTTItse_RQ&oe=62BC3711&_nc_sid=8fd12b",
+            "edge_media_to_tagged_user": {
+                "edges": []
+            },
+            "fact_check_overall_rating": null,
+            "fact_check_information": null,
+            "gating_info": null,
+            "sharing_friction_info": {
+                "should_have_sharing_friction": false,
+                "bloks_app_url": null
+            },
+            "media_overlay_info": null,
+            "media_preview": "ACoquAGl21OvSgkEZ60AQAU7bTI5VkfYM5HX8KfLNHE209Tzgc+1K4x3lqetMMcfp/Or6xZHaqL8MR6E0xEgTcvUj3BwazrJXMAbJI+YYJwBz1yB178mof7Sdhj7n+7yf1/pVWNsDCybevByP/rUDL1pCIzuIJJznB56+uaZI6eacEtkgDJ5A9yeeD2981Uju2ddj4x6gDP6/wBMGnwgB9wY89eD6+2e1Kw/M221GOHK8kgkDvnt1JrONzH649uavxYkU7uQB3ArB2zDoB+dALzKmatxNDsIYfNjqfX29PxqnRTEnYvx2ofgEj5VOeoz3GaVoHh5OCPaqUTFWGCR9K0rskqPw/lVJXv5IcrJJpat2G/bGjXA6U0XAIziqD05egrNgtT/2Q==",
+            "owner": {
+                "id": "12763251766",
+                "username": "clinica_humannexus"
+            },
+            "is_video": false,
+            "has_upcoming_event": false,
+            "accessibility_caption": "Photo by Humannexus on June 07, 2022. May be an image of 3 people, people standing and indoor.",
+            "edge_media_to_caption": {
+                "edges": [
+                    {
+                        "node": {
+                            "text": "Já conheces todas as aulas de grupo que temos disponíveis na Humannexus?\n\nPassa no nosso site, vê o que melhor se adequa ao que pretendes, e junta-te à família!\n.\n.\n.\n.⠀⠀⠀⠀⠀⠀⠀⠀\n#humannexus #bemestar #health #performance #desportiva #fisioterapia #qualidadedevida #nutricao #enfermagem ##psicología"
+                        }
+                    }
+                ]
+            },
+            "edge_media_to_comment": {
+                "count": 0
+            },
+            "comments_disabled": false,
+            "taken_at_timestamp": 1654593061,
+            "edge_liked_by": {
+                "count": 16
+            },
+            "edge_media_preview_like": {
+                "count": 16
+            },
+            "location": null,
+            "nft_asset_info": null,
+            "thumbnail_src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/286386480_431995222082195_2348354134031908865_n.jpg?stp=dst-jpg_e35_s640x640_sh0.08&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=111&_nc_ohc=BC8tzWCPHHoAX9HypwQ&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT-i85OL6Ixh0qS5FUmWllZ-e3_2D-n4-hMVKYG7m1Scwg&oe=62BC3711&_nc_sid=8fd12b",
+            "thumbnail_resources": [
+                {
+                    "src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/286386480_431995222082195_2348354134031908865_n.jpg?stp=dst-jpg_e15_s150x150&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=111&_nc_ohc=BC8tzWCPHHoAX9HypwQ&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT8enXegf_0cxZePs4dxiKYAXyrdAVXxZXUMZ52BIOKNPQ&oe=62BC3711&_nc_sid=8fd12b",
+                    "config_width": 150,
+                    "config_height": 150
+                },
+                {
+                    "src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/286386480_431995222082195_2348354134031908865_n.jpg?stp=dst-jpg_e15_s240x240&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=111&_nc_ohc=BC8tzWCPHHoAX9HypwQ&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT84K0hlmPcdUgw-1gx2o2B3YhZjjL5n8b4u9w8csExC6A&oe=62BC3711&_nc_sid=8fd12b",
+                    "config_width": 240,
+                    "config_height": 240
+                },
+                {
+                    "src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/286386480_431995222082195_2348354134031908865_n.jpg?stp=dst-jpg_e15_s320x320&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=111&_nc_ohc=BC8tzWCPHHoAX9HypwQ&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT-WDkw4qpAAeifejLCCzN32S936d8kZenp06Cxn-tSkcQ&oe=62BC3711&_nc_sid=8fd12b",
+                    "config_width": 320,
+                    "config_height": 320
+                },
+                {
+                    "src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/286386480_431995222082195_2348354134031908865_n.jpg?stp=dst-jpg_e15_s480x480&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=111&_nc_ohc=BC8tzWCPHHoAX9HypwQ&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT_IBc5UM9dLbkm4c86XGmmrv8Ps4I0Npm5Z-RYJL4OOwg&oe=62BC3711&_nc_sid=8fd12b",
+                    "config_width": 480,
+                    "config_height": 480
+                },
+                {
+                    "src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/286386480_431995222082195_2348354134031908865_n.jpg?stp=dst-jpg_e35_s640x640_sh0.08&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=111&_nc_ohc=BC8tzWCPHHoAX9HypwQ&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT-i85OL6Ixh0qS5FUmWllZ-e3_2D-n4-hMVKYG7m1Scwg&oe=62BC3711&_nc_sid=8fd12b",
+                    "config_width": 640,
+                    "config_height": 640
+                }
+            ],
+            "coauthor_producers": [],
+            "pinned_for_users": []
+        }
+    },
+    {
+        "node": {
+            "__typename": "GraphImage",
+            "id": "2852351564342694010",
+            "shortcode": "CeVlqKnLRB6",
+            "dimensions": {
+                "height": 719,
+                "width": 1080
+            },
+            "display_url": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/285910644_691507911921721_5663473323529683663_n.jpg?stp=dst-jpg_e15_fr_s1080x1080&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=101&_nc_ohc=LKd-gshuUQAAX_g6-vO&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT_8n2jBeP-Np2XxEMAGIqvcZjjjwiPrGzXuCzwqII2UAw&oe=62BCCF75&_nc_sid=8fd12b",
+            "edge_media_to_tagged_user": {
+                "edges": []
+            },
+            "fact_check_overall_rating": null,
+            "fact_check_information": null,
+            "gating_info": null,
+            "sharing_friction_info": {
+                "should_have_sharing_friction": false,
+                "bloks_app_url": null
+            },
+            "media_overlay_info": null,
+            "media_preview": "ACoc6Fuh+lUEmiZ/LzyfQEj8T0FSEvIzc4ReMYOT09f5jjFRTWWUKo2Aep49c8elSMuYH1oIArCtpDayGENvXGcj19v89a1YpfOGScY6jHP68Ua72DS9r6kF5520eRg5PPTpj396zPJuvU/nW2zKnf8AlVL+0Iv9r/vk0kxl1pAIyScZz+vSq1vfIwEXIPQEjhuex/xqObmAk9cCqduS0seecAY9uv8AhWiXUm/Qnu4Vt0Z4hhlxz7Z54PrVK2nZnYvzwBgY78k4NaDuZYpN391v5U2GJHSNmAyUGT68CofVDsr3IGw6gDjaCOR757VUJX1P5VZukEQyvGayy5zSSQXd7H//2Q==",
+            "owner": {
+                "id": "12763251766",
+                "username": "clinica_humannexus"
+            },
+            "is_video": false,
+            "has_upcoming_event": false,
+            "accessibility_caption": "Photo by Humannexus on June 03, 2022. May be an image of 2 people, people standing and indoor.",
+            "edge_media_to_caption": {
+                "edges": [
+                    {
+                        "node": {
+                            "text": "Com um leque variado de soluções para investires na tua saúde que se adaptam e respondem às tuas necessidades do dia-a-dia, trabalhamos para que tenhas a melhor qualidade de vida possível 💚\n\nVamos investir na tua saúde juntos?\n.\n.\n.\n.⠀⠀⠀⠀⠀⠀⠀⠀\n#humannexus #bemestar #health #performance #desportiva #fisioterapia #qualidadedevida #nutricao #enfermagem #psicologia"
+                        }
+                    }
+                ]
+            },
+            "edge_media_to_comment": {
+                "count": 0
+            },
+            "comments_disabled": false,
+            "taken_at_timestamp": 1654246825,
+            "edge_liked_by": {
+                "count": 21
+            },
+            "edge_media_preview_like": {
+                "count": 21
+            },
+            "location": null,
+            "nft_asset_info": null,
+            "thumbnail_src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/285910644_691507911921721_5663473323529683663_n.jpg?stp=c180.0.719.719a_dst-jpg_e15_s640x640&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=101&_nc_ohc=LKd-gshuUQAAX_g6-vO&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT-UlqZlnbW5qQHkkY-vHGFdou_4cFv42a6RU1UvWC7-Ig&oe=62BCCF75&_nc_sid=8fd12b",
+            "thumbnail_resources": [
+                {
+                    "src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/285910644_691507911921721_5663473323529683663_n.jpg?stp=c180.0.719.719a_dst-jpg_e15_s150x150&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=101&_nc_ohc=LKd-gshuUQAAX_g6-vO&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT-_WA9Zj3Omu5cPxMCg6DxmMsK7oBVji_1cabeazvSeMA&oe=62BCCF75&_nc_sid=8fd12b",
+                    "config_width": 150,
+                    "config_height": 150
+                },
+                {
+                    "src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/285910644_691507911921721_5663473323529683663_n.jpg?stp=c180.0.719.719a_dst-jpg_e15_s240x240&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=101&_nc_ohc=LKd-gshuUQAAX_g6-vO&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT-pxQYhtiuLmMRNwOXw8HFyeod2gOvzhhHlEyEYPK8lqQ&oe=62BCCF75&_nc_sid=8fd12b",
+                    "config_width": 240,
+                    "config_height": 240
+                },
+                {
+                    "src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/285910644_691507911921721_5663473323529683663_n.jpg?stp=c180.0.719.719a_dst-jpg_e15_s320x320&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=101&_nc_ohc=LKd-gshuUQAAX_g6-vO&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT_9dWnPI0DgQH6BOzj44Yzxgywvtt3NUmzMQUZDHkpkhw&oe=62BCCF75&_nc_sid=8fd12b",
+                    "config_width": 320,
+                    "config_height": 320
+                },
+                {
+                    "src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/285910644_691507911921721_5663473323529683663_n.jpg?stp=c180.0.719.719a_dst-jpg_e15_s480x480&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=101&_nc_ohc=LKd-gshuUQAAX_g6-vO&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT80ImFYj0yMyzoktxzLTQgyEP6gNJLLitlJgK3FC2UgkQ&oe=62BCCF75&_nc_sid=8fd12b",
+                    "config_width": 480,
+                    "config_height": 480
+                },
+                {
+                    "src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/285910644_691507911921721_5663473323529683663_n.jpg?stp=c180.0.719.719a_dst-jpg_e35_s640x640_sh0.08&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=101&_nc_ohc=LKd-gshuUQAAX_g6-vO&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT8BbqzX2n1LwjSx6GLUNQRLUIrsIrD7Q0AynzgaFXz3eA&oe=62BCCF75&_nc_sid=8fd12b",
+                    "config_width": 640,
+                    "config_height": 640
+                }
+            ],
+            "coauthor_producers": [],
+            "pinned_for_users": []
+        }
+    },
+    {
+        "node": {
+            "__typename": "GraphSidecar",
+            "id": "2851168609921727027",
+            "shortcode": "CeRYr6dIPoz",
+            "dimensions": {
+                "height": 1080,
+                "width": 1080
+            },
+            "display_url": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/285552407_167389119078997_8758306339082575478_n.jpg?stp=dst-jpg_e35&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=101&_nc_ohc=YRmveqbo0uYAX_c11yX&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT9R7paqL-KBBG7E-Kna4444JvpZgCa6pfBASzjZnBQnmg&oe=62BC77B9&_nc_sid=8fd12b",
+            "edge_media_to_tagged_user": {
+                "edges": []
+            },
+            "fact_check_overall_rating": null,
+            "fact_check_information": null,
+            "gating_info": null,
+            "sharing_friction_info": {
+                "should_have_sharing_friction": false,
+                "bloks_app_url": null
+            },
+            "media_overlay_info": null,
+            "media_preview": null,
+            "owner": {
+                "id": "12763251766",
+                "username": "clinica_humannexus"
+            },
+            "is_video": false,
+            "has_upcoming_event": false,
+            "accessibility_caption": "Photo by Humannexus on June 01, 2022. May be an image of 1 person and text.",
+            "edge_media_to_caption": {
+                "edges": [
+                    {
+                        "node": {
+                            "text": "🆕 Hoje trazemos-te mais novidades. Um Leg Circuit Workout com o peso do corpo que podes fazer em qualquer lado pelo nosso grande @ptalexandreferro. \n\nMexe, exercita-te e investe na tua saúde 💚\n\nCircuito de pernas, 5 voltas ao circuito, final de cada volta pausa de 30 segundos (+ dificuldade) ou 1 min (mais descanso)👇🏼\n\n1️⃣ Agachamento isometrico 30”\n2️⃣ 20 Agachamentos\n3️⃣ 20 Agachamentos curtos\n4️⃣ 20 Agachamentos com salto\n\n👀 Levanta-te e experimenta este treino! Para mais treinos como este, fica atento às nossas redes. Até lá guarda este treino para fazeres em casa, ao ar livre, no ginásio, onde quiseres 🤙🏼\n.\n.\n.\n.⠀⠀⠀⠀⠀⠀⠀⠀\n#humannexus #bemestar #health #performance #desportiva #fisioterapia #qualidadedevida #nutricao #enfermagem #psicologia"
+                        }
+                    }
+                ]
+            },
+            "edge_media_to_comment": {
+                "count": 0
+            },
+            "comments_disabled": false,
+            "taken_at_timestamp": 1654105806,
+            "edge_liked_by": {
+                "count": 19
+            },
+            "edge_media_preview_like": {
+                "count": 19
+            },
+            "location": {
+                "id": "627280380",
+                "has_public_page": true,
+                "name": "Humannexus",
+                "slug": "humannexus"
+            },
+            "nft_asset_info": null,
+            "thumbnail_src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/285552407_167389119078997_8758306339082575478_n.jpg?stp=dst-jpg_e35_s640x640_sh0.08&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=101&_nc_ohc=YRmveqbo0uYAX_c11yX&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT8V6lrXSQOvTKRJEKM-IVeWQ2aEGNouEamJNToj8s4X6w&oe=62BC77B9&_nc_sid=8fd12b",
+            "thumbnail_resources": [
+                {
+                    "src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/285552407_167389119078997_8758306339082575478_n.jpg?stp=dst-jpg_e35_s150x150&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=101&_nc_ohc=YRmveqbo0uYAX_c11yX&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT9PyP8mEwsKwmP-WSCYdMQ0UR-E2QlX4Ov9SB5qfGYrow&oe=62BC77B9&_nc_sid=8fd12b",
+                    "config_width": 150,
+                    "config_height": 150
+                },
+                {
+                    "src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/285552407_167389119078997_8758306339082575478_n.jpg?stp=dst-jpg_e35_s240x240&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=101&_nc_ohc=YRmveqbo0uYAX_c11yX&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT9ajIEdKDY0GCblfBbtOlV7PpPDAikbEbx4lYCyhiK0ew&oe=62BC77B9&_nc_sid=8fd12b",
+                    "config_width": 240,
+                    "config_height": 240
+                },
+                {
+                    "src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/285552407_167389119078997_8758306339082575478_n.jpg?stp=dst-jpg_e35_s320x320&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=101&_nc_ohc=YRmveqbo0uYAX_c11yX&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT-jWKCrTeS8-ONFwUy4EXeBgiWRLVCzxjMmxzpi5cBb5Q&oe=62BC77B9&_nc_sid=8fd12b",
+                    "config_width": 320,
+                    "config_height": 320
+                },
+                {
+                    "src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/285552407_167389119078997_8758306339082575478_n.jpg?stp=dst-jpg_e35_s480x480&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=101&_nc_ohc=YRmveqbo0uYAX_c11yX&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT8kD-twTh8M-alx4SnR5Sk6pTqJm68x-r1QWqfl8KKvHw&oe=62BC77B9&_nc_sid=8fd12b",
+                    "config_width": 480,
+                    "config_height": 480
+                },
+                {
+                    "src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/285552407_167389119078997_8758306339082575478_n.jpg?stp=dst-jpg_e35_s640x640_sh0.08&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=101&_nc_ohc=YRmveqbo0uYAX_c11yX&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT8V6lrXSQOvTKRJEKM-IVeWQ2aEGNouEamJNToj8s4X6w&oe=62BC77B9&_nc_sid=8fd12b",
+                    "config_width": 640,
+                    "config_height": 640
+                }
+            ],
+            "coauthor_producers": [],
+            "pinned_for_users": [],
+            "edge_sidecar_to_children": {
+                "edges": [
+                    {
+                        "node": {
+                            "__typename": "GraphImage",
+                            "id": "2851168601960936497",
+                            "shortcode": "CeRYrzCoPQx",
+                            "dimensions": {
+                                "height": 1080,
+                                "width": 1080
+                            },
+                            "display_url": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/285552407_167389119078997_8758306339082575478_n.jpg?stp=dst-jpg_e35&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=101&_nc_ohc=YRmveqbo0uYAX_c11yX&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT9R7paqL-KBBG7E-Kna4444JvpZgCa6pfBASzjZnBQnmg&oe=62BC77B9&_nc_sid=8fd12b",
+                            "edge_media_to_tagged_user": {
+                                "edges": []
+                            },
+                            "fact_check_overall_rating": null,
+                            "fact_check_information": null,
+                            "gating_info": null,
+                            "sharing_friction_info": {
+                                "should_have_sharing_friction": false,
+                                "bloks_app_url": null
+                            },
+                            "media_overlay_info": null,
+                            "media_preview": "ACoq0biR41BjAbqTnPQY6YPvUUktxHklEwOuCf8AHtkUl821U5I5bp9BVMOCMEkg9QT1/On0JvZl4SXJ4CJkdeT19Ov50wvcleUUFsY2n1IHPJx1H4VjhnlbAJyx45PQf5/SrrK0koXJwi4JBPP4+/f6d6RT7FxTIXC/KOCMZJ5ABJ98A9/UVN5PqW/OsyxDLc7Cc4Dc5znjr/nmtmgjlRl6t9xPq38hWdFMQpHU44/z7VpasfkT6t/IVidKCi7GQjHgg44x3wOmffvio452UkoCM9e4x/8AWqNUOM5xUi7tuO3c07CuT6ZzcZPo38q3qyNNQCXPXg/yrXoY0Z15E8wXIOAT0BJ7enrVSO1QgmRZE5P8JxjjBPHrkY9x2FbmaQ8ikK1tbtmWLaI4yJenZT7dfl7c9M5HPtUsdrGOMSYxzkHr3x8v5evfFXxRTuOxXt7aOKTcA2cHkggc4GOnXr+lWaM0Uhn/2Q==",
+                            "owner": {
+                                "id": "12763251766",
+                                "username": "clinica_humannexus"
+                            },
+                            "is_video": false,
+                            "has_upcoming_event": false,
+                            "accessibility_caption": "Photo by Humannexus on June 01, 2022. May be an image of 1 person and text."
+                        }
+                    },
+                    {
+                        "node": {
+                            "__typename": "GraphVideo",
+                            "id": "2851165556401363010",
+                            "shortcode": "CeRX_epIdhC",
+                            "dimensions": {
+                                "height": 600,
+                                "width": 480
+                            },
+                            "display_url": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/284860307_410295307671949_2123888914876879713_n.jpg?stp=dst-jpg_e15&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=101&_nc_ohc=e-u-xwk3uUMAX_xOlaJ&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT8hEQAgq7PhAd82AJdYMpywjUP4Hgzpl5Qt8-_3PmJaow&oe=62B88707&_nc_sid=8fd12b",
+                            "edge_media_to_tagged_user": {
+                                "edges": []
+                            },
+                            "fact_check_overall_rating": null,
+                            "fact_check_information": null,
+                            "gating_info": null,
+                            "sharing_friction_info": {
+                                "should_have_sharing_friction": false,
+                                "bloks_app_url": null
+                            },
+                            "media_overlay_info": null,
+                            "media_preview": "ACIq2hTqYDSsSASBkgdPX2pAIyA1WZMdKdbTmZNxAUg4IBzinNQMh2mio/tSehopXQ7MsSzrCu5s4zjgZqnNqEbJ8jEMMEcHnHb8arzXG4bM43cZPYY5/wAPxqtHagqCzEZ56j/PTinuSnfUv292HbgjB5IAxyf5/WrbyqDjIzx+tYZRAcE4xzuB6/WqudxJznjufY0DNI59DRSpcqFAz2HrRUcpfMUGQt1NASpKStL33MkktiPbzn/OKeFFFOFIYzDetFPooA//2Q==",
+                            "owner": {
+                                "id": "12763251766",
+                                "username": "clinica_humannexus"
+                            },
+                            "is_video": true,
+                            "has_upcoming_event": false,
+                            "accessibility_caption": null,
+                            "dash_info": {
+                                "is_dash_eligible": true,
+                                "video_dash_manifest": "<MPD xmlns=\"urn:mpeg:dash:schema:mpd:2011\" minBufferTime=\"PT1.500S\" type=\"static\" mediaPresentationDuration=\"PT0H0M10.034S\" maxSegmentDuration=\"PT0H0M5.000S\" profiles=\"urn:mpeg:dash:profile:isoff-on-demand:2011,http://dashif.org/guidelines/dash264\">\n <Period duration=\"PT0H0M10.034S\">\n <AdaptationSet segmentAlignment=\"true\" maxWidth=\"720\" maxHeight=\"900\" maxFrameRate=\"30\" par=\"720:900\" lang=\"und\" subsegmentAlignment=\"true\" subsegmentStartsWithSAP=\"1\">\n <Representation id=\"5628836130469639vd\" mimeType=\"video/mp4\" codecs=\"avc1.4D401E\" width=\"720\" height=\"900\" frameRate=\"30\" sar=\"1:1\" startWithSAP=\"1\" bandwidth=\"628477\" FBQualityClass=\"hd\" FBQualityLabel=\"720w\" FBPlaybackResolutionMos=\"0:100.00,480:86.41\">\n <BaseURL urlExpiration=\"1656251804\">https://instagram.flba2-1.fna.fbcdn.net/v/t50.2886-16/284675286_1435507376885789_4837043352395033566_n.mp4?_nc_ht=instagram.flba2-1.fna.fbcdn.net&amp;_nc_cat=105&amp;_nc_ohc=Tjy1iChQHNgAX-dY1nW&amp;tn=w5aoGXTTnGFnc2lf&amp;edm=AOQ1c0wBAAAA&amp;ccb=7-5&amp;oh=00_AT9zr_hnU_a1quZavut9S3aFKto7Mu4AFDnSW8FoUz04Vw&amp;oe=62B8659C&amp;_nc_sid=8fd12b</BaseURL>\n <SegmentBase indexRangeExact=\"true\" indexRange=\"841-920\" FBFirstSegmentRange=\"921-181562\" FBSecondSegmentRange=\"181563-348032\" FBPrefetchSegmentRange=\"921-348032\">\n <Initialization range=\"0-840\"/>\n </SegmentBase>\n </Representation>\n <Representation id=\"573691581100668v\" mimeType=\"video/mp4\" codecs=\"avc1.42C01E\" width=\"480\" height=\"600\" frameRate=\"30\" sar=\"1:1\" startWithSAP=\"1\" bandwidth=\"215305\" FBQualityClass=\"sd\" FBQualityLabel=\"480w\" FBPlaybackResolutionMos=\"0:100.00,480:75.89\">\n <BaseURL urlExpiration=\"1656257613\">https://instagram.flba2-1.fna.fbcdn.net/v/t50.2886-16/284967160_192886239730239_8775827630756049388_n.mp4?_nc_ht=instagram.flba2-1.fna.fbcdn.net&amp;_nc_cat=103&amp;_nc_ohc=GRW554QddQ0AX8pa8nQ&amp;edm=AOQ1c0wBAAAA&amp;ccb=7-5&amp;oh=00_AT_wvQs6A-1zGi3U67w7xO7mC-iaoCKcWrcxUHrFqJLT_g&amp;oe=62B87C4D&amp;_nc_sid=8fd12b</BaseURL>\n <SegmentBase indexRangeExact=\"true\" indexRange=\"839-918\" FBFirstSegmentRange=\"919-68483\" FBSecondSegmentRange=\"68484-126016\" FBPrefetchSegmentRange=\"919-126016\">\n <Initialization range=\"0-838\"/>\n </SegmentBase>\n </Representation>\n </AdaptationSet>\n <AdaptationSet segmentAlignment=\"true\" lang=\"und\" subsegmentAlignment=\"true\" subsegmentStartsWithSAP=\"1\">\n <Representation id=\"4957472984381968ad\" mimeType=\"audio/mp4\" codecs=\"mp4a.40.5\" audioSamplingRate=\"44100\" startWithSAP=\"1\" bandwidth=\"113616\">\n <AudioChannelConfiguration schemeIdUri=\"urn:mpeg:dash:23003:3:audio_channel_configuration:2011\" value=\"2\"/>\n <BaseURL urlExpiration=\"1656270724\">https://instagram.flba2-1.fna.fbcdn.net/v/t50.2886-16/284540223_1922328107953335_8593831737101426036_n.mp4?_nc_ht=instagram.flba2-1.fna.fbcdn.net&amp;_nc_cat=103&amp;_nc_ohc=yovMf7yfWYMAX9FrbDf&amp;edm=AOQ1c0wBAAAA&amp;ccb=7-5&amp;oh=00_AT81dipgUW7hmu-lJiim_s4_E-qg88BTl70nhEyAX8lwjQ&amp;oe=62B8AF84&amp;_nc_sid=8fd12b</BaseURL>\n <SegmentBase indexRangeExact=\"true\" indexRange=\"783-886\" FBFirstSegmentRange=\"887-29174\" FBSecondSegmentRange=\"29175-57400\" FBPrefetchSegmentRange=\"887-57400\">\n <Initialization range=\"0-782\"/>\n </SegmentBase>\n </Representation>\n </AdaptationSet>\n </Period>\n</MPD>",
+                                "number_of_qualities": 2
+                            },
+                            "has_audio": false,
+                            "tracking_token": "eyJ2ZXJzaW9uIjo1LCJwYXlsb2FkIjp7ImlzX2FuYWx5dGljc190cmFja2VkIjp0cnVlLCJ1dWlkIjoiMDdlODg2OGM5Nzg2NGQ2YmE2MDVjNGI4YWQ0ZWJiY2IyODUxMTY1NTU2NDAxMzYzMDEwIiwic2VydmVyX3Rva2VuIjoiMTY1NjEwMzQ1ODU4MXwyODUxMTY1NTU2NDAxMzYzMDEwfDUwMjYwNDIyMDg2fDc0MmYzNTMyOTU2MTk4MTdlNzVkODM1MjA1ZGQ3YmY2ZWY3YjhiZDE4YmJiMzI0YjdhNzdiYzQwNjU1M2UwZjMifSwic2lnbmF0dXJlIjoiIn0=",
+                            "video_url": "https://instagram.flba2-1.fna.fbcdn.net/v/t50.2886-16/285258094_2266210763537516_3532179471636409944_n.mp4?_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=108&_nc_ohc=lQ3siqd2CvQAX95eUXO&tn=w5aoGXTTnGFnc2lf&edm=AOQ1c0wBAAAA&ccb=7-5&oe=62B89136&oh=00_AT9_ry5ufb3er175Rmq1lTBuIoC8ZhuTjNtIB9V0kOFahQ&_nc_sid=8fd12b",
+                            "video_view_count": 84
+                        }
+                    },
+                    {
+                        "node": {
+                            "__typename": "GraphVideo",
+                            "id": "2851165556476888452",
+                            "shortcode": "CeRX_etokWE",
+                            "dimensions": {
+                                "height": 600,
+                                "width": 480
+                            },
+                            "display_url": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/285491632_5440535869298599_7261957171290899650_n.jpg?stp=dst-jpg_e15&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=107&_nc_ohc=HQiv-DN0xfwAX8cBf0v&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT9YZmrR6NUT12SVdi7_t-Mp4vvSBuMO7sO0HhiHptbSYg&oe=62B8B5AE&_nc_sid=8fd12b",
+                            "edge_media_to_tagged_user": {
+                                "edges": []
+                            },
+                            "fact_check_overall_rating": null,
+                            "fact_check_information": null,
+                            "gating_info": null,
+                            "sharing_friction_info": {
+                                "should_have_sharing_friction": false,
+                                "bloks_app_url": null
+                            },
+                            "media_overlay_info": null,
+                            "media_preview": "ACIq3hTsUwU6kAxkBqBlIqwCMcdKjagCDBooM6DjP86KLodmTNIsY3OQAO5qJ7qEqRuB4IwDz6ce9U5p9y7eCTgDI7nv+HWs6O0dhncB6fLnpxmhO+ormzZ7Y0CAg8kjHof8/nUxcHoc89qxAJIThTlupzxke3/66gknaR96/KcfNt7kZ5P+eaBsuOfmP1NFMSUbRnrgdaKz5TTmKjhnGDgYpQGAxk/nTqK1bvuYpJaIhIOev1HWnCMU6nCkMj2+woqWigD/2Q==",
+                            "owner": {
+                                "id": "12763251766",
+                                "username": "clinica_humannexus"
+                            },
+                            "is_video": true,
+                            "has_upcoming_event": false,
+                            "accessibility_caption": null,
+                            "dash_info": {
+                                "is_dash_eligible": true,
+                                "video_dash_manifest": "<MPD xmlns=\"urn:mpeg:dash:schema:mpd:2011\" minBufferTime=\"PT1.500S\" type=\"static\" mediaPresentationDuration=\"PT0H0M10.034S\" maxSegmentDuration=\"PT0H0M5.000S\" profiles=\"urn:mpeg:dash:profile:isoff-on-demand:2011,http://dashif.org/guidelines/dash264\">\n <Period duration=\"PT0H0M10.034S\">\n <AdaptationSet segmentAlignment=\"true\" maxWidth=\"720\" maxHeight=\"900\" maxFrameRate=\"30\" par=\"720:900\" lang=\"und\" subsegmentAlignment=\"true\" subsegmentStartsWithSAP=\"1\">\n <Representation id=\"1223783431692354vd\" mimeType=\"video/mp4\" codecs=\"avc1.4D401E\" width=\"720\" height=\"900\" frameRate=\"30\" sar=\"1:1\" startWithSAP=\"1\" bandwidth=\"913333\" FBQualityClass=\"hd\" FBQualityLabel=\"720w\" FBPlaybackResolutionMos=\"0:100.00,480:85.42\">\n <BaseURL urlExpiration=\"1656268643\">https://instagram.flba2-1.fna.fbcdn.net/v/t50.2886-16/284689331_949716602364920_2011111528840374527_n.mp4?_nc_ht=instagram.flba2-1.fna.fbcdn.net&amp;_nc_cat=108&amp;_nc_ohc=Keu0kMWK3I8AX862C14&amp;edm=AOQ1c0wBAAAA&amp;ccb=7-5&amp;oh=00_AT8ZH799NFi5hqis86jDhe-gzleaUHeFZYnhW4kBBPdz-Q&amp;oe=62B8A763&amp;_nc_sid=8fd12b</BaseURL>\n <SegmentBase indexRangeExact=\"true\" indexRange=\"841-920\" FBFirstSegmentRange=\"921-241525\" FBSecondSegmentRange=\"241526-471371\" FBPrefetchSegmentRange=\"921-471371\">\n <Initialization range=\"0-840\"/>\n </SegmentBase>\n </Representation>\n <Representation id=\"738575794028558v\" mimeType=\"video/mp4\" codecs=\"avc1.42C01E\" width=\"480\" height=\"600\" frameRate=\"30\" sar=\"1:1\" startWithSAP=\"1\" bandwidth=\"406701\" FBQualityClass=\"sd\" FBQualityLabel=\"480w\" FBPlaybackResolutionMos=\"0:100.00,480:73.72\">\n <BaseURL urlExpiration=\"1656245534\">https://instagram.flba2-1.fna.fbcdn.net/v/t50.2886-16/285359083_375105421349322_1924857923854726747_n.mp4?_nc_ht=instagram.flba2-1.fna.fbcdn.net&amp;_nc_cat=106&amp;_nc_ohc=jbD5zHw6oY0AX-kcBVy&amp;edm=AOQ1c0wBAAAA&amp;ccb=7-5&amp;oh=00_AT_qFva1Xf0FGW5oFtUCJQuzY9hjzkrb3rYzNdwW9jAq-w&amp;oe=62B84D1E&amp;_nc_sid=8fd12b</BaseURL>\n <SegmentBase indexRangeExact=\"true\" indexRange=\"839-918\" FBFirstSegmentRange=\"919-98075\" FBSecondSegmentRange=\"98076-207695\" FBPrefetchSegmentRange=\"919-207695\">\n <Initialization range=\"0-838\"/>\n </SegmentBase>\n </Representation>\n </AdaptationSet>\n <AdaptationSet segmentAlignment=\"true\" lang=\"und\" subsegmentAlignment=\"true\" subsegmentStartsWithSAP=\"1\">\n <Representation id=\"5153313291423003ad\" mimeType=\"audio/mp4\" codecs=\"mp4a.40.5\" audioSamplingRate=\"44100\" startWithSAP=\"1\" bandwidth=\"116837\">\n <AudioChannelConfiguration schemeIdUri=\"urn:mpeg:dash:23003:3:audio_channel_configuration:2011\" value=\"2\"/>\n <BaseURL urlExpiration=\"1656243030\">https://instagram.flba2-1.fna.fbcdn.net/v/t50.2886-16/283423444_149847147597651_5351045932664677560_n.mp4?_nc_ht=instagram.flba2-1.fna.fbcdn.net&amp;_nc_cat=103&amp;_nc_ohc=_Dtp8KvKH3oAX-k1Yho&amp;edm=AOQ1c0wBAAAA&amp;ccb=7-5&amp;oh=00_AT8vcxhTfZldtLUizINko6QCXDBuTU_PjkbLEqMzRKgGxA&amp;oe=62B84356&amp;_nc_sid=8fd12b</BaseURL>\n <SegmentBase indexRangeExact=\"true\" indexRange=\"783-886\" FBFirstSegmentRange=\"887-30581\" FBSecondSegmentRange=\"30582-60694\" FBPrefetchSegmentRange=\"887-60694\">\n <Initialization range=\"0-782\"/>\n </SegmentBase>\n </Representation>\n </AdaptationSet>\n </Period>\n</MPD>",
+                                "number_of_qualities": 2
+                            },
+                            "has_audio": false,
+                            "tracking_token": "eyJ2ZXJzaW9uIjo1LCJwYXlsb2FkIjp7ImlzX2FuYWx5dGljc190cmFja2VkIjp0cnVlLCJ1dWlkIjoiMDdlODg2OGM5Nzg2NGQ2YmE2MDVjNGI4YWQ0ZWJiY2IyODUxMTY1NTU2NDc2ODg4NDUyIiwic2VydmVyX3Rva2VuIjoiMTY1NjEwMzQ1ODU4MnwyODUxMTY1NTU2NDc2ODg4NDUyfDUwMjYwNDIyMDg2fGI4NGNjYjdlNjA5MDg2OGJlOGUwNTA5MzMzNTNiYWEwNTk1ZjI0NTUxODQyMmRkZmNmZjk3MGQyZWRiMGFmYzkifSwic2lnbmF0dXJlIjoiIn0=",
+                            "video_url": "https://instagram.flba2-1.fna.fbcdn.net/v/t50.2886-16/285647291_900479284684225_8260685042766777786_n.mp4?_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=101&_nc_ohc=8cxtTEw-rBAAX_vlT0V&edm=AOQ1c0wBAAAA&ccb=7-5&oe=62B8624C&oh=00_AT-fvMa_mwvzxdd5z74bF_ZRuwohXDjZuDPlu4fk50XuDw&_nc_sid=8fd12b",
+                            "video_view_count": 35
+                        }
+                    },
+                    {
+                        "node": {
+                            "__typename": "GraphVideo",
+                            "id": "2851165557483472423",
+                            "shortcode": "CeRX_fpoYYn",
+                            "dimensions": {
+                                "height": 600,
+                                "width": 480
+                            },
+                            "display_url": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/285342912_546160920342842_3767756711074797901_n.jpg?stp=dst-jpg_e15&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=102&_nc_ohc=6oVLpmfkS-8AX_eiNVX&tn=w5aoGXTTnGFnc2lf&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT-NTCJ1O689M28X2LKumAX3Ag2lRpvXi_6Q4bZRgm39iQ&oe=62B8A4F2&_nc_sid=8fd12b",
+                            "edge_media_to_tagged_user": {
+                                "edges": []
+                            },
+                            "fact_check_overall_rating": null,
+                            "fact_check_information": null,
+                            "gating_info": null,
+                            "sharing_friction_info": {
+                                "should_have_sharing_friction": false,
+                                "bloks_app_url": null
+                            },
+                            "media_overlay_info": null,
+                            "media_preview": "ACIq3RTqYDTs0gGsoNQMmOlPhnSZcocgHHTH86GoAh2miozcoOOfyopXRVn2LEkywruc8fn1qudRhwcNz2yD1qpLc5G3ON2Fye2ep/z3qnHa7lBLkZ6cjp0H6U1qTe5qWs6ZKp3OT7H29vSrDSqDjPPHH17/AErCaMJ8qtg9d2f0OP8APSoHmaU8tnaOM/j+ftQNl9jyfrRTEuFCgZ6AUVHKacxUZC3BP5UBMVJSVo3fcxSS2IivP+elPCClpwpDGYNFPopgf//Z",
+                            "owner": {
+                                "id": "12763251766",
+                                "username": "clinica_humannexus"
+                            },
+                            "is_video": true,
+                            "has_upcoming_event": false,
+                            "accessibility_caption": null,
+                            "dash_info": {
+                                "is_dash_eligible": true,
+                                "video_dash_manifest": "<MPD xmlns=\"urn:mpeg:dash:schema:mpd:2011\" minBufferTime=\"PT1.500S\" type=\"static\" mediaPresentationDuration=\"PT0H0M10.074S\" maxSegmentDuration=\"PT0H0M5.000S\" profiles=\"urn:mpeg:dash:profile:isoff-on-demand:2011,http://dashif.org/guidelines/dash264\">\n <Period duration=\"PT0H0M10.074S\">\n <AdaptationSet segmentAlignment=\"true\" maxWidth=\"720\" maxHeight=\"900\" maxFrameRate=\"30\" par=\"720:900\" lang=\"und\" subsegmentAlignment=\"true\" subsegmentStartsWithSAP=\"1\">\n <Representation id=\"536677524787460vd\" mimeType=\"video/mp4\" codecs=\"avc1.4D401E\" width=\"720\" height=\"900\" frameRate=\"30\" sar=\"1:1\" startWithSAP=\"1\" bandwidth=\"822216\" FBQualityClass=\"hd\" FBQualityLabel=\"720w\" FBPlaybackResolutionMos=\"0:100.00,480:85.64\">\n <BaseURL urlExpiration=\"1656269354\">https://instagram.flba2-1.fna.fbcdn.net/v/t50.2886-16/285704027_546290473888774_2690793889622215122_n.mp4?_nc_ht=instagram.flba2-1.fna.fbcdn.net&amp;_nc_cat=110&amp;_nc_ohc=ov7ZejRReNIAX9FhaOT&amp;edm=AOQ1c0wBAAAA&amp;ccb=7-5&amp;oh=00_AT-SpjKJBQ5pdGf6sLgdmgnLbRHJcOqnDVykwHDIvTe_Bw&amp;oe=62B8AA2A&amp;_nc_sid=8fd12b</BaseURL>\n <SegmentBase indexRangeExact=\"true\" indexRange=\"841-920\" FBFirstSegmentRange=\"921-220881\" FBSecondSegmentRange=\"220882-433965\" FBPrefetchSegmentRange=\"921-433965\">\n <Initialization range=\"0-840\"/>\n </SegmentBase>\n </Representation>\n <Representation id=\"806901413614287v\" mimeType=\"video/mp4\" codecs=\"avc1.42C01E\" width=\"480\" height=\"600\" frameRate=\"30\" sar=\"1:1\" startWithSAP=\"1\" bandwidth=\"350639\" FBQualityClass=\"sd\" FBQualityLabel=\"480w\" FBPlaybackResolutionMos=\"0:100.00,480:74.76\">\n <BaseURL urlExpiration=\"1656252771\">https://instagram.flba2-1.fna.fbcdn.net/v/t50.2886-16/284127668_760800924915766_2021389835446446540_n.mp4?_nc_ht=instagram.flba2-1.fna.fbcdn.net&amp;_nc_cat=110&amp;_nc_ohc=c389UCSNoJIAX-wBiUH&amp;edm=AOQ1c0wBAAAA&amp;ccb=7-5&amp;oh=00_AT8EARk-ZIOboIwutHHmwK5rraxY8NgX9k44L0iIGUtsZQ&amp;oe=62B86963&amp;_nc_sid=8fd12b</BaseURL>\n <SegmentBase indexRangeExact=\"true\" indexRange=\"839-918\" FBFirstSegmentRange=\"919-96300\" FBSecondSegmentRange=\"96301-188474\" FBPrefetchSegmentRange=\"919-188474\">\n <Initialization range=\"0-838\"/>\n </SegmentBase>\n </Representation>\n </AdaptationSet>\n <AdaptationSet segmentAlignment=\"true\" lang=\"und\" subsegmentAlignment=\"true\" subsegmentStartsWithSAP=\"1\">\n <Representation id=\"821490042158155ad\" mimeType=\"audio/mp4\" codecs=\"mp4a.40.5\" audioSamplingRate=\"44100\" startWithSAP=\"1\" bandwidth=\"117140\">\n <AudioChannelConfiguration schemeIdUri=\"urn:mpeg:dash:23003:3:audio_channel_configuration:2011\" value=\"2\"/>\n <BaseURL urlExpiration=\"1656274872\">https://instagram.flba2-1.fna.fbcdn.net/v/t50.2886-16/284202753_148702237727613_5009027031952418629_n.mp4?_nc_ht=instagram.flba2-1.fna.fbcdn.net&amp;_nc_cat=109&amp;_nc_ohc=asLuFnuT-8MAX9enYAR&amp;tn=w5aoGXTTnGFnc2lf&amp;edm=AOQ1c0wBAAAA&amp;ccb=7-5&amp;oh=00_AT_b5l9i72tOIOY-4geuB4TrKoWJzMoNith9BjrwVXxjNg&amp;oe=62B8BFB8&amp;_nc_sid=8fd12b</BaseURL>\n <SegmentBase indexRangeExact=\"true\" indexRange=\"783-886\" FBFirstSegmentRange=\"887-30194\" FBSecondSegmentRange=\"30195-62410\" FBPrefetchSegmentRange=\"887-62410\">\n <Initialization range=\"0-782\"/>\n </SegmentBase>\n </Representation>\n </AdaptationSet>\n </Period>\n</MPD>",
+                                "number_of_qualities": 2
+                            },
+                            "has_audio": false,
+                            "tracking_token": "eyJ2ZXJzaW9uIjo1LCJwYXlsb2FkIjp7ImlzX2FuYWx5dGljc190cmFja2VkIjp0cnVlLCJ1dWlkIjoiMDdlODg2OGM5Nzg2NGQ2YmE2MDVjNGI4YWQ0ZWJiY2IyODUxMTY1NTU3NDgzNDcyNDIzIiwic2VydmVyX3Rva2VuIjoiMTY1NjEwMzQ1ODU4MnwyODUxMTY1NTU3NDgzNDcyNDIzfDUwMjYwNDIyMDg2fDdiMTYxYzZlMGFhOGZhMWRhNDQ4Y2U5NzJkNmZkZTM5MjkwZmVlZGJiNzNjOTdjOGJkZDRmYmZmM2RiNDg4ZDUifSwic2lnbmF0dXJlIjoiIn0=",
+                            "video_url": "https://instagram.flba2-1.fna.fbcdn.net/v/t50.2886-16/284980293_530332815362471_422606202703139423_n.mp4?_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=111&_nc_ohc=91P8hKJtDUgAX_ri9CS&edm=AOQ1c0wBAAAA&ccb=7-5&oe=62B878C1&oh=00_AT_X-Zc3x_ORSqr0u4NghZN0H5OH0__kYgX_fd-kGBGM7w&_nc_sid=8fd12b",
+                            "video_view_count": 24
+                        }
+                    },
+                    {
+                        "node": {
+                            "__typename": "GraphVideo",
+                            "id": "2851165557156398860",
+                            "shortcode": "CeRX_fWIscM",
+                            "dimensions": {
+                                "height": 600,
+                                "width": 480
+                            },
+                            "display_url": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/285075431_1204832043620944_7530966436139311701_n.jpg?stp=dst-jpg_e15&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=104&_nc_ohc=guUPmYuGnicAX8-5bh8&tn=w5aoGXTTnGFnc2lf&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT9pdYWW_VwrNwDIfPGaRCTzWPU1yojxVNQP88zb0ky3kA&oe=62B83170&_nc_sid=8fd12b",
+                            "edge_media_to_tagged_user": {
+                                "edges": []
+                            },
+                            "fact_check_overall_rating": null,
+                            "fact_check_information": null,
+                            "gating_info": null,
+                            "sharing_friction_info": {
+                                "should_have_sharing_friction": false,
+                                "bloks_app_url": null
+                            },
+                            "media_overlay_info": null,
+                            "media_preview": "ACIq3RRtBoFLSAiaP0qBgRVvtg1E1AFeipcCigZKDUdwrPGQhIbtg4J9s9s1RuZQ8ZU57YAPU9h+dZcfnkfKCQe+7HTr3459KN9hHSRk7QG+8AM+tIxrEjuZYiBt3Dv1OPaomvZN5xwp5AJzjHp+I/CgZYbqfrRQu1gGPUjP50VnymvMik8rnBXOQc05J5FUDgY9qKStf60MEraCGVyevXvwOntUYjI70vepBSGM3EcZb86KkooA/9k=",
+                            "owner": {
+                                "id": "12763251766",
+                                "username": "clinica_humannexus"
+                            },
+                            "is_video": true,
+                            "has_upcoming_event": false,
+                            "accessibility_caption": null,
+                            "dash_info": {
+                                "is_dash_eligible": true,
+                                "video_dash_manifest": "<MPD xmlns=\"urn:mpeg:dash:schema:mpd:2011\" minBufferTime=\"PT1.500S\" type=\"static\" mediaPresentationDuration=\"PT0H0M10.267S\" maxSegmentDuration=\"PT0H0M5.000S\" profiles=\"urn:mpeg:dash:profile:isoff-on-demand:2011,http://dashif.org/guidelines/dash264\">\n <Period duration=\"PT0H0M10.267S\">\n <AdaptationSet segmentAlignment=\"true\" maxWidth=\"720\" maxHeight=\"900\" maxFrameRate=\"30\" par=\"720:900\" lang=\"und\" subsegmentAlignment=\"true\" subsegmentStartsWithSAP=\"1\">\n <Representation id=\"376039177690506vd\" mimeType=\"video/mp4\" codecs=\"avc1.4D401E\" width=\"720\" height=\"900\" frameRate=\"30\" sar=\"1:1\" startWithSAP=\"1\" bandwidth=\"1010415\" FBQualityClass=\"hd\" FBQualityLabel=\"720w\" FBPlaybackResolutionMos=\"0:100.00,480:85.35\">\n <BaseURL urlExpiration=\"1656251598\">https://instagram.flba2-1.fna.fbcdn.net/v/t50.2886-16/285610346_610496047077743_5207382005862447304_n.mp4?_nc_ht=instagram.flba2-1.fna.fbcdn.net&amp;_nc_cat=111&amp;_nc_ohc=bkz3AfHexFsAX_JGBTq&amp;edm=AOQ1c0wBAAAA&amp;ccb=7-5&amp;oh=00_AT8sHbLj92ZDGT9I2eg8cRN319ci-4wC2mK9W-A2lOSHaQ&amp;oe=62B864CE&amp;_nc_sid=8fd12b</BaseURL>\n <SegmentBase indexRangeExact=\"true\" indexRange=\"841-920\" FBFirstSegmentRange=\"921-265962\" FBSecondSegmentRange=\"265963-521077\" FBPrefetchSegmentRange=\"921-521077\">\n <Initialization range=\"0-840\"/>\n </SegmentBase>\n </Representation>\n <Representation id=\"1101392123773568v\" mimeType=\"video/mp4\" codecs=\"avc1.42C01E\" width=\"480\" height=\"600\" frameRate=\"30\" sar=\"1:1\" startWithSAP=\"1\" bandwidth=\"425544\" FBQualityClass=\"sd\" FBQualityLabel=\"480w\" FBPlaybackResolutionMos=\"0:100.00,480:73.20\">\n <BaseURL urlExpiration=\"1656268349\">https://instagram.flba2-1.fna.fbcdn.net/v/t50.2886-16/284985081_170433358734392_6285697171874726356_n.mp4?_nc_ht=instagram.flba2-1.fna.fbcdn.net&amp;_nc_cat=108&amp;_nc_ohc=tZJvS7VzZP0AX-PBfu9&amp;edm=AOQ1c0wBAAAA&amp;ccb=7-5&amp;oh=00_AT93JHGZnuKMnl1tWDT9w_dajNHAOt1fvXySVvPsX1XnnQ&amp;oe=62B8A63D&amp;_nc_sid=8fd12b</BaseURL>\n <SegmentBase indexRangeExact=\"true\" indexRange=\"839-918\" FBFirstSegmentRange=\"919-108734\" FBSecondSegmentRange=\"108735-225987\" FBPrefetchSegmentRange=\"919-225987\">\n <Initialization range=\"0-838\"/>\n </SegmentBase>\n </Representation>\n </AdaptationSet>\n <AdaptationSet segmentAlignment=\"true\" lang=\"und\" subsegmentAlignment=\"true\" subsegmentStartsWithSAP=\"1\">\n <Representation id=\"551538403217388ad\" mimeType=\"audio/mp4\" codecs=\"mp4a.40.5\" audioSamplingRate=\"44100\" startWithSAP=\"1\" bandwidth=\"113845\">\n <AudioChannelConfiguration schemeIdUri=\"urn:mpeg:dash:23003:3:audio_channel_configuration:2011\" value=\"2\"/>\n <BaseURL urlExpiration=\"1656247309\">https://instagram.flba2-1.fna.fbcdn.net/v/t50.2886-16/283938976_344511074435157_8172440987034788567_n.mp4?_nc_ht=instagram.flba2-1.fna.fbcdn.net&amp;_nc_cat=109&amp;_nc_ohc=lhfeWWQqeiYAX_LLp5O&amp;tn=w5aoGXTTnGFnc2lf&amp;edm=AOQ1c0wBAAAA&amp;ccb=7-5&amp;oh=00_AT8icoqZpKn2euMMMS3c1XnAToYs6us9B02PU28IlQTmyw&amp;oe=62B8540D&amp;_nc_sid=8fd12b</BaseURL>\n <SegmentBase indexRangeExact=\"true\" indexRange=\"783-886\" FBFirstSegmentRange=\"887-28942\" FBSecondSegmentRange=\"28943-58070\" FBPrefetchSegmentRange=\"887-58070\">\n <Initialization range=\"0-782\"/>\n </SegmentBase>\n </Representation>\n </AdaptationSet>\n </Period>\n</MPD>",
+                                "number_of_qualities": 2
+                            },
+                            "has_audio": false,
+                            "tracking_token": "eyJ2ZXJzaW9uIjo1LCJwYXlsb2FkIjp7ImlzX2FuYWx5dGljc190cmFja2VkIjp0cnVlLCJ1dWlkIjoiMDdlODg2OGM5Nzg2NGQ2YmE2MDVjNGI4YWQ0ZWJiY2IyODUxMTY1NTU3MTU2Mzk4ODYwIiwic2VydmVyX3Rva2VuIjoiMTY1NjEwMzQ1ODU4MnwyODUxMTY1NTU3MTU2Mzk4ODYwfDUwMjYwNDIyMDg2fGQ1MmU3OTA5NDMxM2VjODBjZWQ1Njc5ZDFhN2EyYmUxMzY3MmZjNGI3YzliYWRmYjAxOTNmNDc0NTBmYzliYjMifSwic2lnbmF0dXJlIjoiIn0=",
+                            "video_url": "https://instagram.flba2-1.fna.fbcdn.net/v/t50.2886-16/284689539_1220525152094207_398730774994107019_n.mp4?_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=111&_nc_ohc=FANSX1d02xsAX9zH4wL&tn=w5aoGXTTnGFnc2lf&edm=AOQ1c0wBAAAA&ccb=7-5&oe=62B859A7&oh=00_AT_3qdifqFbtGEj2QdIyl2rlbsj--qRn3jS6QfuG_WNa_Q&_nc_sid=8fd12b",
+                            "video_view_count": 35
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "node": {
+            "__typename": "GraphSidecar",
+            "id": "2849758369045050872",
+            "shortcode": "CeMYCNSoHX4",
+            "dimensions": {
+                "height": 722,
+                "width": 1080
+            },
+            "display_url": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/284995826_452446393353849_1705912290861015557_n.jpg?stp=dst-jpg_e35&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=109&_nc_ohc=19nu8wlIqNcAX8YuKgT&tn=w5aoGXTTnGFnc2lf&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT_MvMkI8Rt0C8lBs7FzKG2C4yOeY48aK2whUk-qv3XWSg&oe=62BDF497&_nc_sid=8fd12b",
+            "edge_media_to_tagged_user": {
+                "edges": [
+                    {
+                        "node": {
+                            "user": {
+                                "full_name": "Cascais Crusaders",
+                                "followed_by_viewer": false,
+                                "id": "599040362",
+                                "is_verified": false,
+                                "profile_pic_url": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-19/242003037_378131293979133_5955048399063114959_n.jpg?stp=dst-jpg_s150x150&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=109&_nc_ohc=shRBofkOCdQAX84FI7-&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT-bdoA1bcNJQ8U1RTVnYFh0AIXrtsGw8-rnTxUktzTipg&oe=62BC12B0&_nc_sid=8fd12b",
+                                "username": "cascaiscrusaders"
+                            },
+                            "x": 0.5108695600000001,
+                            "y": 0.55600286
+                        }
+                    }
+                ]
+            },
+            "fact_check_overall_rating": null,
+            "fact_check_information": null,
+            "gating_info": null,
+            "sharing_friction_info": {
+                "should_have_sharing_friction": false,
+                "bloks_app_url": null
+            },
+            "media_overlay_info": null,
+            "media_preview": null,
+            "owner": {
+                "id": "12763251766",
+                "username": "clinica_humannexus"
+            },
+            "is_video": false,
+            "has_upcoming_event": false,
+            "accessibility_caption": "Photo shared by Humannexus on May 30, 2022 tagging @cascaiscrusaders. May be an image of 1 person, playing football and outdoors.",
+            "edge_media_to_caption": {
+                "edges": [
+                    {
+                        "node": {
+                            "text": "Chega ao fim mais uma época desportiva de Futebol Americano 🏈\n\nUm ano de conquistas 🏆 Foram 2 títulos nacionais ganhos pelos @cascaiscrusaders - A Taça Fundadores e A Liga Portuguesa de Futebol Americano 👏🏻\n\nDurante este percurso, os atletas dos Cascais Crusaders contaram sempre com o apoio dos profissionais da Humannexus, quer a nível de recuperação de lesões, quer a nível de acompanhamento nutricional e melhoria da performance 💪🏼\n\nMuitos Parabéns por estas conquistas e Obrigado pela confiança no nosso trabalho!\n\nAs vossas conquistas são as nossas. Continuem a brilhar dentro de campo. Nós iremos garantir, fora dele, que estão nas melhores condições para fazerem o que mais gostam 💚\n.\n.\n.\n.\n.\n#humannexus #bemestar #health #performance #desportiva #fisioterapia #qualidadedevida #nutricao #enfermagem #psicologia"
+                        }
+                    }
+                ]
+            },
+            "edge_media_to_comment": {
+                "count": 9
+            },
+            "comments_disabled": false,
+            "taken_at_timestamp": 1653937692,
+            "edge_liked_by": {
+                "count": 164
+            },
+            "edge_media_preview_like": {
+                "count": 164
+            },
+            "location": {
+                "id": "627280380",
+                "has_public_page": true,
+                "name": "Humannexus",
+                "slug": "humannexus"
+            },
+            "nft_asset_info": null,
+            "thumbnail_src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/284995826_452446393353849_1705912290861015557_n.jpg?stp=c125.0.507.507a_dst-jpg_e35&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=109&_nc_ohc=19nu8wlIqNcAX8YuKgT&tn=w5aoGXTTnGFnc2lf&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT_IFGYmGbQm6pkqTTsdHTPIZwPJCHf6QfAfnsQPaqcEcA&oe=62BDF497&_nc_sid=8fd12b",
+            "thumbnail_resources": [
+                {
+                    "src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/284995826_452446393353849_1705912290861015557_n.jpg?stp=c125.0.507.507a_dst-jpg_e35_s150x150&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=109&_nc_ohc=19nu8wlIqNcAX8YuKgT&tn=w5aoGXTTnGFnc2lf&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT8AekhL8QdJFc7031Ui7mQrPjSUxp2oj-IOINAXXwIxOA&oe=62BDF497&_nc_sid=8fd12b",
+                    "config_width": 150,
+                    "config_height": 150
+                },
+                {
+                    "src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/284995826_452446393353849_1705912290861015557_n.jpg?stp=c125.0.507.507a_dst-jpg_e35_s240x240&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=109&_nc_ohc=19nu8wlIqNcAX8YuKgT&tn=w5aoGXTTnGFnc2lf&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT_rRAqtgaT4I-_VzGWXGgFesODFXj3fMZ1MnpYmfPNwPg&oe=62BDF497&_nc_sid=8fd12b",
+                    "config_width": 240,
+                    "config_height": 240
+                },
+                {
+                    "src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/284995826_452446393353849_1705912290861015557_n.jpg?stp=c125.0.507.507a_dst-jpg_e35_s320x320&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=109&_nc_ohc=19nu8wlIqNcAX8YuKgT&tn=w5aoGXTTnGFnc2lf&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT_UE4x325bLONh-Pc0tp8XR93LrCEq7QcGIRV3mSdvu1g&oe=62BDF497&_nc_sid=8fd12b",
+                    "config_width": 320,
+                    "config_height": 320
+                },
+                {
+                    "src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/284995826_452446393353849_1705912290861015557_n.jpg?stp=c125.0.507.507a_dst-jpg_e35_s480x480&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=109&_nc_ohc=19nu8wlIqNcAX8YuKgT&tn=w5aoGXTTnGFnc2lf&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT-GSwsETQqIp4nTNkkPtczyLWMYIOnxwu2clEk3CCi62Q&oe=62BDF497&_nc_sid=8fd12b",
+                    "config_width": 480,
+                    "config_height": 480
+                },
+                {
+                    "src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/284995826_452446393353849_1705912290861015557_n.jpg?stp=c125.0.507.507a_dst-jpg_e35_s640x640_sh0.08&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=109&_nc_ohc=19nu8wlIqNcAX8YuKgT&tn=w5aoGXTTnGFnc2lf&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT_NP5p0JGpn6HZcIzWl-YM7xdZtKiM4jypo80Hkh5IPrg&oe=62BDF497&_nc_sid=8fd12b",
+                    "config_width": 640,
+                    "config_height": 640
+                }
+            ],
+            "coauthor_producers": [
+                {
+                    "id": "599040362",
+                    "is_verified": false,
+                    "profile_pic_url": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-19/242003037_378131293979133_5955048399063114959_n.jpg?stp=dst-jpg_s150x150&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=109&_nc_ohc=shRBofkOCdQAX84FI7-&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT-bdoA1bcNJQ8U1RTVnYFh0AIXrtsGw8-rnTxUktzTipg&oe=62BC12B0&_nc_sid=8fd12b",
+                    "username": "cascaiscrusaders"
+                }
+            ],
+            "pinned_for_users": [],
+            "edge_sidecar_to_children": {
+                "edges": [
+                    {
+                        "node": {
+                            "__typename": "GraphImage",
+                            "id": "2849758360212020196",
+                            "shortcode": "CeMYCFEIxvk",
+                            "dimensions": {
+                                "height": 722,
+                                "width": 1080
+                            },
+                            "display_url": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/284995826_452446393353849_1705912290861015557_n.jpg?stp=dst-jpg_e35&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=109&_nc_ohc=19nu8wlIqNcAX8YuKgT&tn=w5aoGXTTnGFnc2lf&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT_MvMkI8Rt0C8lBs7FzKG2C4yOeY48aK2whUk-qv3XWSg&oe=62BDF497&_nc_sid=8fd12b",
+                            "edge_media_to_tagged_user": {
+                                "edges": [
+                                    {
+                                        "node": {
+                                            "user": {
+                                                "full_name": "Cascais Crusaders",
+                                                "followed_by_viewer": false,
+                                                "id": "599040362",
+                                                "is_verified": false,
+                                                "profile_pic_url": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-19/242003037_378131293979133_5955048399063114959_n.jpg?stp=dst-jpg_s150x150&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=109&_nc_ohc=shRBofkOCdQAX84FI7-&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT-bdoA1bcNJQ8U1RTVnYFh0AIXrtsGw8-rnTxUktzTipg&oe=62BC12B0&_nc_sid=8fd12b",
+                                                "username": "cascaiscrusaders"
+                                            },
+                                            "x": 0.5108695600000001,
+                                            "y": 0.55600286
+                                        }
+                                    }
+                                ]
+                            },
+                            "fact_check_overall_rating": null,
+                            "fact_check_information": null,
+                            "gating_info": null,
+                            "sharing_friction_info": {
+                                "should_have_sharing_friction": false,
+                                "bloks_app_url": null
+                            },
+                            "media_overlay_info": null,
+                            "media_preview": "ACoco+eCRgcU+J95IOB6VASseBjn/wCvUw2AlVGSeBkdfrzgd+npVKb3F7JWJiAG2mnbVHcc0zaDgqOmAcj9B/npSArnkjP+7/L+Y9ar2jJ9ku407gGI6DpVQu+T1/OrwCJ97BwM4we/+fwqEsp/hX8v/r1DlcfLykchMntjHJ9qjDHcdudo6n+v0PYU+lzldvYc1nctMlMinAXIUDnjnB698enI5A4qWR0Chlxv6YI+7gdcev8AXpVVTg5HUUpOetFy1NJp207f8EQ88k5POQe/pz/nml4P/wCqk4PYUbz60iZS5j//2Q==",
+                            "owner": {
+                                "id": "12763251766",
+                                "username": "clinica_humannexus"
+                            },
+                            "is_video": false,
+                            "has_upcoming_event": false,
+                            "accessibility_caption": "Photo shared by Humannexus on May 30, 2022 tagging @cascaiscrusaders. May be an image of 1 person, playing football and outdoors."
+                        }
+                    },
+                    {
+                        "node": {
+                            "__typename": "GraphImage",
+                            "id": "2849758360211950798",
+                            "shortcode": "CeMYCFEIgzO",
+                            "dimensions": {
+                                "height": 501,
+                                "width": 750
+                            },
+                            "display_url": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/284492492_4897679190361556_6852764345650034034_n.jpg?stp=dst-jpg_e35&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=108&_nc_ohc=6aNsltyXgLcAX_slnVQ&tn=w5aoGXTTnGFnc2lf&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT8Z4QO0Zwk02B57d4APrMj5C6_Grzhy8r0rxdwyMd6U5g&oe=62BC7045&_nc_sid=8fd12b",
+                            "edge_media_to_tagged_user": {
+                                "edges": []
+                            },
+                            "fact_check_overall_rating": null,
+                            "fact_check_information": null,
+                            "gating_info": null,
+                            "sharing_friction_info": {
+                                "should_have_sharing_friction": false,
+                                "bloks_app_url": null
+                            },
+                            "media_overlay_info": null,
+                            "media_preview": "ACocpx4cZFSbKjEDWzdN3bOcAn6f4+9WVclc7Tz7itFLuQ4voQMAvX/PvTtlW4YPtADE4wR268AkVHIrrIY0AbnAYnAzjPNHMLlKe5SSPSo/MSraWUg3nA2kHBBzz3/Cs/yG9D+RpcxVi3cSRq2Yzk8kk9v0qFWcHOeO/P8An1NVC23PAPHfmpYmLDJrF9zZu2iN6zlLJtiAOCcseAP8TiqNw7QuACGI5I/2s8+4B4NZDkgnHrSMSNp/z1qrEXNaMkRO7HDbgx+p9P6VX+2v/eb8zUJY8Hucfyp2TU3G+nof/9k=",
+                            "owner": {
+                                "id": "12763251766",
+                                "username": "clinica_humannexus"
+                            },
+                            "is_video": false,
+                            "has_upcoming_event": false,
+                            "accessibility_caption": "Photo by Humannexus on May 30, 2022. May be an image of 9 people and people standing."
+                        }
+                    },
+                    {
+                        "node": {
+                            "__typename": "GraphImage",
+                            "id": "2849758360211846580",
+                            "shortcode": "CeMYCFEIHW0",
+                            "dimensions": {
+                                "height": 722,
+                                "width": 1080
+                            },
+                            "display_url": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/284271387_801523620814648_162015870633560283_n.jpg?stp=dst-jpg_e35&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=104&_nc_ohc=yUF1EdZYlUEAX8Aky3l&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT8OE-iH44NrmBkyvhzAv3w4Bk_t8fdFNmSQp4wQqLg35A&oe=62BC7933&_nc_sid=8fd12b",
+                            "edge_media_to_tagged_user": {
+                                "edges": []
+                            },
+                            "fact_check_overall_rating": null,
+                            "fact_check_information": null,
+                            "gating_info": null,
+                            "sharing_friction_info": {
+                                "should_have_sharing_friction": false,
+                                "bloks_app_url": null
+                            },
+                            "media_overlay_info": null,
+                            "media_preview": "ACocxABjqKbjBpfLAxkHn/PFXlii3YyTjjpn2/8A1UmUlfYp9Bmh4ymM8ZGa0haAYbJ4z6cf5/nUrQBhuwHIxjrn/wDVn/PNSOxVSPK9MnH+RSBCO1TOWVS2zAXGPfPanKYyASSCe3FRqi0kyvtLH1xUyK6g44zUqipgKdyE7bEcR2535O70x+nPH+FQsjHn2IwOMfT6jFW8UuOKLjuzNCMxwc4/T/IqztX0qYimbRRe4rn/2Q==",
+                            "owner": {
+                                "id": "12763251766",
+                                "username": "clinica_humannexus"
+                            },
+                            "is_video": false,
+                            "has_upcoming_event": false,
+                            "accessibility_caption": "Photo by Humannexus on May 30, 2022. May be an image of 5 people, people standing and outdoors."
+                        }
+                    },
+                    {
+                        "node": {
+                            "__typename": "GraphImage",
+                            "id": "2849758360212075035",
+                            "shortcode": "CeMYCFEI_Ib",
+                            "dimensions": {
+                                "height": 722,
+                                "width": 1080
+                            },
+                            "display_url": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/284548209_540705040786339_5457301000091146939_n.jpg?stp=dst-jpg_e35_s1080x1080&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=107&_nc_ohc=ol4NT5dyWwcAX8g_tjU&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT9_ClLh9vKBGYCV9ngn7qh5PWdNeftGIJGCHJJa28dZCw&oe=62BCE8A5&_nc_sid=8fd12b",
+                            "edge_media_to_tagged_user": {
+                                "edges": []
+                            },
+                            "fact_check_overall_rating": null,
+                            "fact_check_information": null,
+                            "gating_info": null,
+                            "sharing_friction_info": {
+                                "should_have_sharing_friction": false,
+                                "bloks_app_url": null
+                            },
+                            "media_overlay_info": null,
+                            "media_preview": "ACocyIoxuAznkVemiU43Y6cA9ce3NOXHmhFA6ZyMdadvEivxzxj8OP0PNYm25EUyu7dg8DHHQdunXFJDCzg7iCR04GPx4zT9mBjs3Oe/51WaZgSFOAuR1z/n2p8t+wrlgW4P/wCof4VAYXzwoI+gqKOcqepC1eEqEffP6VPK11C6Y6yjxl+OOBU5tgjZzw3JHp/k1XRykDEdQf8ACp4HaSIsxyc4/Ij/ABqkrivYqgFcqozt4/X3/rVJspuVhgk1ad2VmAOASc/nVMknOeeatCYsYXkEZJxj0p+xfSmL1qWoluB//9k=",
+                            "owner": {
+                                "id": "12763251766",
+                                "username": "clinica_humannexus"
+                            },
+                            "is_video": false,
+                            "has_upcoming_event": false,
+                            "accessibility_caption": "Photo by Humannexus on May 30, 2022. May be an image of 3 people and people standing."
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "node": {
+            "__typename": "GraphImage",
+            "id": "2846834244479820054",
+            "shortcode": "CeB_KmEoyEW",
+            "dimensions": {
+                "height": 1350,
+                "width": 1080
+            },
+            "display_url": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/284046322_544859627090470_8153617629015486774_n.jpg?stp=dst-jpg_e35_p1080x1080&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=110&_nc_ohc=Rpm8KVDSSlMAX9s0U1N&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT__uMXF1iNWS6yF5VTqae-YUDFLib8EryOMomjY6bYHVA&oe=62BC3A81&_nc_sid=8fd12b",
+            "edge_media_to_tagged_user": {
+                "edges": []
+            },
+            "fact_check_overall_rating": null,
+            "fact_check_information": null,
+            "gating_info": null,
+            "sharing_friction_info": {
+                "should_have_sharing_friction": false,
+                "bloks_app_url": null
+            },
+            "media_overlay_info": null,
+            "media_preview": "ACIq1ipHUd6q3CjAI9TWuO/1qrdRDaCOOaQGJMNoIH+elaCkYjI/z8tUrkfKavoPki75xn8qBikg9hRVry1ooAdMwA+9t5B46/SsyaYlSGckgdsY689Pwx+NV5rlAeuT+dNK+auV4OARnjqKYiGWXduH1qWKdiqr0GBjp1Hf8ff0rPLEkqQN3PT6VNAw2A9waQGiZW9T+n+FFQGVT/n/AOvRQVcWNAjAY69f8+nrTZjhiQcdvwwB/OppTiM49v5mstzTJLM0kZHmIAAMK475I4YeoPQ/rVRpy3yqP8KrHlufSrMY4oGP2iiiikB//9k=",
+            "owner": {
+                "id": "12763251766",
+                "username": "clinica_humannexus"
+            },
+            "is_video": false,
+            "has_upcoming_event": false,
+            "accessibility_caption": "Photo by Humannexus in Humannexus. May be an image of indoor.",
+            "edge_media_to_caption": {
+                "edges": [
+                    {
+                        "node": {
+                            "text": "Já conheces o nosso studio? 🏋🏼‍♂️\n\nCom várias opções de escolha, o acompanhamento personalizado é uma das muitas em que te podes inscrever 😎\n\nVamos a um treino juntos? 💪🏼💪🏼💪🏼\n.\n.\n.\n.\n.\n#humannexus #bemestar #health #performance #desportiva #fisioterapia #qualidadedevida #nutricao #enfermagem #psicologia"
+                        }
+                    }
+                ]
+            },
+            "edge_media_to_comment": {
+                "count": 0
+            },
+            "comments_disabled": false,
+            "taken_at_timestamp": 1653589109,
+            "edge_liked_by": {
+                "count": 15
+            },
+            "edge_media_preview_like": {
+                "count": 15
+            },
+            "location": {
+                "id": "627280380",
+                "has_public_page": true,
+                "name": "Humannexus",
+                "slug": "humannexus"
+            },
+            "nft_asset_info": null,
+            "thumbnail_src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/284046322_544859627090470_8153617629015486774_n.jpg?stp=c0.180.1440.1440a_dst-jpg_e35_s640x640_sh0.08&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=110&_nc_ohc=Rpm8KVDSSlMAX9s0U1N&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT_G2HyedEfdpcvYVRgZJ-CFvyDSwrdKQ3dyFexmrqUquQ&oe=62BC3A81&_nc_sid=8fd12b",
+            "thumbnail_resources": [
+                {
+                    "src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/284046322_544859627090470_8153617629015486774_n.jpg?stp=c0.180.1440.1440a_dst-jpg_e35_s150x150&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=110&_nc_ohc=Rpm8KVDSSlMAX9s0U1N&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT81qM2wSewAMELErKJas3NyFTF2eWh0Wc6XZ7xOF-_LiQ&oe=62BC3A81&_nc_sid=8fd12b",
+                    "config_width": 150,
+                    "config_height": 150
+                },
+                {
+                    "src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/284046322_544859627090470_8153617629015486774_n.jpg?stp=c0.180.1440.1440a_dst-jpg_e35_s240x240&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=110&_nc_ohc=Rpm8KVDSSlMAX9s0U1N&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT8NcwUF04sybbiezJbjUGIYeGaPYeFAi2qWKPXqqXazuA&oe=62BC3A81&_nc_sid=8fd12b",
+                    "config_width": 240,
+                    "config_height": 240
+                },
+                {
+                    "src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/284046322_544859627090470_8153617629015486774_n.jpg?stp=c0.180.1440.1440a_dst-jpg_e35_s320x320&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=110&_nc_ohc=Rpm8KVDSSlMAX9s0U1N&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT-h1vu_vg59YwF2TZmzBQvCfarOOBvFaxUecjb9HHlpgw&oe=62BC3A81&_nc_sid=8fd12b",
+                    "config_width": 320,
+                    "config_height": 320
+                },
+                {
+                    "src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/284046322_544859627090470_8153617629015486774_n.jpg?stp=c0.180.1440.1440a_dst-jpg_e35_s480x480&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=110&_nc_ohc=Rpm8KVDSSlMAX9s0U1N&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT_I0RHtjMK8t9e8vURDoHSh3TSYl0qI--CLDwkxsmT-xA&oe=62BC3A81&_nc_sid=8fd12b",
+                    "config_width": 480,
+                    "config_height": 480
+                },
+                {
+                    "src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/284046322_544859627090470_8153617629015486774_n.jpg?stp=c0.180.1440.1440a_dst-jpg_e35_s640x640_sh0.08&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=110&_nc_ohc=Rpm8KVDSSlMAX9s0U1N&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT_G2HyedEfdpcvYVRgZJ-CFvyDSwrdKQ3dyFexmrqUquQ&oe=62BC3A81&_nc_sid=8fd12b",
+                    "config_width": 640,
+                    "config_height": 640
+                }
+            ],
+            "coauthor_producers": [],
+            "pinned_for_users": []
+        }
+    },
+    {
+        "node": {
+            "__typename": "GraphVideo",
+            "id": "2844684260514739428",
+            "shortcode": "Cd6WUNeIDTk",
+            "dimensions": {
+                "height": 1333,
+                "width": 750
+            },
+            "display_url": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/283062745_542427153989763_2089662341766081654_n.jpg?stp=dst-jpg_e15&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=103&_nc_ohc=z4hZ0LSA6A8AX8QC2YO&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT92ntJiO9j0VcxUrcxoTFR48jPq5WgGO8glw76aFhWTZQ&oe=62B86FED&_nc_sid=8fd12b",
+            "edge_media_to_tagged_user": {
+                "edges": []
+            },
+            "fact_check_overall_rating": null,
+            "fact_check_information": null,
+            "gating_info": null,
+            "sharing_friction_info": {
+                "should_have_sharing_friction": false,
+                "bloks_app_url": null
+            },
+            "media_overlay_info": null,
+            "media_preview": "ABgq2wKcQO9MBp2aQEbxiilY0UDKBvVMZaMgkeoP4/59apf2jM4+UfkhP8zVKOYqNoyPSnJckYB4K8c8dPSjUSd730J5Ly5Xk9P90DP50VDcym4Iz2FFAyKmbBTqWgBVGKKUUUAf/9k=",
+            "owner": {
+                "id": "12763251766",
+                "username": "clinica_humannexus"
+            },
+            "is_video": true,
+            "has_upcoming_event": false,
+            "accessibility_caption": null,
+            "dash_info": {
+                "is_dash_eligible": true,
+                "video_dash_manifest": "<MPD xmlns=\"urn:mpeg:dash:schema:mpd:2011\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"urn:mpeg:dash:schema:mpd:2011 DASH-MPD.xsd\" profiles=\"urn:mpeg:dash:profile:isoff-on-demand:2011\" minBufferTime=\"PT2S\" type=\"static\" mediaPresentationDuration=\"PT0H0M9.447S\" maxSegmentDuration=\"PT0H0M1.997S\">\n <Period id=\"0\" duration=\"PT0H0M9.447S\">\n <AdaptationSet id=\"0\" contentType=\"video\" width=\"1080\" height=\"1920\" frameRate=\"1000000/33000\" subsegmentAlignment=\"true\" par=\"9:16\">\n <Representation id=\"975833693104121vd\" bandwidth=\"906106\" codecs=\"vp09.00.40.08.00.01.01.01.01\" mimeType=\"video/webm\" sar=\"1:1\" width=\"1080\" height=\"1920\" FBQualityClass=\"hd\" FBQualityLabel=\"1080w\" FBPlaybackResolutionMos=\"0:100.00,360:95.64,480:94.73,720:93.22,1080:90.25\">\n <BaseURL urlExpiration=\"1656247406\">https://instagram.flba2-1.fna.fbcdn.net/v/t66.30100-16/49109340_1044356809505793_4396028129186514227_n.webm?_nc_ht=instagram.flba2-1.fna.fbcdn.net&amp;_nc_cat=109&amp;_nc_ohc=H-yNQwGsERYAX_LCQsM&amp;edm=AOQ1c0wBAAAA&amp;ccb=7-5&amp;oh=00_AT8sX79IIh2kMGmcWk3gIXWzHu32QVd2P_TIEkQnFVQlLA&amp;oe=62B8546E&amp;_nc_sid=8fd12b</BaseURL>\n <SegmentBase indexRange=\"314-380\" timescale=\"1000000\" FBFirstSegmentRange=\"381-263643\" FBSecondSegmentRange=\"263644-532669\" FBPrefetchSegmentRange=\"381-532669\">\n <Initialization range=\"0-313\"/>\n </SegmentBase>\n </Representation>\n <Representation id=\"2036175856589327v\" bandwidth=\"122394\" codecs=\"vp09.00.31.08.00.01.01.01.01\" mimeType=\"video/webm\" sar=\"1:1\" width=\"564\" height=\"1002\" FBQualityClass=\"sd\" FBQualityLabel=\"564w\" FBPlaybackResolutionMos=\"0:100.00,360:75.98,480:73.04,720:69.47,1080:65.09\">\n <BaseURL urlExpiration=\"1656265023\">https://instagram.flba2-1.fna.fbcdn.net/v/t66.30100-16/40790773_1191371285022323_7338357952831852985_n.webm?_nc_ht=instagram.flba2-1.fna.fbcdn.net&amp;_nc_cat=111&amp;_nc_ohc=Di6kx32csuAAX-UaXOi&amp;tn=w5aoGXTTnGFnc2lf&amp;edm=AOQ1c0wBAAAA&amp;ccb=7-5&amp;oh=00_AT9ZIeC8LC4smZxHokAD3pOZPzhqxn4xaLopdlnjQH6caA&amp;oe=62B8993F&amp;_nc_sid=8fd12b</BaseURL>\n <SegmentBase indexRange=\"314-379\" timescale=\"1000000\" FBFirstSegmentRange=\"380-32099\" FBSecondSegmentRange=\"32100-68828\" FBPrefetchSegmentRange=\"380-68828\">\n <Initialization range=\"0-313\"/>\n </SegmentBase>\n </Representation>\n <Representation id=\"404207711606235v\" bandwidth=\"226063\" codecs=\"vp09.00.31.08.00.01.01.01.01\" mimeType=\"video/webm\" sar=\"1:1\" width=\"720\" height=\"1280\" FBQualityClass=\"hd\" FBQualityLabel=\"720w\" FBPlaybackResolutionMos=\"0:100.00,360:86.02,480:83.50,720:78.60,1080:75.02\">\n <BaseURL urlExpiration=\"1656239130\">https://instagram.flba2-1.fna.fbcdn.net/v/t66.30100-16/53457328_3285345315070941_1914198770689996567_n.webm?_nc_ht=instagram.flba2-1.fna.fbcdn.net&amp;_nc_cat=109&amp;_nc_ohc=39g2GORPe5sAX_ROTuS&amp;edm=AOQ1c0wBAAAA&amp;ccb=7-5&amp;oh=00_AT9Sxm5zDayt05WOv3WjqPPHUJDH7EwyP22irPlDG9ZXTg&amp;oe=62B8341A&amp;_nc_sid=8fd12b</BaseURL>\n <SegmentBase indexRange=\"314-379\" timescale=\"1000000\" FBFirstSegmentRange=\"380-59761\" FBSecondSegmentRange=\"59762-126750\" FBPrefetchSegmentRange=\"380-126750\">\n <Initialization range=\"0-313\"/>\n </SegmentBase>\n </Representation>\n <Representation id=\"402695945052095v\" bandwidth=\"373711\" codecs=\"vp09.00.31.08.00.01.01.01.01\" mimeType=\"video/webm\" sar=\"1:1\" width=\"720\" height=\"1280\" FBQualityClass=\"hd\" FBQualityLabel=\"720w\" FBPlaybackResolutionMos=\"0:100.00,360:91.27,480:89.52,720:85.69,1080:81.50\">\n <BaseURL urlExpiration=\"1656246862\">https://instagram.flba2-1.fna.fbcdn.net/v/t66.30100-16/121405601_1450243492073578_3496207947058794632_n.webm?_nc_ht=instagram.flba2-1.fna.fbcdn.net&amp;_nc_cat=110&amp;_nc_ohc=53qhadJY-z8AX8iebbJ&amp;edm=AOQ1c0wBAAAA&amp;ccb=7-5&amp;oh=00_AT9gjkO9hecl2JyvDG6tzkgtLRN2w3MEyq0faK1NqGJGfw&amp;oe=62B8524E&amp;_nc_sid=8fd12b</BaseURL>\n <SegmentBase indexRange=\"314-380\" timescale=\"1000000\" FBFirstSegmentRange=\"381-99761\" FBSecondSegmentRange=\"99762-209004\" FBPrefetchSegmentRange=\"381-209004\">\n <Initialization range=\"0-313\"/>\n </SegmentBase>\n </Representation>\n <Representation id=\"1201834793981766v\" bandwidth=\"582788\" codecs=\"vp09.00.31.08.00.01.01.01.01\" mimeType=\"video/webm\" sar=\"1:1\" width=\"720\" height=\"1280\" FBQualityClass=\"hd\" FBQualityLabel=\"720w\" FBPlaybackResolutionMos=\"0:100.00,360:93.87,480:92.69,720:89.35,1080:85.81\">\n <BaseURL urlExpiration=\"1656247582\">https://instagram.flba2-1.fna.fbcdn.net/v/t66.30100-16/164041159_2912680769028964_4773829741974709929_n.webm?_nc_ht=instagram.flba2-1.fna.fbcdn.net&amp;_nc_cat=104&amp;_nc_ohc=yclZQvr4Yx8AX_JsgTd&amp;edm=AOQ1c0wBAAAA&amp;ccb=7-5&amp;oh=00_AT_2b4LJCZ2y_XSnk5fzKyjMsGZxgmHLBAYU3dMv3FOWGg&amp;oe=62B8551E&amp;_nc_sid=8fd12b</BaseURL>\n <SegmentBase indexRange=\"314-380\" timescale=\"1000000\" FBFirstSegmentRange=\"381-171143\" FBSecondSegmentRange=\"171144-337199\" FBPrefetchSegmentRange=\"381-337199\">\n <Initialization range=\"0-313\"/>\n </SegmentBase>\n </Representation>\n </AdaptationSet>\n <AdaptationSet segmentAlignment=\"true\" lang=\"und\" subsegmentAlignment=\"true\" subsegmentStartsWithSAP=\"1\">\n <Representation id=\"245213121154913ad\" mimeType=\"audio/mp4\" codecs=\"mp4a.40.5\" audioSamplingRate=\"44100\" startWithSAP=\"1\" bandwidth=\"92825\">\n <AudioChannelConfiguration schemeIdUri=\"urn:mpeg:dash:23003:3:audio_channel_configuration:2011\" value=\"2\"/>\n <BaseURL urlExpiration=\"1656272053\">https://instagram.flba2-1.fna.fbcdn.net/v/t50.2886-16/283452996_677683900194759_8774306006241285667_n.mp4?_nc_ht=instagram.flba2-1.fna.fbcdn.net&amp;_nc_cat=103&amp;_nc_ohc=OE_KrLYZu2UAX_1VU0q&amp;edm=AOQ1c0wBAAAA&amp;ccb=7-5&amp;oh=00_AT_yhBat18EYUPPV4o8CADxd8u_1-QKWaoLjtM_wMqEClg&amp;oe=62B8B4B5&amp;_nc_sid=8fd12b</BaseURL>\n <SegmentBase indexRangeExact=\"true\" indexRange=\"783-874\" FBFirstSegmentRange=\"875-17651\" FBSecondSegmentRange=\"17652-36349\" FBPrefetchSegmentRange=\"875-36349\">\n <Initialization range=\"0-782\"/>\n </SegmentBase>\n </Representation>\n </AdaptationSet>\n </Period>\n</MPD>",
+                "number_of_qualities": 5
+            },
+            "has_audio": true,
+            "tracking_token": "eyJ2ZXJzaW9uIjo1LCJwYXlsb2FkIjp7ImlzX2FuYWx5dGljc190cmFja2VkIjp0cnVlLCJ1dWlkIjoiMDdlODg2OGM5Nzg2NGQ2YmE2MDVjNGI4YWQ0ZWJiY2IyODQ0Njg0MjYwNTE0NzM5NDI4Iiwic2VydmVyX3Rva2VuIjoiMTY1NjEwMzQ1ODU4NHwyODQ0Njg0MjYwNTE0NzM5NDI4fDUwMjYwNDIyMDg2fDBiZDlkMWMxZTdmNzljMGUzNjZkODRkMDgxNGNkY2FiYjI5NDAzYjc1ODljMzgzZWE3YTYwMzZmMzlkNTViNTMifSwic2lnbmF0dXJlIjoiIn0=",
+            "video_url": "https://instagram.flba2-1.fna.fbcdn.net/v/t50.2886-16/283281531_118702057505791_4283631663884749787_n.mp4?_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=107&_nc_ohc=l412lkoJd5EAX8Qe8vg&edm=AOQ1c0wBAAAA&ccb=7-5&oe=62B8250F&oh=00_AT9aPcqFSbeJI4mCbn6f7MkfyQNWM9Lt_n6GDD2keKT2Ug&_nc_sid=8fd12b",
+            "video_view_count": 852,
+            "edge_media_to_caption": {
+                "edges": [
+                    {
+                        "node": {
+                            "text": "Aqui, colocamos sempre a tua saúde em primeiro lugar 💚\n.\n.\n.\n.\n.\n#humannexus #bemestar #health #performance #desportiva #fisioterapia #qualidadedevida #nutricao #enfermagem #psicologia"
+                        }
+                    }
+                ]
+            },
+            "edge_media_to_comment": {
+                "count": 0
+            },
+            "comments_disabled": false,
+            "taken_at_timestamp": 1653332849,
+            "edge_liked_by": {
+                "count": 51
+            },
+            "edge_media_preview_like": {
+                "count": 51
+            },
+            "location": {
+                "id": "627280380",
+                "has_public_page": true,
+                "name": "Humannexus",
+                "slug": "humannexus"
+            },
+            "nft_asset_info": null,
+            "thumbnail_src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/283062745_542427153989763_2089662341766081654_n.jpg?stp=c0.280.720.720a_dst-jpg_e15_s640x640&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=103&_nc_ohc=z4hZ0LSA6A8AX8QC2YO&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT9QFrw-XXq1q3puyB3aeT2Ky20ZYxSRnQrvx2RY-Tha6A&oe=62B86FED&_nc_sid=8fd12b",
+            "thumbnail_resources": [
+                {
+                    "src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/283062745_542427153989763_2089662341766081654_n.jpg?stp=c0.280.720.720a_dst-jpg_e15_s150x150&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=103&_nc_ohc=z4hZ0LSA6A8AX8QC2YO&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT8toDzQVLEmFEbs_PltJUDorGJLHME55q82ANNIS2Lsjw&oe=62BC646D&_nc_sid=8fd12b",
+                    "config_width": 150,
+                    "config_height": 150
+                },
+                {
+                    "src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/283062745_542427153989763_2089662341766081654_n.jpg?stp=c0.280.720.720a_dst-jpg_e15_s240x240&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=103&_nc_ohc=z4hZ0LSA6A8AX8QC2YO&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT9tGZPOxniiFsE67_frmhnWZsMDiafoQjB_51foim3R6A&oe=62BC646D&_nc_sid=8fd12b",
+                    "config_width": 240,
+                    "config_height": 240
+                },
+                {
+                    "src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/283062745_542427153989763_2089662341766081654_n.jpg?stp=c0.280.720.720a_dst-jpg_e15_s320x320&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=103&_nc_ohc=z4hZ0LSA6A8AX8QC2YO&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT-MVfht-dLH3-S5wp72SU1sKLjYOR6Rqm2Tavov7rFmVA&oe=62BC646D&_nc_sid=8fd12b",
+                    "config_width": 320,
+                    "config_height": 320
+                },
+                {
+                    "src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/283062745_542427153989763_2089662341766081654_n.jpg?stp=c0.280.720.720a_dst-jpg_e15_s480x480&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=103&_nc_ohc=z4hZ0LSA6A8AX8QC2YO&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT9dchMd2XkiPSrXLcg5FmjZdx1dWORU0pGCsN790hy7nA&oe=62BC646D&_nc_sid=8fd12b",
+                    "config_width": 480,
+                    "config_height": 480
+                },
+                {
+                    "src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/283062745_542427153989763_2089662341766081654_n.jpg?stp=c0.280.720.720a_dst-jpg_e15_s640x640&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=103&_nc_ohc=z4hZ0LSA6A8AX8QC2YO&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT9y7L0_YxCir35p9Kfyvdmf0u2QKDPP4Nbu4Iza0K7sWw&oe=62BC646D&_nc_sid=8fd12b",
+                    "config_width": 640,
+                    "config_height": 640
+                }
+            ],
+            "felix_profile_grid_crop": null,
+            "coauthor_producers": [],
+            "pinned_for_users": [],
+            "product_type": "clips",
+            "clips_music_attribution_info": {
+                "artist_name": "clinica_humannexus",
+                "song_name": "Original Audio",
+                "uses_original_audio": true,
+                "should_mute_audio": false,
+                "should_mute_audio_reason": "",
+                "audio_id": "1403647443434171"
+            }
+        }
+    },
+    {
+        "node": {
+            "__typename": "GraphSidecar",
+            "id": "2843648823247744293",
+            "shortcode": "Cd2q4nXo60l",
+            "dimensions": {
+                "height": 1080,
+                "width": 1080
+            },
+            "display_url": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/281680456_673274997095653_3813921800571370327_n.jpg?stp=dst-jpg_e35_s1080x1080&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=101&_nc_ohc=xxYUnU7e8AcAX803hUi&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT-p7P3CfyBsYGWmgIpxonnUPsPHcjN17isEBB9AmLQtYQ&oe=62BD8605&_nc_sid=8fd12b",
+            "edge_media_to_tagged_user": {
+                "edges": [
+                    {
+                        "node": {
+                            "user": {
+                                "full_name": "Mimoso⚜️",
+                                "followed_by_viewer": false,
+                                "id": "7709015391",
+                                "is_verified": false,
+                                "profile_pic_url": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-19/286391677_1107116999880500_4302034778344308541_n.jpg?stp=dst-jpg_s150x150&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=108&_nc_ohc=deif6BeATQgAX-MwAUg&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT8Wr9kfipRpPLtxJg4j2VCuHSuRL8BSi8OvSzASyFVqsg&oe=62BD6E09&_nc_sid=8fd12b",
+                                "username": "rafaelmimoso_"
+                            },
+                            "x": 0.2983091787,
+                            "y": 0.7234299517
+                        }
+                    }
+                ]
+            },
+            "fact_check_overall_rating": null,
+            "fact_check_information": null,
+            "gating_info": null,
+            "sharing_friction_info": {
+                "should_have_sharing_friction": false,
+                "bloks_app_url": null
+            },
+            "media_overlay_info": null,
+            "media_preview": null,
+            "owner": {
+                "id": "12763251766",
+                "username": "clinica_humannexus"
+            },
+            "is_video": false,
+            "has_upcoming_event": false,
+            "accessibility_caption": "Photo shared by Humannexus on May 22, 2022 tagging @rafaelmimoso_. May be an image of 2 people and people standing.",
+            "edge_media_to_caption": {
+                "edges": [
+                    {
+                        "node": {
+                            "text": "Alguns atletas acompanhados pela Humannexus estiveram presentes durante o mês passado nos Campeonatos Nacionais de Natação 🏆\n\nUma fase final onde se reuniram os melhores atletas/equipas deste ano na modalidade! \n\nDurante as provas, tivemos dois atletas que alcançaram o tão admirável pódio! \n\n@rafaelmimoso_ sagrou-se campeão nacional de Juvenis de 50, 100 e 200 metros bruços\n\nJá @_lpcoelho tornou-se Vice Campeã Nacional de Juniores em 100 e 200 metros livres \n\nMais uma competição onde o trabalho desenvolvido e o acompanhamento desportivo dos atletas resultou no melhor contexto desportivo possível para os atletas em questão. Que juntos, continuaremos o bom trabalho até aqui desenvolvido! \n\nQue venham mais conquistas, juntos 💪🏼💪🏼💪🏼\n.\n.\n.\n.\n.\n#humannexus #bemestar #health #performance #desportiva #fisioterapia #qualidadedevida #nutricao #enfermagem #psicologia"
+                        }
+                    }
+                ]
+            },
+            "edge_media_to_comment": {
+                "count": 3
+            },
+            "comments_disabled": false,
+            "taken_at_timestamp": 1653209377,
+            "edge_liked_by": {
+                "count": 58
+            },
+            "edge_media_preview_like": {
+                "count": 58
+            },
+            "location": {
+                "id": "627280380",
+                "has_public_page": true,
+                "name": "Humannexus",
+                "slug": "humannexus"
+            },
+            "nft_asset_info": null,
+            "thumbnail_src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/281680456_673274997095653_3813921800571370327_n.jpg?stp=dst-jpg_e35_s640x640_sh0.08&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=101&_nc_ohc=xxYUnU7e8AcAX803hUi&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT-Ow5ChqyGkX2ohU1GMEX4vovIXoW9ikZkgVBRzLGwkdA&oe=62BD8605&_nc_sid=8fd12b",
+            "thumbnail_resources": [
+                {
+                    "src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/281680456_673274997095653_3813921800571370327_n.jpg?stp=dst-jpg_e35_s150x150&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=101&_nc_ohc=xxYUnU7e8AcAX803hUi&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT-kI1mZbLzhPikHfuaYN3UXS_ZLvcIg5Zy10WF7IvlWYQ&oe=62BD8605&_nc_sid=8fd12b",
+                    "config_width": 150,
+                    "config_height": 150
+                },
+                {
+                    "src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/281680456_673274997095653_3813921800571370327_n.jpg?stp=dst-jpg_e35_s240x240&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=101&_nc_ohc=xxYUnU7e8AcAX803hUi&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT-zJCvDs3lpJSQ03ELOssMDe82WHPCJ_-4WBsxWhA2RPw&oe=62BD8605&_nc_sid=8fd12b",
+                    "config_width": 240,
+                    "config_height": 240
+                },
+                {
+                    "src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/281680456_673274997095653_3813921800571370327_n.jpg?stp=dst-jpg_e35_s320x320&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=101&_nc_ohc=xxYUnU7e8AcAX803hUi&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT9K1ikTx3DHin0U2wUHLr1lWQs2qqzm6JS7GoOXQ9I8FA&oe=62BD8605&_nc_sid=8fd12b",
+                    "config_width": 320,
+                    "config_height": 320
+                },
+                {
+                    "src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/281680456_673274997095653_3813921800571370327_n.jpg?stp=dst-jpg_e35_s480x480&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=101&_nc_ohc=xxYUnU7e8AcAX803hUi&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT9uIPZfFJ0VNJZ3kqUsz6lQ3nCUrLQSQ8IMi2gz6cP8-Q&oe=62BD8605&_nc_sid=8fd12b",
+                    "config_width": 480,
+                    "config_height": 480
+                },
+                {
+                    "src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/281680456_673274997095653_3813921800571370327_n.jpg?stp=dst-jpg_e35_s640x640_sh0.08&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=101&_nc_ohc=xxYUnU7e8AcAX803hUi&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT-Ow5ChqyGkX2ohU1GMEX4vovIXoW9ikZkgVBRzLGwkdA&oe=62BD8605&_nc_sid=8fd12b",
+                    "config_width": 640,
+                    "config_height": 640
+                }
+            ],
+            "coauthor_producers": [],
+            "pinned_for_users": [],
+            "edge_sidecar_to_children": {
+                "edges": [
+                    {
+                        "node": {
+                            "__typename": "GraphImage",
+                            "id": "2843648813416165891",
+                            "shortcode": "Cd2q4eNobID",
+                            "dimensions": {
+                                "height": 1080,
+                                "width": 1080
+                            },
+                            "display_url": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/281680456_673274997095653_3813921800571370327_n.jpg?stp=dst-jpg_e35_s1080x1080&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=101&_nc_ohc=xxYUnU7e8AcAX803hUi&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT-p7P3CfyBsYGWmgIpxonnUPsPHcjN17isEBB9AmLQtYQ&oe=62BD8605&_nc_sid=8fd12b",
+                            "edge_media_to_tagged_user": {
+                                "edges": [
+                                    {
+                                        "node": {
+                                            "user": {
+                                                "full_name": "Mimoso⚜️",
+                                                "followed_by_viewer": false,
+                                                "id": "7709015391",
+                                                "is_verified": false,
+                                                "profile_pic_url": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-19/286391677_1107116999880500_4302034778344308541_n.jpg?stp=dst-jpg_s150x150&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=108&_nc_ohc=deif6BeATQgAX-MwAUg&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT8Wr9kfipRpPLtxJg4j2VCuHSuRL8BSi8OvSzASyFVqsg&oe=62BD6E09&_nc_sid=8fd12b",
+                                                "username": "rafaelmimoso_"
+                                            },
+                                            "x": 0.2983091787,
+                                            "y": 0.7234299517
+                                        }
+                                    }
+                                ]
+                            },
+                            "fact_check_overall_rating": null,
+                            "fact_check_information": null,
+                            "gating_info": null,
+                            "sharing_friction_info": {
+                                "should_have_sharing_friction": false,
+                                "bloks_app_url": null
+                            },
+                            "media_overlay_info": null,
+                            "media_preview": "ACoqnFOxTRT6DjHrHuGcgc4pjLtOOtIZ1j+99ehOPc46D605iWOfWgtrQZikxTjTc0ECA1TuY1mYBiflHQfz+tWqy42C53DJB/x61Ldjpox5m32tp66F+OFpVBX5gOMnvV2SIxjOciqeltw/1H9au3TlV46Hg0k+ppOCXu72vb8yDdTc0wGlzVnEFZZcgt7k5rTrnCTmpaudVCXK3pfY27G5jhBVztLHOccdPWrc86TL8h3YPOK53+AfjVq1Pb3/AKGnbQuUr3fqaQNJuppqOg4z/9k=",
+                            "owner": {
+                                "id": "12763251766",
+                                "username": "clinica_humannexus"
+                            },
+                            "is_video": false,
+                            "has_upcoming_event": false,
+                            "accessibility_caption": "Photo shared by Humannexus on May 22, 2022 tagging @rafaelmimoso_. May be an image of 2 people and people standing."
+                        }
+                    },
+                    {
+                        "node": {
+                            "__typename": "GraphImage",
+                            "id": "2843648813399465884",
+                            "shortcode": "Cd2q4eMot-c",
+                            "dimensions": {
+                                "height": 1079,
+                                "width": 1080
+                            },
+                            "display_url": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/283494619_750100569739288_8062478852093450924_n.jpg?stp=dst-jpg_e35_s1080x1080&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=104&_nc_ohc=IqkDWmpvfV4AX_LUWJT&tn=w5aoGXTTnGFnc2lf&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT-1AzjGklNr_qJNDSbSkf45Lj9g4CqhOxy_Ckak2DCxbg&oe=62BD0205&_nc_sid=8fd12b",
+                            "edge_media_to_tagged_user": {
+                                "edges": []
+                            },
+                            "fact_check_overall_rating": null,
+                            "fact_check_information": null,
+                            "gating_info": null,
+                            "sharing_friction_info": {
+                                "should_have_sharing_friction": false,
+                                "bloks_app_url": null
+                            },
+                            "media_overlay_info": null,
+                            "media_preview": "ACoqkFPFMFPFI4yRYywyPXFNK7Tg9RTfPSPhvr3/AFwOlPJ3HI70FW0uNpKdTaCSMHFNeXbjuTwB/n9aaTUeMsGz0BHtzSbNqcHPXotwMyliDwQDu+g/nT4LpZeBwQOntWO5IY5OSep9c06F9sgPv/PihLqaSjpbtexvbqbuppNNzQcow1Du+TOef/r1Mag7H8aLXOqlNxTXczpQQ3PPFNjGXA9xU1198fQf1qzaf6tvqKew3rf0ZbLUm6o6bSOU/9k=",
+                            "owner": {
+                                "id": "12763251766",
+                                "username": "clinica_humannexus"
+                            },
+                            "is_video": false,
+                            "has_upcoming_event": false,
+                            "accessibility_caption": "Photo by Humannexus on May 22, 2022. May be an image of 2 people and people standing."
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "node": {
+            "__typename": "GraphImage",
+            "id": "2841102259165723136",
+            "shortcode": "Cdtn3OwIfoA",
+            "dimensions": {
+                "height": 1080,
+                "width": 1080
+            },
+            "display_url": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/281668713_3352013535085265_3440208781967495281_n.jpg?stp=dst-jpg_e35_s1080x1080&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=105&_nc_ohc=ic_fERPZNB0AX-KWoSO&tn=w5aoGXTTnGFnc2lf&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT_tl83fjhkdaVTnHZylLUpc32Z6KJ1AhJTskrG5gRqDIA&oe=62BD6673&_nc_sid=8fd12b",
+            "edge_media_to_tagged_user": {
+                "edges": []
+            },
+            "fact_check_overall_rating": null,
+            "fact_check_information": null,
+            "gating_info": null,
+            "sharing_friction_info": {
+                "should_have_sharing_friction": false,
+                "bloks_app_url": null
+            },
+            "media_overlay_info": null,
+            "media_preview": "ACoqkS4cDawDD0arIu1UfKiqfXIrIzycgdf896mUZ4AH5VHKR7ToW2l3DnGfXNNGPUfnUPI4wB/wEf4Uqsdw6dfQf4VSRDqaltBUmKRRUmKk6DGlGJGHT5jUkZwc1XctuO7ls8n3q7DAGXcTz2x9O9Wcdrt2FJ3HJ70oxkfWqjS7RmmCfueBn2p3Eot6mqAW6+/9KmzTbYpJGHHOc+tS+UPX+VQdpg3QbLMOO9UzeynjIA6YAwP0rWuvuv8AQ/yrCFK99RKKV7FhHLcHpVkxoOi4/wA/SqkfWrp6UyrCrKyDavAqcXk396qpp1UhH//Z",
+            "owner": {
+                "id": "12763251766",
+                "username": "clinica_humannexus"
+            },
+            "is_video": false,
+            "has_upcoming_event": false,
+            "accessibility_caption": "Photo by Humannexus in Humannexus. May be an image of 1 person, office and indoor.",
+            "edge_media_to_caption": {
+                "edges": [
+                    {
+                        "node": {
+                            "text": "O teu espaço. O teu conforto. A tua saúde 💚\n.\n.\n.\n.\n.⠀⠀⠀⠀⠀⠀⠀⠀\n#humannexus #bemestar #health #performance #desportiva #fisioterapia #qualidadedevida #nutricao #enfermagem #psicologia"
+                        }
+                    }
+                ]
+            },
+            "edge_media_to_comment": {
+                "count": 0
+            },
+            "comments_disabled": false,
+            "taken_at_timestamp": 1652905803,
+            "edge_liked_by": {
+                "count": 31
+            },
+            "edge_media_preview_like": {
+                "count": 31
+            },
+            "location": {
+                "id": "627280380",
+                "has_public_page": true,
+                "name": "Humannexus",
+                "slug": "humannexus"
+            },
+            "nft_asset_info": null,
+            "thumbnail_src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/281668713_3352013535085265_3440208781967495281_n.jpg?stp=dst-jpg_e35_s640x640_sh0.08&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=105&_nc_ohc=ic_fERPZNB0AX-KWoSO&tn=w5aoGXTTnGFnc2lf&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT_1NjviNZ7UVktP74W9dpyOwdmnsaqbfrVWktVKXB5nnQ&oe=62BD6673&_nc_sid=8fd12b",
+            "thumbnail_resources": [
+                {
+                    "src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/281668713_3352013535085265_3440208781967495281_n.jpg?stp=dst-jpg_e35_s150x150&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=105&_nc_ohc=ic_fERPZNB0AX-KWoSO&tn=w5aoGXTTnGFnc2lf&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT_q8Y-wJGK71q_NfB8vrTXXzgdI2cwEaGhx91t3SSxoDA&oe=62BD6673&_nc_sid=8fd12b",
+                    "config_width": 150,
+                    "config_height": 150
+                },
+                {
+                    "src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/281668713_3352013535085265_3440208781967495281_n.jpg?stp=dst-jpg_e35_s240x240&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=105&_nc_ohc=ic_fERPZNB0AX-KWoSO&tn=w5aoGXTTnGFnc2lf&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT-uBdvbmEF6Ji5Z4IlC6_AW3BvCSWvwUiZ9vHyinWW1Yw&oe=62BD6673&_nc_sid=8fd12b",
+                    "config_width": 240,
+                    "config_height": 240
+                },
+                {
+                    "src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/281668713_3352013535085265_3440208781967495281_n.jpg?stp=dst-jpg_e35_s320x320&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=105&_nc_ohc=ic_fERPZNB0AX-KWoSO&tn=w5aoGXTTnGFnc2lf&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT-KdM6DtZEoQiysl0NY8MxNZrcg4bOuzAhGwOaLojdp5w&oe=62BD6673&_nc_sid=8fd12b",
+                    "config_width": 320,
+                    "config_height": 320
+                },
+                {
+                    "src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/281668713_3352013535085265_3440208781967495281_n.jpg?stp=dst-jpg_e35_s480x480&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=105&_nc_ohc=ic_fERPZNB0AX-KWoSO&tn=w5aoGXTTnGFnc2lf&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT8fvdwBFhgFOAueHW4mgVUgWy3B_sS-AbZtVYwzyA8nuA&oe=62BD6673&_nc_sid=8fd12b",
+                    "config_width": 480,
+                    "config_height": 480
+                },
+                {
+                    "src": "https://instagram.flba2-1.fna.fbcdn.net/v/t51.2885-15/281668713_3352013535085265_3440208781967495281_n.jpg?stp=dst-jpg_e35_s640x640_sh0.08&_nc_ht=instagram.flba2-1.fna.fbcdn.net&_nc_cat=105&_nc_ohc=ic_fERPZNB0AX-KWoSO&tn=w5aoGXTTnGFnc2lf&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT_1NjviNZ7UVktP74W9dpyOwdmnsaqbfrVWktVKXB5nnQ&oe=62BD6673&_nc_sid=8fd12b",
+                    "config_width": 640,
+                    "config_height": 640
+                }
+            ],
+            "coauthor_producers": [],
+            "pinned_for_users": []
+        }
+    }
+]
