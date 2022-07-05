@@ -19,7 +19,7 @@ export default {
 
 <template>
   <div
-    class="flex flex-col items-center w-80 bg-white rounded-sm border border-gray-200 dark:bg-gray-800 dark:border-gray-700 shadow-md p-4"
+    class="flex flex-col items-center w-80 bg-gray-50 rounded-sm border border-gray-50 dark:bg-gray-800 dark:border-gray-700 shadow-lg p-4"
   >
     <slot name="icon" />
     <span class="text-md text-black dark:text-white">{{ identifier }}</span>

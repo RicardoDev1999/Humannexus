@@ -9,9 +9,13 @@ export default {
 </script>
 
 <template>
-  <main class="dark:bg-gray-800">
+  <main class="dark:bg-gray-800 bg-gray-100">
     <div class="mx-auto container pt-12">
-      <title-component text="Apresentamos" />
+      <title-component>
+        <template #text>
+          <div class="text-4xl">Apresentamos</div>
+        </template>
+      </title-component>
 
       <carousel :items-to-show="1" :wrap-around="true" :autoplay="2500">
         <slide :key="1">
@@ -31,9 +35,11 @@ export default {
         </slide>
       </carousel>
 
-      <!-- O que esperar de nos -->
-
-      <title-component text="O que esperar de nós" class="pb-8" />
+      <title-component class="pb-8">
+        <template #text>
+          <div>O que esperar de nós</div>
+        </template>
+      </title-component>
 
       <div
         class="flex flex-col lg:flex-row place-items-center lg:place-items-stretch justify-center gap-4"
@@ -112,7 +118,11 @@ export default {
         </div>
       </div>
 
-      <title-component class="pt-8 pb-8" text="Redes Sociais" />
+      <title-component class="pt-8 pb-8">
+        <template #text>
+          <div>Redes Sociais</div>
+        </template>
+      </title-component>
 
       <div
         class="flex flex-col md:flex-row place-items-center md:place-items-stretch justify-center gap-4"
@@ -129,7 +139,7 @@ export default {
         </social-card>
 
         <social-card
-          identifier="@Humannexuslda"
+          identifier="#Humannexuslda"
           href="https://www.facebook.com/Humannexuslda/"
         >
           <template #icon>
@@ -140,7 +150,11 @@ export default {
         </social-card>
       </div>
 
-      <title-component class="pt-8 pb-8" text="TO DO" />
+      <title-component class="pt-8 pb-8">
+        <template #text>
+          <div>TO DO</div>
+        </template>
+      </title-component>
     </div>
   </main>
 </template>
