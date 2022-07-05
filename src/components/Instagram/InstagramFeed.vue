@@ -1,6 +1,5 @@
 <script>
 import InstagramFeedItem from "@/components/Instagram/InstagramFeedItem.vue";
-import IconLoader from "@/components/icons/IconLoader.vue";
 
 // import axios from "axios";
 import { ref } from "vue";
@@ -19,36 +18,35 @@ export default {
       props.nrItems > 0
         ? Feed.map((v) => ({
             postUrl: `https://www.instagram.com/p/${v.node.shortcode}`,
-            thumbnailSrc: v.node.thumbnail_src,
+            thumbnailSrc:
+              "https://scontent-iad3-1.cdninstagram.com/v/t51.2885-15/291000327_541025877724373_1606811833989774305_n.jpg?stp=dst-jpg_e15_s640x640&_nc_ht=scontent-iad3-1.cdninstagram.com&_nc_cat=105&_nc_ohc=MhQkszZ5lEQAX_vqE5k&tn=qkqh8iLQuzD4cCTq&edm=APU89FABAAAA&ccb=7-5&oh=00_AT-x7WUhayOjJBjK9o_efZWgKZakMN5J-h4OKoCFYCH85w&oe=62CBD2E4&_nc_sid=86f79a",
             isVideo: v.node.is_video,
           })).slice(-props.nrItems)
         : []
     );
 
+    // const options = {
+    //   method: "GET",
+    //   url: "https://instagram130.p.rapidapi.com/account-feed",
+    //   params: { username: "clinica_humannexus" },
+    //   headers: {
+    //     "X-RapidAPI-Key": "f59ee3a3d6msh4b6bf830507a870p117a90jsn3627ef305f75",
+    //     "X-RapidAPI-Host": "instagram130.p.rapidapi.com",
+    //   },
+    // };
+
+    // axios
+    //   .request(options)
+    //   .then(function (response) {
+    //     console.log(response.data);
+    //   })
+    //   .catch(function (error) {
+    //     console.error(error);
+    //   });
+
     return { feed };
   },
 };
-
-// const options = {
-//   method: "GET",
-//   url: "https://instagram130.p.rapidapi.com/account-feed",
-//   params: { username: "clinica_humannexus" },
-//   headers: {
-//     "X-RapidAPI-Key": "f59ee3a3d6msh4b6bf830507a870p117a90jsn3627ef305f75",
-//     "X-RapidAPI-Host": "instagram130.p.rapidapi.com",
-//   },
-// };
-
-// axios
-//   .request(options)
-//   .then(function (response) {
-//     feed.value = response.data.map((v) => {
-//       v.display_url, v.is_video;
-//     });
-//   })
-//   .catch(function (error) {
-//     console.error(error);
-//   });
 </script>
 
 <template>

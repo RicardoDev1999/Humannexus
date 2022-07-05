@@ -1,35 +1,31 @@
 <script>
-import InstagramFeed from "@/components/Instagram/InstagramFeed.vue";
 import "vue3-carousel/dist/carousel.css";
 import { Carousel, Slide } from "vue3-carousel";
+import SocialCard from "../components/SocialCard.vue";
 
 export default {
-  components: { InstagramFeed, Carousel, Slide },
+  components: { Carousel, Slide, SocialCard },
 };
 </script>
 
 <template>
-  <main>
-    <div class="flex justify-center mt-8">
-      <img
-        src="http://humannexus.pt/online/images/headers/a_presentamos.png"
-        class="object-contain w-[28rem]"
-        alt="..."
-      />
-    </div>
+  <main class="dark:bg-gray-800">
+    <div class="mx-auto container pt-12">
+      <title-component text="Apresentamos" />
 
-    <div class="mx-auto container">
       <carousel :items-to-show="1" :wrap-around="true" :autoplay="2500">
         <slide :key="1">
-          <div class="carousel__item">
+          <div class="carousel__item text-black dark:text-white text-xl">
             CONFIANÇA, SEGURANÇA E BEM ESTAR DOS PACIENTES
           </div>
         </slide>
         <slide :key="2">
-          <div class="carousel__item">SERVIÇOS E TRATAMENTOS DE CONFIANÇA</div>
+          <div class="carousel__item text-black dark:text-white text-xl">
+            SERVIÇOS E TRATAMENTOS DE CONFIANÇA
+          </div>
         </slide>
         <slide :key="3">
-          <div class="carousel__item">
+          <div class="carousel__item text-black dark:text-white text-xl">
             TRATAMENTOS PARA PROMOVER QUALIDADE DE VIDA AOS PACIENTES
           </div>
         </slide>
@@ -37,16 +33,10 @@ export default {
 
       <!-- O que esperar de nos -->
 
-      <div class="flex justify-center mt-8">
-        <img
-          src="http://humannexus.pt/online/images/headers/o_que_esperar_de_nos.png"
-          class="object-contain w-[28rem]"
-          alt="..."
-        />
-      </div>
+      <title-component text="O que esperar de nós" class="pb-8" />
 
       <div
-        class="flex flex-col md:flex-row place-items-center md:place-items-stretch justify-center gap-4 mt-8"
+        class="flex flex-col lg:flex-row place-items-center lg:place-items-stretch justify-center gap-4"
       >
         <div
           class="flex flex-col basis-1/3 items-center max-w-sm pt-4 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
@@ -121,11 +111,36 @@ export default {
           </div>
         </div>
       </div>
-      <div class="px-5 py-6 mx-auto">
-        <p class="bold text-2xl">O nosso instagram</p>
+
+      <title-component class="pt-8 pb-8" text="Redes Sociais" />
+
+      <div
+        class="flex flex-col md:flex-row place-items-center md:place-items-stretch justify-center gap-4"
+      >
+        <social-card
+          identifier="@clinica_humannexus"
+          href="https://www.instagram.com/clinica_humannexus/"
+        >
+          <template #icon>
+            <div>
+              <instagram-icon class="w-24" />
+            </div>
+          </template>
+        </social-card>
+
+        <social-card
+          identifier="@Humannexuslda"
+          href="https://www.facebook.com/Humannexuslda/"
+        >
+          <template #icon>
+            <div>
+              <facebook-icon class="w-24" />
+            </div>
+          </template>
+        </social-card>
       </div>
 
-      <instagram-feed nrItems="6" />
+      <title-component class="pt-8 pb-8" text="TO DO" />
     </div>
   </main>
 </template>
@@ -135,12 +150,9 @@ export default {
   min-height: 200px;
   width: 100%;
   background-color: transparent;
-  color: black;
-  font-size: 20px;
   border-radius: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 </style>
->
