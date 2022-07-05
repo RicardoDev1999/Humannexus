@@ -1,13 +1,40 @@
 <script>
 import InstagramFeed from "@/components/Instagram/InstagramFeed.vue";
+import "vue3-carousel/dist/carousel.css";
+import { Carousel, Slide } from "vue3-carousel";
+
 export default {
-  components: { InstagramFeed },
+  components: { InstagramFeed, Carousel, Slide },
 };
 </script>
 
 <template>
   <main>
+    <div class="flex justify-center mt-8">
+      <img
+        src="http://humannexus.pt/online/images/headers/a_presentamos.png"
+        class="object-contain w-[28rem]"
+        alt="..."
+      />
+    </div>
+
     <div class="mx-auto container">
+      <carousel :items-to-show="1" :wrap-around="true" :autoplay="2500">
+        <slide :key="1">
+          <div class="carousel__item">
+            CONFIANÇA, SEGURANÇA E BEM ESTAR DOS PACIENTES
+          </div>
+        </slide>
+        <slide :key="2">
+          <div class="carousel__item">SERVIÇOS E TRATAMENTOS DE CONFIANÇA</div>
+        </slide>
+        <slide :key="3">
+          <div class="carousel__item">
+            TRATAMENTOS PARA PROMOVER QUALIDADE DE VIDA AOS PACIENTES
+          </div>
+        </slide>
+      </carousel>
+
       <!-- O que esperar de nos -->
 
       <div class="flex justify-center mt-8">
@@ -102,3 +129,18 @@ export default {
     </div>
   </main>
 </template>
+
+<style scoped>
+.carousel__item {
+  min-height: 200px;
+  width: 100%;
+  background-color: transparent;
+  color: black;
+  font-size: 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+</style>
+>
