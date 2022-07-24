@@ -1,0 +1,17 @@
+[
+    { 
+        "identifier": "realized_appointments",
+        "key" : "Consultas Realizadas",
+        "value": 246 
+    },
+    { 
+        "identifier": "realized_treatmeants",
+        "key" : "Tratamentos Realizados",
+        "value": 346 
+    },
+    { 
+        "identifier": "realized_classes",
+        "key" : "Classes Realizados",
+        "value": 16 
+    }
+]

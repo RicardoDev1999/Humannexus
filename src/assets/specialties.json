@@ -1,0 +1,26 @@
+[
+    {
+        "title": "Enfermagem",
+        "description": "Visa a prestação de cuidados de Enfermagem personalizados a indivíduos ou famílias"
+    },
+    {
+        "title": "Fisioterapia",
+        "description": "Fisioterapia visam identificar e intervir nas estruturas responsáveis pelo mecanismo de lesão."
+    },
+    {
+        "title": "Nutrição",
+        "description": "Ser saudável é fundamental para um crescimento, desenvolvimento e manutenção do organismo."
+    },
+    {
+        "title": "Performance Desportiva",
+        "description": "Atualmente, a prática de desporto tem-se tornado um hábito cada vez mais presente na vida das pessoas."
+    },
+    {
+        "title": "Exames Médicos e Desportivos",
+        "description": "A Psicologia é a ciência que estuda o comportamento e os processos mentais. "
+    },
+    {
+        "title": "Coaching",
+        "description": "Ajuda em alcançar melhores resultados na sua vida pessoal e profissional. "
+    }
+]
