@@ -1,0 +1,270 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Button from "../../components/Button.astro";
+
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+import { sendEmail } from "../../scripts/sendEmail";
+
+import { showDialog } from "../../stores/ToastStore";
+
+const reference = Astro.url.searchParams.get("ref")! || "";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+let presetMessage = null;
+
+switch (reference) {
+  case "voucher":
+    presetMessage =
+      "Estou a entrar em contacto porque gostaria de adquirir um voucher...";
+    break;
+  case "schedule":
+    presetMessage =
+      "Estou a entrar em contacto porque gostaria de marcar uma consulta de...";
+    break;
+  case "pricing":
+    presetMessage =
+      "Estou a entrar em contacto porque gostaria de ter conhecimento do preçário...";
+    break;
+}
+
+const errors = { username: "", email: "", phonenumber: "", message: "" };
+
+const showErrorDialog = () =>
+  showDialog(
+    "E-mail não foi enviado.",
+    "Ocorreu um erro a enviar o email, por favor tente de novo mais tarde.",
+    "error"
+  );
+
+const showSuccessDialog = () =>
+  showDialog(
+    "E-mail enviado com sucesso!",
+    "Obrigado pelo seu contacto. Responderemos assim que possível.",
+    "success"
+  );
+
+if (Astro.request.method === "POST") {
+  try {
+    const data = await Astro.request.formData();
+    const name = data.get("name");
+    const email = data.get("email");
+    const phonenumber = data.get("phonenumber");
+    const message = data.get("message");
+
+    if (!name || !email || !phonenumber || !message) {
+      return;
+    }
+
+    var success = await sendEmail(name, email, phonenumber, message);
+
+    if (!success) {
+      return showErrorDialog();
+    }
+
+    showSuccessDialog();
+  } catch (error) {
+    showErrorDialog();
+    console.error(error);
+  }
+}
+---
+
+<BaseLayout title="Contactos">
+  <section class="flex flex-col justify-center items-center gap-y-3">
+    <h1 class="text-h-800 text-center text-2xl font-bold">
+      Pedido de contacto
+    </h1>
+    <p class="text-h-600 text-center text-base font-medium">
+      Se pretende que entremos em contacto consigo pode enviar um pedido de
+      contacto através do formulário.
+    </p>
+  </section>
+  <section aria-labelledby="Formulário Contactar" class="mx-2">
+    <form
+      method="POST"
+      class="relative flex flex-col gap-y-3 flex-1 w-full p-8 pb-12 rounded-lg border-2 border-h-900"
+    >
+      <div aria-describedby="name">
+        <label for="name" class="block mb-2 text-sm font-medium text-h-800"
+          >Nome
+        </label>
+        <input
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          type="text"
+          name="name"
+          required
+        />
+        {
+          errors.username && (
+            <span class="text-sm text-red-600">{errors.username}</span>
+          )
+        }
+      </div>
+      <div aria-describedby="email">
+        <label for="email" class="block mb-2 text-sm font-medium text-h-800"
+          >Email
+        </label>
+        <input
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          type="email"
+          name="email"
+          required
+        />
+        {
+          errors.email && (
+            <span class="text-sm text-red-600">{errors.email}</span>
+          )
+        }
+      </div>
+      <div aria-describedby="phonenumber">
+        <label
+          for="phonenumber"
+          class="block mb-2 text-sm font-medium text-h-800"
+          >Telemóvel
+        </label>
+        <input
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          type="number"
+          name="phonenumber"
+          required
+        />
+        {
+          errors.phonenumber && (
+            <span class="text-sm text-red-600">{errors.phonenumber}</span>
+          )
+        }
+      </div>
+      <div aria-describeby="message">
+        <label for="message" class="block mb-2 text-sm font-medium text-h-800"
+          >Mensagem
+        </label>
+        <textarea
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          name="message"
+          set:text={presetMessage}
+          rows="10"
+          required
+        />
+        {
+          errors.message && (
+            <span class="text-sm text-red-600">{errors.message}</span>
+          )
+        }
+      </div>
+      <div
+        class="flex items-center align-middle gap-2"
+        aria-describedby="terms-and-conditions-plus-privacy-policy"
+      >
+        <input
+          class="cursor-pointer w-4 h-4"
+          id="terms-and-policy-plus-privacy-policy"
+          type="checkbox"
+          required
+        />
+        <label
+          class="cursor-pointer text-sm font-medium text-h-800"
+          for="terms-and-policy-plus-privacy-policy"
+          >Aceito os
+          <a
+            class="font-semibold hover:font-bold"
+            href="/terms-and-conditions"
+            target="_blank">termos e condições</a
+          > e a
+          <a
+            class="font-semibold hover:font-bold"
+            href="/privacy-policy"
+            target="_blank">política de privacidade.</a
+          >
+        </label>
+      </div>
+      <div class="absolute right-3 -bottom-7">
+        <Button text="Enviar" />
+      </div>
+    </form>
+  </section>
+  <section aria-labelledby="Como Chegar" class="mt-12">
+    <div class="mx-auto text-center mb-8 lg:mb-8">
+      <p
+        class="mb-4 sm:text-2xl text-2xl tracking-tight font-extrabold text-h-600"
+      >
+        {t("contacts.travel.title")}
+      </p>
+      <span class="text-sm">{t("contacts.travel.subtitle")}</span>
+    </div>
+    <div class="mapouter">
+      <div class="gmap_canvas">
+        <iframe
+          height="500"
+          id="gmap_canvas"
+          src="https://maps.google.com/maps?q=Humannexus&t=&z=15&ie=UTF8&iwloc=&output=embed"
+          frameborder="0"
+          scrolling="no"
+          marginheight="0"
+          marginwidth="0"></iframe>
+      </div>
+    </div>
+    <div class="directions--grid mt-8">
+      <div class="directions--grid-items">
+        <p class="directions--grid-item-title">
+          {t("contacts.travel.subway.title")}
+        </p>
+        <span class="directions--grid-item-description"
+          >{t("contacts.travel.subway.description")}</span
+        >
+      </div>
+      <div class="directions--grid-items">
+        <p class="directions--grid-item-title">
+          {t("contacts.travel.bus.title")}
+        </p>
+        <span class="directions--grid-item-description">
+          {t("contacts.travel.bus.description")}</span
+        >
+      </div>
+      <div class="directions--grid-items">
+        <p class="directions--grid-item-title">
+          {t("contacts.travel.train.title")}
+        </p>
+        <span class="directions--grid-item-description"
+          >{t("contacts.travel.train.description")}</span
+        >
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style scoped>
+  .mapouter {
+    display: flex;
+    justify-self: center;
+    text-align: right;
+    height: 500px;
+    width: 100%;
+  }
+  .gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 500px;
+    width: 100%;
+  }
+  .gmap_canvas iframe {
+    height: 500px;
+    width: 100%;
+  }
+
+  .directions--grid {
+    @apply grid lg:grid-cols-3 grid-cols-1 grid-flow-row gap-8;
+  }
+  .directions--grid-items {
+    @apply flex flex-col justify-center text-center;
+  }
+
+  .directions--grid-item-title {
+    @apply text-lg font-semibold text-h-600;
+  }
+
+  .directions--grid-item-description {
+    @apply mt-2 text-sm;
+  }
+</style>

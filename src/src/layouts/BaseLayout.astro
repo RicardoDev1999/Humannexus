@@ -1,0 +1,103 @@
+---
+import "flowbite";
+
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Toast from "../components/Toast.astro";
+import Loading from "../components/Loading.astro";
+
+import { ViewTransitions } from "astro:transitions";
+
+import { useStoryblokApi } from "@storyblok/astro";
+import { getStory } from "../scripts/astro/services";
+
+let headerStory, footerStory;
+
+const asParam = Astro.url.searchParams.get("as")! || "";
+const isStudio = asParam === "studio";
+
+try {
+  const storyblokApi = useStoryblokApi();
+  headerStory = await getStory(isStudio ? "studio/header" : "header", storyblokApi);
+} catch (error) {
+  console.error(error);
+  return Astro.redirect("/400");
+}
+
+try {
+  const storyblokApi = useStoryblokApi();
+  footerStory = await getStory(isStudio ? "studio/footer" : "footer", storyblokApi);
+} catch (error) {
+  console.error(error);
+  return Astro.redirect("/400");
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta
+      name="description"
+      content="Humannexus - Saúde & Performance Desportiva"
+    />
+    <link rel="icon" type="image/jpg" href="/favicon.jpg" slot="header" />
+    <slot name="header" />
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- End Google Font -->
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+
+    <ViewTransitions />
+  </head>
+  <body>
+    <Header
+      headerStory={headerStory}
+      transition:name="header"
+      transition:persist
+    />
+    <Loading />
+    <main class="flex flex-col max-w-screen-xl mt-8 mx-auto gap-y-8">
+      <Toast />
+      <slot />
+    </main>
+    <Footer
+      footerStory={footerStory}
+      transition:name="footer"
+      transition:persist
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script is:inline>
+      document.addEventListener("astro:before-preparation", () => {
+        //Restart loading animation
+        document.querySelector("#loading svg image").style.transform = null;
+        document.querySelector("#loading").style.opacity = 100;
+      });
+      document.addEventListener("astro:after-preparation", () => {
+        document.querySelector("#loading").style.opacity = 0;
+      });
+    </script>
+    <style>
+      html {
+        overflow-x: hidden;
+      }
+
+      body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+    </style>
+  </body>
+</html>

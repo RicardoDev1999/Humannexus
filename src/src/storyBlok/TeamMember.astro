@@ -1,0 +1,38 @@
+---
+import { Image } from "astro:assets";
+
+import { storyblokEditable } from "@storyblok/astro";
+import { renderRichText } from "@storyblok/astro";
+
+const { story, blok } = Astro.props;
+
+const description = renderRichText(blok.description);
+---
+
+<main {...storyblokEditable(blok)}>
+  <div class="flex flex-col items-center">
+    <Image
+      class="md:w-64 md:h-64 sm:w-48 sm:h-48 w-36 h-36 object-center object-cover rounded-3xl shadow-md shadow-slate-300"
+      width="256"
+      height="256"
+      alt={story.name}
+      src={blok.photo?.filename ?? "/default-avatar.png"}
+      decoding="async"
+      loading="lazy"
+    />
+    <span class="flex mt-4 text-2xl text-h-800 font-semibold"
+      >{story.name}</span
+    >
+    <span class="flex mt-1 text-sm text-h-600 font-light"
+      >{blok.role}</span
+    >
+    <article class="max-w-full m-12 prose prose-md lg:prose-lg prose-headings:text-h-800" set:html={description} />
+  </div>
+</main>
+
+<style scoped>
+    .prose :is(:where(b):not(:where([class~="not-prose"] *))) {
+      @apply text-h-500;
+    }
+  </style>
+  

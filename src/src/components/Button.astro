@@ -1,0 +1,13 @@
+---
+const { text, variant } = Astro.props;
+---
+
+<button
+  type="submit"
+  class:list={[
+    "block w-42.5 h-14 px-3 py-2 content-center align-baseline rounded-3xl shadow-button hover:brightness-110 hover:shadow-md",
+    variant === "light" ? "bg-h-700" : "bg-h-900",
+  ]}
+>
+  <span class="text-white text-base font-semibold">{text}</span>
+</button>

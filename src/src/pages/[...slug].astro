@@ -1,0 +1,27 @@
+---
+import { useStoryblokApi } from "@storyblok/astro";
+import { getStory } from "../scripts/astro/services";
+import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
+
+import Layout from "../layouts/BaseLayout.astro";
+
+const asParam = Astro.url.searchParams.get("as")! || "";
+const isStudio = asParam === "studio";
+
+const LayoutComponent = Layout;
+
+const slug = Astro.params.slug === undefined ? "home" : Astro.params.slug;
+
+let story;
+
+try {
+  const storyblokApi = useStoryblokApi();
+  story = await getStory(slug, storyblokApi);
+} catch (error) {
+  return Astro.redirect("/404");
+}
+---
+
+<LayoutComponent title={story.name}>
+  <StoryblokComponent blok={story.content} story={story} />
+</LayoutComponent>

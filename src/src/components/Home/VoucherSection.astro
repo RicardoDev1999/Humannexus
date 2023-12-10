@@ -1,0 +1,29 @@
+---
+import HomeCard from "../HomeCard.astro";
+
+const { homeStory } = Astro.props;
+
+const asParam = Astro.url.searchParams.get("as")! || "";
+const isStudio = asParam === "studio";
+
+const t = "Ofereça um voucher!";
+const d =
+  "Sessões de fisioterapia especializada, massagens desportivas, massagens terapêuticas, tratamentos de estética, drenagens, sessões de osteopatia ou acupuntura, aulas de Yoga, aulas de Pilates para Grávidas, aulas de Yoga baby, aulas de Preparação para o Parto ou de de Recuperação do Parto… são muitas as ideias de ofertas que serão garantidamente um sucesso!";
+---
+
+<section
+  class="flex flex-row m-auto p-1 items-center justify-center md:p-0 lg:w-10/12"
+>
+  <form class="w-full md:w-2/3" action="/contacts" method="get">
+    {isStudio && <input type="hidden" name="as" value="studio" />}
+    <input type="hidden" name="ref" value="voucher" />
+    <HomeCard title={t} description={d} buttonText="Oferecer" />
+  </form>
+  <div class="hidden md:block w-1/3">
+    <img
+      class="object-center object-contain"
+      src={homeStory.content.voucher_image.filename}
+      alt="Voucher"
+    />
+  </div>
+</section>
