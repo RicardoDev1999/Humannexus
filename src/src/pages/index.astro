@@ -2,7 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 import { useStoryblokApi } from "@storyblok/astro";
-import { getHomepageContent } from "../scripts/astro/services";
+import { getStory } from "../scripts/astro/services";
 
 import CarouselSection from "../components/Home/CarouselSection.astro";
 import VoucherSection from "../components/Home/VoucherSection.astro";
@@ -10,16 +10,14 @@ import StudioSection from "../components/Home/StudioSection.astro";
 import ScheduleSection from "../components/Home/ScheduleSection.astro";
 import ServicesSection from "../components/Home/ServicesSection.astro";
 
-let homeStory, servicesStories;
+let homeStory;
 
 const asParam = Astro.url.searchParams.get("as")! || "";
 const isStudio = asParam === "studio";
 
 try {
   const storyblokApi = useStoryblokApi();
-  const { home, services } = await getHomepageContent(storyblokApi, isStudio);
-  homeStory = home;
-  servicesStories = services;
+  homeStory = await getStory(isStudio ? "studio/home" : "home", storyblokApi);
 } catch (error) {
   return Astro.redirect("/400");
 }
@@ -28,7 +26,7 @@ try {
 <BaseLayout title="Inicio">
   <CarouselSection homeStory={homeStory} />
   <ScheduleSection />
-  { !isStudio && <StudioSection homeStory={homeStory} /> }
+  {!isStudio && <StudioSection homeStory={homeStory} />}
   <VoucherSection homeStory={homeStory} />
-  <ServicesSection servicesStories={servicesStories} />
+  <ServicesSection homeStory={homeStory} />
 </BaseLayout>

@@ -59,37 +59,6 @@ export const getStories = async (
   return data?.stories;
 };
 
-export const getHomepageContent = async (
-  storyBlokApi,
-  isStudio = false
-) => {
-  let home, services;
-  try {
-    const stories = await getStories(
-      storyBlokApi,
-      {
-        filter_query: {
-          __or: [
-            { component: { in: "service" } },
-            {
-              component: { in: "homepage" },
-              name: { is: "Home" },
-            },
-          ],
-        },
-      },
-      isStudio
-    );
-
-    home = stories?.filter((x) => x?.content?.component === "homepage");
-    services = stories?.filter((x) => x?.content?.component === "service");
-  } catch (err) {
-    console.error(err);
-  }
-
-  return { home: (home || [])[0], services };
-};
-
 export const getLocalizationFromDatasource = async (
   storyBlokApi
 ) => {

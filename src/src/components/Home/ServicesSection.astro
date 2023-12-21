@@ -1,36 +1,33 @@
 ---
 import { Image } from "astro:assets";
-
 import Button from "../Button.astro";
+
+import { useStoryblokApi } from "@storyblok/astro";
+import { getStories } from "../../scripts/astro/services";
 
 const asParam = Astro.url.searchParams.get("as")! || "";
 const isStudio = asParam === "studio";
 
-const { servicesStories } = Astro.props;
+const { homeStory } = Astro.props;
 
-//Sort by descinding order then get first 4 member
-const services = servicesStories
-  .sort((a, b) => {
-    const nameA = a.name.toUpperCase();
-    const nameB = b.name.toUpperCase();
+const servicesIds = homeStory?.content?.services || [];
 
-    if (nameA < nameB) {
-      return -1;
-    }
-    if (nameA > nameB) {
-      return 1;
-    }
+let servicesStories = [];
 
-    return 0;
-  })
-  .splice(0, 4);
+try {
+  const storyblokApi = useStoryblokApi();
+  servicesStories = await getStories(storyblokApi, { by_uuids: String(servicesIds) }, isStudio);
+  servicesStories = servicesStories.sort((a, b) => servicesIds.indexOf(a.uuid) - servicesIds.indexOf(b.uuid)).splice(0,4);
+} catch (error) {
+  return Astro.redirect("/400");
+}
 ---
 
 <section class="flex justify-center w-full mt-4 mx-auto p-1 md:p-0">
   <div class="w-auto inline-flex flex-col items-center gap-y-9">
     <div class="flex flex-col md:flex-row items-center gap-5">
       {
-        services.map((service) => (
+        servicesStories.map((service) => (
           <a class="relative" href={service.full_slug} data-astro-prefetch>
             <div class="rounded-full shadow-md">
               <button class="flex flex-col w-[170px] h-[159px] bg-gray-200 rounded-xl">
