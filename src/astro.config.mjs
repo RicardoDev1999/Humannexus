@@ -3,6 +3,7 @@ import tailwind from "@astrojs/tailwind";
 import storyblok from "@storyblok/astro";
 import vercel from "@astrojs/vercel/serverless";
 import basicSsl from "@vitejs/plugin-basic-ssl";
+import netlify from '@astrojs/netlify/functions';
 
 // https://astro.build/config
 export default defineConfig({
@@ -18,6 +19,7 @@ export default defineConfig({
     useCustomApi: false,
     components: {
       service: "storyBlok/Service",
+      program: "storyBlok/Program",
       teamMember: "storyBlok/TeamMember",
       partner: "storyBlok/Partner"
     },
@@ -39,5 +41,7 @@ export default defineConfig({
     "@scripts/*": "./src/scripts/*"
   },
   output: "server",
-  adapter: vercel()
+  adapter: netlify({
+    edgeMiddleware: true
+  }),
 });

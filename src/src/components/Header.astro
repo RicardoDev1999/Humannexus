@@ -29,11 +29,11 @@ const { default: whatsappIcon } = await import(
   <div
     class="flex flex-1 flex-wrap lg:flex-nowrap max-w-screen-2xl h-20.5 items-center justify-between md:mx-auto lg:px-2"
   >
-    <div class="flex flex-row items-center justify-between w-full">
-      <a href={headerStory.content.logo_redirect} class="flex items-center">
+    <div class="inline-flex flex-1 flex-row items-center justify-between w-full">
+      <a href={headerStory.content.logo_redirect} class="inline-flex items-center">
         <Image
           src={logo}
-          class="w-70 h-17 mr-3 transition duration-850 hover:scale-90"
+          class="max-w-[17.5rem] max-h-[4.25rem] mr-3 transition duration-850 hover:scale-90"
           alt="Humannexus Logo"
           width="280"
           height="68"
@@ -64,7 +64,7 @@ const { default: whatsappIcon } = await import(
         </svg>
       </button>
     </div>
-    <div class="hidden w-full lg:flex lg:w-auto z-40" id="navbar-default">
+    <div class="hidden w-full lg:inline-flex lg:w-auto lg:flex-2 z-40" id="navbar-default">
       <ul
         class="flex flex-col gap-y-0.5 items-center font-semibold text-sm lg:p-0 lg:gap-4 border border-gray-100 bg-white lg:flex-row lg:mt-0 lg:border-0"
       >
