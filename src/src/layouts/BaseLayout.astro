@@ -6,8 +6,6 @@ import Footer from "../components/Footer.astro";
 import Toast from "../components/Toast.astro";
 import Loading from "../components/Loading.astro";
 
-import SpeedInsights from "@vercel/speed-insights/astro";
-
 import { ViewTransitions } from "astro:transitions";
 
 import { useStoryblokApi } from "@storyblok/astro";
@@ -69,10 +67,10 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
 
+    <script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     <ViewTransitions />
   </head>
   <body>
-    <SpeedInsights />
     <Header
       headerStory={headerStory}
       transition:name="header"

@@ -14,7 +14,7 @@ const d =
 <section
   class="flex flex-row m-auto p-1 items-center justify-center md:p-0 lg:w-10/12"
 >
-  <form class="w-full md:w-2/3" action="/contacts" method="get">
+  <form class="w-full md:w-2/3" action="/contacts" method="get" data-astro-reload>
     {isStudio && <input type="hidden" name="as" value="studio" />}
     <input type="hidden" name="ref" value="voucher" />
     <HomeCard title={t} description={d} buttonText="Oferecer" />

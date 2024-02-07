@@ -4,6 +4,7 @@ import Button from "../../components/Button.astro";
 
 import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 import { sendEmail } from "../../scripts/sendEmail";
+import { POST as turnstile } from "../turnstile";
 
 import { showDialog } from "../../stores/ToastStore";
 
@@ -47,6 +48,15 @@ const showSuccessDialog = () =>
 
 if (Astro.request.method === "POST") {
   try {
+    const turnStileResponse = await turnstile({
+      request: Astro.request.clone(),
+    });
+    const turnStileResponseJson = await turnStileResponse.json();
+
+    if (!turnStileResponseJson.success) {
+      return showErrorDialog();
+    }
+
     const data = await Astro.request.formData();
     const name = data.get("name");
     const email = data.get("email");
@@ -84,6 +94,7 @@ if (Astro.request.method === "POST") {
   <section aria-labelledby="Formulário Contactar" class="mx-2">
     <form
       method="POST"
+      name="contact-form"
       class="relative flex flex-col gap-y-3 flex-1 w-full p-8 pb-12 rounded-lg border-2 border-h-900"
     >
       <div aria-describedby="name">
@@ -179,6 +190,14 @@ if (Astro.request.method === "POST") {
           >
         </label>
       </div>
+      <div
+        class="cf-turnstile"
+        data-appearance="always"
+        data-theme="light"
+        data-language="pt"
+        data-sitekey="0x4AAAAAAARBXvF-JfG3UnQv"
+      >
+      </div>
       <div class="absolute right-3 -bottom-7">
         <Button text="Enviar" />
       </div>
@@ -199,10 +218,7 @@ if (Astro.request.method === "POST") {
           height="500"
           id="gmap_canvas"
           src="https://maps.google.com/maps?q=Humannexus&t=&z=15&ie=UTF8&iwloc=&output=embed"
-          frameborder="0"
-          scrolling="no"
-          marginheight="0"
-          marginwidth="0"></iframe>
+        ></iframe>
       </div>
     </div>
     <div class="directions--grid mt-8">

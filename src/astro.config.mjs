@@ -1,9 +1,8 @@
 import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import storyblok from "@storyblok/astro";
-import vercel from "@astrojs/vercel/serverless";
 import basicSsl from "@vitejs/plugin-basic-ssl";
-import netlify from '@astrojs/netlify/functions';
+import netlify from '@astrojs/netlify';
 
 // https://astro.build/config
 export default defineConfig({
@@ -27,12 +26,13 @@ export default defineConfig({
   }), tailwind()],
   vite: {
     define: {
-      'process.env.NODE_ENV': `'${import.meta.env.MODE}'`
+      'process.env.NODE_ENV': `'${import.meta.env.MODE}'`,
+      "process.env.RECAPTCHA_SITE_KEY": `'${import.meta.env.VITE_RECAPTCHA_SITE_KEY}'`,
     }
   },
   plugins: [basicSsl()],
   server: {
-    https: true
+    https: true,
   },
   paths: {
     "@components/*": "./src/components/*",
@@ -41,7 +41,5 @@ export default defineConfig({
     "@scripts/*": "./src/scripts/*"
   },
   output: "server",
-  adapter: netlify({
-    edgeMiddleware: true
-  }),
+  adapter: netlify(),
 });

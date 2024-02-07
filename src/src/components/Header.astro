@@ -73,7 +73,8 @@ const { default: whatsappIcon } = await import(
             <li class="flex items-center justify-center align-middle bg-h-700 lg:bg-transparent h-16 w-full whitespace-nowrap">
               <a
                 href={item.url}
-                data-astro-prefetch="tap"
+                data-astro-prefetch="hover"
+                data-astro-reload={item.isDataReload ? 'true' : undefined}
                 class:list={[
                   "block py-2 text-white rounded lg:bg-transparent lg:p-0",
                   isMenuSelected(item.url) ? "lg:text-h-800" : "lg:text-black",
@@ -127,7 +128,7 @@ const { default: whatsappIcon } = await import(
         <li
           class="flex items-center justify-center align-middle bg-h-700 lg:bg-transparent h-16 w-full"
         >
-          <form action="/contacts" method="get">
+          <form action="/contacts" method="get" data-astro-reload>
             {isStudio && <input type="hidden" name="as" value="studio" />}
             <input type="hidden" name="ref" value="pricing" />
             <button

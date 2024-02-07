@@ -2,6 +2,6 @@
    publish = "dist"
 
 [[redirects]]
-   from = "/online"
+   from = "/online/*"
    to = "/"
    status = 301
