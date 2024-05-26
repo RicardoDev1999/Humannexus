@@ -11,13 +11,13 @@
       "contacts.form.field.description": "Descrição",
       "contacts.form.button.submit": "Enviar",
       "contacts.travel.title": "Como chegar",
-      "contacts.travel.bus.description": "711, 746, 758, 764 767",
+      "contacts.travel.bus.description": "764, 1015, 1506, 1510, 1704, 1713",
       "contacts.travel.subtitle": "Para chegar a Humannexus, pode vir de transportes públicos, autocarro, comboio e metro.",
       "contacts.travel.subway.title": "Metro",
-      "contacts.travel.subway.description": "Metropolitano de Lisboa - Linha Azul - Estação de Reboleira",
+      "contacts.travel.subway.description": "Metropolitano de Lisboa - Linha Azul - Estação da Reboleira",
       "contacts.travel.bus.title": "Autocarros",
       "contacts.travel.train.title": "Comboio",
-      "contacts.travel.train.description": "CP - Linha de Sintra - Estação de Reboleira",
+      "contacts.travel.train.description": "CP - Linha de Sintra - Estação da Damaia",
       "partners.title": "Os nossos parceiros",
       "partners.subtitle": "Pretendemos fortalecer as relações institucionais e de favorecer a colaboração entre as organizações."
     }
