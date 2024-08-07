@@ -18,6 +18,12 @@ try {
     },
     isStudio
   );
+  stories.map((st) => {
+    if (!st.content?.photo) return;
+    st.content.photo.filename = st.content?.photo?.is_external_url
+      ? st.content?.photo?.filename
+      : st.content?.photo?.filename + "/m/fit-in/192x144";
+  });
 } catch (error) {
   return Astro.redirect("/400");
 }

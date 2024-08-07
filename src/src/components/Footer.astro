@@ -3,6 +3,13 @@ import { renderRichText } from "@storyblok/astro";
 
 const { footerStory } = Astro.props;
 
+footerStory?.content?.sections?.map((section) => {
+  if (!section.icon) return;
+  section.icon.filename = !section.icon.is_external_url
+    ? section.icon.filename + "/m/800x800"
+    : section.icon.filename;
+});
+
 const year = new Date().getFullYear();
 ---
 
@@ -28,16 +35,22 @@ const year = new Date().getFullYear();
         ))
       }
     </div>
-    <div class="px-4 pb-4 flex flex-col-reverse md:flex-row gap-2 justify-between">
+    <div
+      class="px-4 pb-4 flex flex-col-reverse md:flex-row gap-2 justify-between"
+    >
       <span class="text-sm text-white sm:text-center"
         >© {year} - Humannexus - Saúde & Performance Desportiva
       </span>
       <div class="flex flex-col md:flex-row gap-2 justify-between">
         <span class="text-sm text-white sm:text-center"
-          ><a class="hover:font-medium" href="/terms-and-conditions">Termos e condições</a>
+          ><a class="hover:font-medium" href="/terms-and-conditions"
+            >Termos e condições</a
+          >
         </span>
         <span class="text-sm text-white sm:text-center">
-          <a class="hover:font-medium" href="privacy-policy">Política de privacidade</a>
+          <a class="hover:font-medium" href="privacy-policy"
+            >Política de privacidade</a
+          >
         </span>
       </div>
     </div>

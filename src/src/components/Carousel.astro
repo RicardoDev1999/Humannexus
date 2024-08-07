@@ -1,5 +1,10 @@
 ---
 const { showArrows, showSliders, items } = Astro.props;
+
+items.map(item => {
+  if(!item.image) return;
+  item.image.filename = item.image.is_external_url ? item.image.filename : item.image.filename + "/m/0x384/filters:format(webp):quality(100)";
+});
 ---
 
 {

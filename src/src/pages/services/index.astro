@@ -12,26 +12,36 @@ let stories;
 
 try {
   const storyblokApi = useStoryblokApi();
-  stories = await getStories(storyblokApi, {
-    content_type: "service",
-  }, isStudio);
+  stories = await getStories(
+    storyblokApi,
+    {
+      content_type: "service",
+    },
+    isStudio
+  );
+  stories = stories.sort((a, b) => {
+    const nameA = a.name.toUpperCase();
+    const nameB = b.name.toUpperCase();
+
+    if (nameA < nameB) {
+      return -1;
+    }
+    if (nameA > nameB) {
+      return 1;
+    }
+
+    return 0;
+  });
+  stories.map((st) => {
+    if (!st.content?.image) return;
+    st.content.image.filename = st.content?.image?.is_external_url
+      ? st.content?.image?.filename
+      : st.content?.image?.filename +
+        "/m/fit-in/455x256/smart/filters:format(webp):quality(100)";
+  });
 } catch (error) {
   return Astro.redirect("/400");
 }
-
-stories = stories.sort((a, b) => {
-  const nameA = a.name.toUpperCase();
-  const nameB = b.name.toUpperCase();
-
-  if (nameA < nameB) {
-    return -1;
-  }
-  if (nameA > nameB) {
-    return 1;
-  }
-
-  return 0;
-});
 ---
 
 <BaseLayout title="Serviços">

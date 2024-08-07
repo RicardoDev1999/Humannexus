@@ -4,6 +4,12 @@ import { renderRichText } from "@storyblok/astro";
 
 const { story, blok } = Astro.props;
 
+const image = blok.photo 
+  ? blok.photo.is_external_url 
+    ? blok.photo?.filename
+    : blok.photo?.filename + "/m/0x320/filters:format(webp):quality(100)"
+  : null;
+
 const description = renderRichText(blok.description);
 ---
 
@@ -11,7 +17,7 @@ const description = renderRichText(blok.description);
   <div class="flex flex-col items-center">
     <img
       class="w-auto lg:h-80 md:h-64 sm:h-48 h-36 object-contain rounded-md shadow-md shadow-slate-300"
-      src={blok.photo.filename}
+      src={image}
       transition:name={"partner-" + blok._uid}
     />
     <span class="flex mt-4 text-2xl text-h-800 font-semibold">{story.name}</span

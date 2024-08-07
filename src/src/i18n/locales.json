@@ -1,24 +1,26 @@
 {
-    "pt": {
-      "home.whoarewe.title": "Quem Somos",
-      "home.ourservices.title": "Os Nossos Serviços",
-      "team.title": "A nossa equipa",
-      "team.subtitle": "Vem conhecer a nossa equipa de técnicos especializados!",
-      "contacts.form.title": "Pedido de contacto",
-      "contacts.form.subtitle": "Se pretende que entremos em contacto consigo pode enviar um pedido de contacto através do formulário.",
-      "contacts.form.field.name": "Nome",
-      "contacts.form.field.email": "Email",
-      "contacts.form.field.description": "Descrição",
-      "contacts.form.button.submit": "Enviar",
-      "contacts.travel.title": "Como chegar",
-      "contacts.travel.bus.description": "764, 1015, 1506, 1510, 1704, 1713",
-      "contacts.travel.subtitle": "Para chegar a Humannexus, pode vir de transportes públicos, autocarro, comboio e metro.",
-      "contacts.travel.subway.title": "Metro",
-      "contacts.travel.subway.description": "Metropolitano de Lisboa - Linha Azul - Estação da Reboleira",
-      "contacts.travel.bus.title": "Autocarros",
-      "contacts.travel.train.title": "Comboio",
-      "contacts.travel.train.description": "CP - Linha de Sintra - Estação da Damaia",
-      "partners.title": "Os nossos parceiros",
-      "partners.subtitle": "Pretendemos fortalecer as relações institucionais e de favorecer a colaboração entre as organizações."
-    }
+  "pt": {
+    "home.whoarewe.title": "Quem Somos",
+    "home.ourservices.title": "Os Nossos Serviços",
+    "home.scheduleSection.title": "Marcar uma consulta",
+    "home.scheduleSection.description": "Na nossa clínica, estamos prontos para ajudar a melhorar a sua saúde e qualidade de vida. Marcar uma consulta é simples e o primeiro passo para aliviar dores, melhorar a sua mobilidade e alcançar um estado ótimo de saúde. Os nossos experientes fisioterapeutas estão à disposição para oferecer tratamentos personalizados e eficazes. Entre em contacto connosco agora para agendar a sua consulta e dar início à sua jornada para uma vida mais saudável e ativa. Estamos ansiosos por cuidar de si e ajudá-lo a atingir os seus objetivos de saúde.",
+    "team.title": "A nossa equipa",
+    "team.subtitle": "Vem conhecer a nossa equipa de técnicos especializados!",
+    "contacts.form.title": "Pedido de contacto",
+    "contacts.form.subtitle": "Se pretende que entremos em contacto consigo pode enviar um pedido de contacto através do formulário.",
+    "contacts.form.field.name": "Nome",
+    "contacts.form.field.email": "Email",
+    "contacts.form.field.description": "Descrição",
+    "contacts.form.button.submit": "Enviar",
+    "contacts.travel.title": "Como chegar",
+    "contacts.travel.bus.description": "764, 1015, 1506, 1510, 1704, 1713",
+    "contacts.travel.subtitle": "Para chegar a Humannexus, pode vir de transportes públicos, autocarro, comboio e metro.",
+    "contacts.travel.subway.title": "Metro",
+    "contacts.travel.subway.description": "Metropolitano de Lisboa - Linha Azul - Estação da Reboleira",
+    "contacts.travel.bus.title": "Autocarros",
+    "contacts.travel.train.title": "Comboio",
+    "contacts.travel.train.description": "CP - Linha de Sintra - Estação da Damaia",
+    "partners.title": "Os nossos parceiros",
+    "partners.subtitle": "Pretendemos fortalecer as relações institucionais e de favorecer a colaboração entre as organizações."
   }
+}

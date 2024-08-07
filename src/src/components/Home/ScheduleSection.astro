@@ -1,25 +1,19 @@
 ---
 import HomeCard from "../HomeCard.astro";
 
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+
 const asParam = Astro.url.searchParams.get("as")! || "";
 const isStudio = asParam === "studio";
 
-const t = "Marcar uma consulta";
-const d =
-  "Na nossa clínica, estamos prontos para ajudar a melhorar a sua saúde e" +
-  "qualidade de vida. Marcar uma consulta é simples e o primeiro passo para" +
-  "aliviar dores, melhorar a sua mobilidade e alcançar um estado ótimo de" +
-  "saúde. Os nossos experientes fisioterapeutas estão à disposição para" +
-  "oferecer tratamentos personalizados e eficazes. Entre em contacto connosco" +
-  "agora para agendar a sua consulta e dar início à sua jornada para uma vida" +
-  "mais saudável e ativa. Estamos ansiosos por cuidar de si e ajudá-lo a" +
-  "atingir os seus objetivos de saúde.";
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <section class="w-full m-auto p-1 md:w-10/12 md:p-0">
   <form action="/contacts" method="get" data-astro-reload>
     {isStudio && <input type="hidden" name="as" value="studio" />}
     <input type="hidden" name="ref" value="schedule" />
-    <HomeCard title={t} description={d} buttonText="Marcar" />
+    <HomeCard title={t('home.scheduleSection.title')} description={t('home.scheduleSection.description')} buttonText="Marcar" />
   </form>
 </section>

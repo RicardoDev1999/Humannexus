@@ -4,6 +4,12 @@ import { renderRichText } from "@storyblok/astro";
 
 const { story, blok } = Astro.props;
 
+const image = blok.image 
+  ? blok.image.is_external_url 
+    ? blok.image?.filename
+    : blok.image?.filename + "/m/0x320/filters:format(webp):quality(100)"
+  : null;
+
 //If there isn't a description set then let's use the short description
 const descriptionIsEmpty = !blok.description || blok.description?.content[0].content === undefined;
 const description = renderRichText(!descriptionIsEmpty ? blok.description : blok.short_description);
@@ -14,7 +20,7 @@ const description = renderRichText(!descriptionIsEmpty ? blok.description : blok
     <img
       class="w-auto lg:h-80 h-auto object-cover rounded-3xl shadow-md shadow-slate-300"
       transition:name={"program-image-" + blok._uid}
-      src={blok.image?.filename}
+      src={image}
     />
     <div class="text-center mt-8 text-2xl text-h-800 font-semibold">
       {story.name}

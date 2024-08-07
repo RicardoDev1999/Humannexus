@@ -16,8 +16,20 @@ let servicesStories = [];
 
 try {
   const storyblokApi = useStoryblokApi();
-  servicesStories = await getStories(storyblokApi, { by_uuids: String(servicesIds) }, isStudio);
-  servicesStories = servicesStories.sort((a, b) => servicesIds.indexOf(a.uuid) - servicesIds.indexOf(b.uuid)).splice(0,4);
+  servicesStories = await getStories(
+    storyblokApi,
+    { by_uuids: String(servicesIds) },
+    isStudio
+  );
+  servicesStories = servicesStories
+    .sort((a, b) => servicesIds.indexOf(a.uuid) - servicesIds.indexOf(b.uuid))
+    .splice(0, 4);
+  servicesStories.map((service) => {
+    if (!service.content?.image) return;
+    service.content.image.filename = service.content?.image?.is_external_url
+      ? service.content?.image?.filename
+      : service.content?.image?.filename + "/m/170x159";
+  });
 } catch (error) {
   return Astro.redirect("/400");
 }

@@ -9,9 +9,20 @@ let stories;
 
 try {
   const storyblokApi = useStoryblokApi();
-  stories = await getStories(storyblokApi, {
-    content_type: "program",
-  }, false);
+  stories = await getStories(
+    storyblokApi,
+    {
+      content_type: "program",
+    },
+    false
+  );
+  stories.map((st) => {
+    if (!st.content?.image) return;
+    st.content.image.filename = st.content?.image?.is_external_url
+      ? st.content?.image?.filename
+      : st.content?.image?.filename +
+        "/m/fit-in/455x256/filters:format(webp):quality(100)";
+  });
 } catch (error) {
   return Astro.redirect("/400");
 }
@@ -55,8 +66,8 @@ stories = stories.sort((a, b) => {
               class="flex flex-1 w-full h-64 rounded-[2rem] object-center object-cover shadow-lg"
               src={st.content?.image?.filename}
               alt={st.name}
-              height="256"
               width="455"
+              height="256"
               decoding="async"
               loading="lazy"
             />

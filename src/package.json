@@ -8,9 +8,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "build-deploy": "vercel build",
-    "pre-deploy": "build-deploy && vercel --prebuilt",
-    "deploy": "build-deploy && vercel --prebuilt --prod"
+    "deploy": "build && netlify deploy --prod"
   },
   "dependencies": {
     "@astrojs/netlify": "^4.1.1",
