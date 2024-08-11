@@ -1,0 +1,7 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+---
+
+<BaseLayout title={Astro.props.title} hideMain="true">
+  <slot slot="beforeMain" />
+</BaseLayout>

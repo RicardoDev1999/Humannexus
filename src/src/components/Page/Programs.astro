@@ -6,43 +6,48 @@ import { getStories } from "@scripts/astro/services";
 
 import { fullSlugToUri } from "@utils/urlUtils.js";
 
-let stories;
+let storiesMapped;
 
 const { context } = Astro.params;
 
 try {
   const storyblokApi = useStoryblokApi();
-  stories = await getStories(
+  const stories = await getStories(
     storyblokApi,
     {
       content_type: "program",
     },
     context
   );
-  stories.map((st) => {
-    if (!st.content?.image) return;
+
+  storiesMapped = structuredClone(stories);
+
+  storiesMapped = storiesMapped.sort((a, b) => {
+    const nameA = a.name.toUpperCase();
+    const nameB = b.name.toUpperCase();
+
+    if (nameA < nameB) {
+      return -1;
+    }
+    if (nameA > nameB) {
+      return 1;
+    }
+
+    return 0;
+  });
+
+  storiesMapped.map((st) => {
+    if (!st.content?.image) return st;
     st.content.image.filename = st.content?.image?.is_external_url
       ? st.content?.image?.filename
       : st.content?.image?.filename +
         "/m/fit-in/455x256/filters:format(webp):quality(100)";
+    return st;
   });
 } catch (error) {
+  console.error(error);
   return Astro.redirect("/400");
 }
-
-stories = stories.sort((a, b) => {
-  const nameA = a.name.toUpperCase();
-  const nameB = b.name.toUpperCase();
-
-  if (nameA < nameB) {
-    return -1;
-  }
-  if (nameA > nameB) {
-    return 1;
-  }
-
-  return 0;
-});
 ---
 
 <main class="px-2">
@@ -54,7 +59,7 @@ stories = stories.sort((a, b) => {
   </section>
   <section class="flex flex-col mt-10 gap-y-4">
     {
-      stories.map((st, index) => (
+      storiesMapped.map((st, index) => (
         <a
           data-astro-prefetch
           href={fullSlugToUri(st.full_slug)}

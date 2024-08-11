@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 16,
+            "activePatchIndex": 18,
             "patches": [
                 {
                     "date": 1723388257888,
@@ -72,6 +72,14 @@
                 {
                     "date": 1723392180701,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,23 @@\n+---\r\n+import { useStoryblokApi } from \"@storyblok/astro\";\r\n+import { getStory } from \"@scripts/astro/services\";\r\n+import StoryblokComponent from \"@storyblok/astro/StoryblokComponent.astro\";\r\n+\r\n+import BaseLayout from \"@layouts/BaseLayout.astro\";\r\n+\r\n+const slug = Astro.params.slug === undefined ? \"home\" : Astro.params.slug;\r\n+\r\n+let story;\r\n+\r\n+try {\r\n+  const storyblokApi = useStoryblokApi();\r\n+  story = await getStory(slug, storyblokApi);\r\n+} catch (error) {\r\n+  console.error(error, slug);\r\n+  return Astro.redirect(\"/404\");\r\n+}\r\n+---\r\n+\r\n+<BaseLayout title={story.name}>\r\n+  <StoryblokComponent blok={story.content} story={story} />\r\n+</BaseLayout>\r\n"
+                },
+                {
+                    "date": 1723393587041,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n try {\r\n   const storyblokApi = useStoryblokApi();\r\n   story = await getStory(slug, storyblokApi);\r\n } catch (error) {\r\n-  console.error(error, slug);\r\n+  console.error(error);\r\n   return Astro.redirect(\"/404\");\r\n }\r\n ---\r\n \r\n"
+                },
+                {
+                    "date": 1723395916614,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { useStoryblokApi } from \"@storyblok/astro\";\r\n import { getStory } from \"@scripts/astro/services\";\r\n import StoryblokComponent from \"@storyblok/astro/StoryblokComponent.astro\";\r\n \r\n-import BaseLayout from \"@layouts/BaseLayout.astro\";\r\n+import Layout from \"@layouts/Layout.astro\";\r\n \r\n const slug = Astro.params.slug === undefined ? \"home\" : Astro.params.slug;\r\n \r\n let story;\r\n@@ -17,7 +17,7 @@\n   return Astro.redirect(\"/404\");\r\n }\r\n ---\r\n \r\n-<BaseLayout title={story.name}>\r\n+<Layout title={story.name}>\r\n   <StoryblokComponent blok={story.content} story={story} />\r\n-</BaseLayout>\r\n+</Layout>\r\n"
                 }
             ],
             "date": 1723388257888,

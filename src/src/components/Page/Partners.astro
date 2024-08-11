@@ -4,24 +4,28 @@ import { getStories } from "@scripts/astro/services";
 
 import { fullSlugToUri } from "@utils/urlUtils.js";
 
-let stories;
+let storiesMapped;
 
 const { context } = Astro.params;
 
 try {
   const storyblokApi = useStoryblokApi();
-  stories = await getStories(
+  const stories = await getStories(
     storyblokApi,
     {
       content_type: "partner",
     },
     context
   );
-  stories.map((st) => {
-    if (!st.content?.photo) return;
+
+  storiesMapped = structuredClone(stories);
+
+  storiesMapped.map((st) => {
+    if (!st.content?.photo) return st;
     st.content.photo.filename = st.content?.photo?.is_external_url
       ? st.content?.photo?.filename
       : st.content?.photo?.filename + "/m/fit-in/192x144";
+    return st;
   });
 } catch (error) {
   return Astro.redirect("/400");
@@ -39,7 +43,7 @@ try {
   class="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3 gap-x-5 gap-y-3 justify-items-center mt-10"
 >
   {
-    stories.map((st) => (
+    storiesMapped.map((st) => (
       <a href={fullSlugToUri(st.full_slug)} data-astro-prefetch>
         <div class="cursor-pointer w-48 h-full p-2 shadow-lg rounded-xl transition duration-[350ms] hover:scale-105">
           <img

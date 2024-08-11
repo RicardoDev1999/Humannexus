@@ -1,8 +1,12 @@
 ---
-import BaseLayout from "@layouts/BaseLayout.astro";
+import Layout from "@layouts/Layout.astro";
 import Page from "@components/Page/Home.astro";
+
+if(Astro.request.method !== "POST") {
+  return Astro.redirect("/context");
+}
 ---
 
-<BaseLayout title="Início">
+<Layout title="Início">
   <Page>
-</BaseLayout>
+</Layout>

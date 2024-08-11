@@ -1,0 +1,30 @@
+{
+    "sourceFile": "src/pages/context/Index.astro",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1723403551382,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1723403563757,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,24 +2,16 @@\n import ContextLayout from \"@layouts/ContextLayout.astro\";\r\n ---\r\n \r\n <ContextLayout title=\"Início\">\r\n+  <main class=\"w-full h-full\">\r\n+    <div class=\"flex w-full h-full justify-center align-middle flex-col gap-8\">\r\n+      <form action=\"/\" method=\"post\">\r\n+        <button type=\"submit\">Humannexus</button>\r\n+      </form>\r\n \r\n-</Layout>\r\n-\r\n-<!doctype html>\r\n-<html lang=\"pt\">\r\n-  <head> </head>\r\n-  <body>\r\n-    <main class=\"w-full h-full\">\r\n-      <div class=\"flex w-full h-full justify-center align-middle flex-col gap-8\">\r\n-        <form action=\"/\" method=\"post\">\r\n-          <button type=\"submit\">Humannexus</button>\r\n-        </form>\r\n-    \r\n-        <form action=\"/studio\" method=\"post\">\r\n-          <button type=\"submit\">Humannexus Studio</button>\r\n-        </form>\r\n-      </div>\r\n-    </main>\r\n-  </body>\r\n-</html>\r\n+      <form action=\"/studio\" method=\"post\">\r\n+        <button type=\"submit\">Humannexus Studio</button>\r\n+      </form>\r\n+    </div>\r\n+  </main>\r\n+</ContextLayout>\r\n"
+                },
+                {
+                    "date": 1723403725712,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,13 +4,13 @@\n \r\n <ContextLayout title=\"Início\">\r\n   <main class=\"w-full h-full\">\r\n     <div class=\"flex w-full h-full justify-center align-middle flex-col gap-8\">\r\n-      <form action=\"/\" method=\"post\">\r\n+      <form action=\"/\" method=\"get\">\r\n         <button type=\"submit\">Humannexus</button>\r\n       </form>\r\n \r\n-      <form action=\"/studio\" method=\"post\">\r\n+      <form action=\"/studio\" method=\"get\">\r\n         <button type=\"submit\">Humannexus Studio</button>\r\n       </form>\r\n     </div>\r\n   </main>\r\n"
+                },
+                {
+                    "date": 1723403868626,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,13 +4,13 @@\n \r\n <ContextLayout title=\"Início\">\r\n   <main class=\"w-full h-full\">\r\n     <div class=\"flex w-full h-full justify-center align-middle flex-col gap-8\">\r\n-      <form action=\"/\" method=\"get\">\r\n+      <form action=\"/\" method=\"post\">\r\n         <button type=\"submit\">Humannexus</button>\r\n       </form>\r\n \r\n-      <form action=\"/studio\" method=\"get\">\r\n+      <form action=\"/studio\" method=\"post\">\r\n         <button type=\"submit\">Humannexus Studio</button>\r\n       </form>\r\n     </div>\r\n   </main>\r\n"
+                }
+            ],
+            "date": 1723403551382,
+            "name": "Commit-0",
+            "content": "---\r\nimport ContextLayout from \"@layouts/ContextLayout.astro\";\r\n---\r\n\r\n<ContextLayout title=\"Início\">\r\n\r\n</Layout>\r\n\r\n<!doctype html>\r\n<html lang=\"pt\">\r\n  <head> </head>\r\n  <body>\r\n    <main class=\"w-full h-full\">\r\n      <div class=\"flex w-full h-full justify-center align-middle flex-col gap-8\">\r\n        <form action=\"/\" method=\"post\">\r\n          <button type=\"submit\">Humannexus</button>\r\n        </form>\r\n    \r\n        <form action=\"/studio\" method=\"post\">\r\n          <button type=\"submit\">Humannexus Studio</button>\r\n        </form>\r\n      </div>\r\n    </main>\r\n  </body>\r\n</html>\r\n"
+        }
+    ]
+}

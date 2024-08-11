@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/storyBlok/TeamMember.astro",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1723416784103,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1723416784103,
+            "name": "Commit-0",
+            "content": "---\r\nimport { Image } from \"astro:assets\";\r\n\r\nimport { storyblokEditable } from \"@storyblok/astro\";\r\nimport { renderRichText } from \"@storyblok/astro\";\r\n\r\nconst { story, blok } = Astro.props;\r\n\r\nconst image = blok.photo?.filename\r\n  ? blok.photo?.is_external_url\r\n    ? blok.photo.filename\r\n    : blok.photo.filename + \"/m/256x256/smart/filters:format(webp):quality(100)\"\r\n  : \"/default-avatar.png\";\r\n\r\nconst description = renderRichText(blok.description);\r\n---\r\n\r\n<main {...storyblokEditable(blok)}>\r\n  <div class=\"flex flex-col items-center\">\r\n    <Image\r\n      class=\"md:w-64 md:h-64 sm:w-48 sm:h-48 w-36 h-36 object-center object-cover rounded-3xl shadow-md shadow-slate-300\"\r\n      width=\"256\"\r\n      height=\"256\"\r\n      alt={story.name}\r\n      src={image}\r\n      decoding=\"async\"\r\n      loading=\"lazy\"\r\n    />\r\n    <span class=\"flex mt-4 text-2xl text-h-800 font-semibold\">{story.name}</span\r\n    >\r\n    <span class=\"flex mt-1 text-sm text-h-600 font-light\">{blok.role}</span>\r\n    <article\r\n      class=\"max-w-full m-12 prose prose-md lg:prose-lg prose-headings:text-h-800\"\r\n      set:html={description}\r\n    />\r\n  </div>\r\n</main>\r\n\r\n<style scoped>\r\n  .prose :is(:where(b):not(:where([class~=\"not-prose\"] *))) {\r\n    @apply text-h-500;\r\n  }\r\n</style>\r\n"
+        }
+    ]
+}

@@ -13,25 +13,32 @@ const { homeStory } = Astro.props;
 
 const servicesIds = homeStory?.content?.services || [];
 
-let servicesStories = [];
+let servicesMapped = [];
 
 try {
   const storyblokApi = useStoryblokApi();
-  servicesStories = await getStories(
+
+  const services = await getStories(
     storyblokApi,
     { by_uuids: String(servicesIds) },
     context
   );
-  servicesStories = servicesStories
+
+  servicesMapped = structuredClone(services);
+
+  servicesMapped = servicesMapped
     .sort((a, b) => servicesIds.indexOf(a.uuid) - servicesIds.indexOf(b.uuid))
     .splice(0, 4);
-  servicesStories.map((service) => {
-    if (!service.content?.image) return;
+
+  servicesMapped.map((service) => {
+    if (!service.content?.image) return service;
     service.content.image.filename = service.content?.image?.is_external_url
       ? service.content?.image?.filename
       : service.content?.image?.filename + "/m/170x159";
+    return service;
   });
 } catch (error) {
+  console.error(error);
   return Astro.redirect("/400");
 }
 ---
@@ -40,7 +47,7 @@ try {
   <div class="w-auto inline-flex flex-col items-center gap-y-9">
     <div class="flex flex-col md:flex-row items-center gap-5">
       {
-        servicesStories.map((service) => (
+        servicesMapped.map((service) => (
           <a
             class="relative"
             href={fullSlugToUri(service.full_slug)}

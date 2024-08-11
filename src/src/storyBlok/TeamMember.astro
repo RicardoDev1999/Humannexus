@@ -6,8 +6,6 @@ import { renderRichText } from "@storyblok/astro";
 
 const { story, blok } = Astro.props;
 
-console.log(blok);
-
 const image = blok.photo?.filename
   ? blok.photo?.is_external_url
     ? blok.photo.filename

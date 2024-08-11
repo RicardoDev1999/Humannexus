@@ -1,5 +1,5 @@
 ---
-import BaseLayout from "@layouts/BaseLayout.astro";
+import Layout from "@layouts/Layout.astro";
 import Button from "@components/Button.astro";
 
 import { getLangFromUrl, useTranslations } from "@i18n/utils";
@@ -75,13 +75,13 @@ if (Astro.request.method === "POST") {
 
     showSuccessDialog();
   } catch (error) {
-    showErrorDialog();
     console.error(error);
+    showErrorDialog();
   }
 }
 ---
 
-<BaseLayout title="Contactos">
+<Layout title="Contactos">
   <section class="flex flex-col justify-center items-center gap-y-3">
     <h1 class="text-h-800 text-center text-2xl font-bold">
       Pedido de contacto
@@ -248,7 +248,7 @@ if (Astro.request.method === "POST") {
       </div>
     </div>
   </section>
-</BaseLayout>
+</Layout>
 
 <style scoped>
   .mapouter {

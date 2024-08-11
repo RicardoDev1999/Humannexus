@@ -1,9 +1,50 @@
 ---
-import BaseLayout from "@layouts/BaseLayout.astro";
-import Homepage from "@components/Page/Home.astro";
+import ContextLayout from "@layouts/ContextLayout.astro";
 
+import { useStoryblokApi } from "@storyblok/astro";
+import { getStory } from "@scripts/astro/services";
+
+const { context } = Astro.params;
+
+let sectionsMapped;
+
+try {
+  const storyblokApi = useStoryblokApi();
+  const story = await getStory("index", storyblokApi, {}, context);
+
+  sectionsMapped = structuredClone(story.content.sections);
+
+  sectionsMapped.map((section) => {
+    if (!section.image.filename) return section;
+
+    section.image.filename =
+      section.image.filename +
+      "/m/fit-in/0x96/filters:format(webp):quality(100)";
+    return section;
+  });
+} catch (error) {
+  console.error(error);
+  return Astro.redirect("/400");
+}
 ---
 
-<BaseLayout title="Início">
-  <Homepage>
-</BaseLayout>
+<ContextLayout title="Início">
+  <main class="bg-slate-500 flex flex-1 w-full h-full justify-center align-middle m-auto p-auto">
+    <section
+      class="flex w-full h-full justify-center align-middle m-auto p-auto flex-col gap-16"
+    >
+      {
+        sectionsMapped.map((section) => (
+          <div class="flex justify-center align-middle" aria-label={section.name}>
+            <form action={section.href} method="post">
+              <button type="submit" class="transition duration-850 hover:scale-90 hover:drop-shadow-2xl">
+                <img class="w-auto md:h-24 h-12" src={section.image.filename} alt={section.name} />
+                {/* <span>{section.name}</span> */}
+              </button>
+            </form>
+          </div>
+        ))
+      }
+    </section>
+  </main>
+</ContextLayout>

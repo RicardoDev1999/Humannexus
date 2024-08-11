@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/pages/[context]/partners/index.astro",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1723409541424,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1723409541424,
+            "name": "Commit-0",
+            "content": "---\r\nimport Layout from \"@layouts/Layout.astro\";\r\nimport Page from \"@components/Page/Partners.astro\";\r\n---\r\n\r\n<Layout title=\"Parceiros\">\r\n  <Page />\r\n</Layout>\r\n"
+        }
+    ]
+}

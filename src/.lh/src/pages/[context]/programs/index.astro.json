@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 4,
+            "activePatchIndex": 5,
             "patches": [
                 {
                     "date": 1723392814767,
@@ -24,6 +24,10 @@
                 {
                     "date": 1723392883483,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,7 @@\n ---\r\n import BaseLayout from \"@layouts/BaseLayout.astro\";\r\n import Page from \"@components/Page/Programs.astro\";\r\n-\r\n-// REMOVE THIS IF WE EVER NEED PROGRAMS IN OTHER CONTEXTS.\r\n-Astro.redirect(\"/404\");\r\n ---\r\n \r\n <BaseLayout title=\"Programas\">\r\n   <Page />\r\n"
+                },
+                {
+                    "date": 1723409547866,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n ---\r\n-import BaseLayout from \"@layouts/BaseLayout.astro\";\r\n+import Layout from \"@layouts/Layout.astro\";\r\n import Page from \"@components/Page/Programs.astro\";\r\n ---\r\n \r\n-<BaseLayout title=\"Programas\">\r\n+<Layout title=\"Programas\">\r\n   <Page />\r\n-</BaseLayout>\r\n+</Layout>\r\n"
                 }
             ],
             "date": 1723392814767,

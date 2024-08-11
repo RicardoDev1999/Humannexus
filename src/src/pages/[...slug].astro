@@ -3,7 +3,7 @@ import { useStoryblokApi } from "@storyblok/astro";
 import { getStory } from "@scripts/astro/services";
 import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
 
-import BaseLayout from "@layouts/BaseLayout.astro";
+import Layout from "@layouts/Layout.astro";
 
 const slug = Astro.params.slug === undefined ? "home" : Astro.params.slug;
 
@@ -13,11 +13,11 @@ try {
   const storyblokApi = useStoryblokApi();
   story = await getStory(slug, storyblokApi);
 } catch (error) {
-  console.error(error, slug);
+  console.error(error);
   return Astro.redirect("/404");
 }
 ---
 
-<BaseLayout title={story.name}>
+<Layout title={story.name}>
   <StoryblokComponent blok={story.content} story={story} />
-</BaseLayout>
+</Layout>

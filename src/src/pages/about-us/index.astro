@@ -1,5 +1,5 @@
 ---
-import BaseLayout from "@layouts/BaseLayout.astro";
+import Layout from "@layouts/Layout.astro";
 
 import { renderRichText, useStoryblokApi } from "@storyblok/astro";
 import { getStory } from "@scripts/astro/services";
@@ -10,11 +10,12 @@ try {
   const storyblokApi = useStoryblokApi();
   story = await getStory("about-us", storyblokApi);
 } catch (error) {
+  console.error(error);
   return Astro.redirect("/400");
 }
 ---
 
-<BaseLayout title="Sobre nós">
+<Layout title="Sobre nós">
   <section class="flex flex-col justify-center items-center gap-y-3">
     <h1 class="text-h-800 text-center text-2xl font-bold">Sobre nós</h1>
   </section>
@@ -24,7 +25,7 @@ try {
       set:html={renderRichText(story.content.content)}
     />
   </section>
-</BaseLayout>
+</Layout>
 
 <style scoped>
   .prose :is(:where(b):not(:where([class~="not-prose"] *))) {

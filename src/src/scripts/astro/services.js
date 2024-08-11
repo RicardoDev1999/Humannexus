@@ -1,5 +1,4 @@
-const version =
-  import.meta.env.NODE_ENV === "development" ? "draft" : "published";
+const version = "draft";
 
 const getDefaultParams = () => {
   return {
@@ -27,31 +26,27 @@ export const getStory = async (
   params = {},
   context = null
 ) => {
-  const { data } = await storyBlokApi.get(context ? `cdn/stories/${context}/${slug}` : `cdn/stories/${slug}`, {
-    ...getDefaultStoryParams(),
-    ...params,
-  });
+  const { data } = await storyBlokApi.get(
+    context ? `cdn/stories/${context}/${slug}` : `cdn/stories/${slug}`,
+    {
+      ...getDefaultStoryParams(),
+      ...params,
+    }
+  );
 
   return data?.story;
 };
 
-export const getDatasourceEntries = async (
-  storyBlokApi,
-  params = {}
-) => {
+export const getDatasourceEntries = async (storyBlokApi, params = {}) => {
   const { data } = await storyBlokApi.get(`cdn/datasource_entries`, {
-    ...(getDefaultParams()),
+    ...getDefaultParams(),
     ...params,
   });
 
   return data?.datasource_entries;
 };
 
-export const getStories = async (
-  storyBlokApi,
-  params = {},
-  context = null
-) => {
+export const getStories = async (storyBlokApi, params = {}, context = null) => {
   const { data } = await storyBlokApi.get("cdn/stories", {
     ...getDefaultStoriesParams(context),
     ...params,
@@ -60,9 +55,7 @@ export const getStories = async (
   return data?.stories;
 };
 
-export const getLocalizationFromDatasource = async (
-  storyBlokApi
-) => {
+export const getLocalizationFromDatasource = async (storyBlokApi) => {
   let localization = { pt: {} };
 
   try {

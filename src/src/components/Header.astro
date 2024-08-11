@@ -19,6 +19,8 @@ const { default: instagramIcon } = await import(
 const { default: whatsappIcon } = await import(
   `@public/icons/whatsapp.svg?raw`
 );
+
+const headerItems = structuredClone(headerStory?.content?.items);
 ---
 
 <nav class="bg-white border-gray-200 shadow-header z-50">
@@ -73,7 +75,7 @@ const { default: whatsappIcon } = await import(
         class="flex flex-col gap-y-0.5 items-center font-semibold text-sm lg:p-0 lg:gap-4 border border-gray-100 bg-white lg:flex-row lg:mt-0 lg:border-0"
       >
         {
-          headerStory?.content?.items.map((item) => (
+          headerItems.map((item) => (
             <li class="flex items-center justify-center align-middle bg-h-700 lg:bg-transparent h-16 w-full whitespace-nowrap">
               <a
                 href={item.url}

@@ -8,11 +8,12 @@ import { fullSlugToUri } from "@utils/urlUtils.js";
 
 const { context } = Astro.params;
 
-let stories;
+let storiesMapped = null;
 
 try {
   const storyblokApi = useStoryblokApi();
-  stories = await getStories(
+  
+  const stories = await getStories(
     storyblokApi,
     {
       content_type: "service",
@@ -20,7 +21,9 @@ try {
     context
   );
 
-  stories = stories.sort((a, b) => {
+  storiesMapped = structuredClone(stories);
+
+  storiesMapped = storiesMapped.sort((a, b) => {
     const nameA = a.name.toUpperCase();
     const nameB = b.name.toUpperCase();
 
@@ -33,14 +36,17 @@ try {
 
     return 0;
   });
-  stories.map((st) => {
+
+  storiesMapped.map((st) => {
     if (!st.content?.image) return;
     st.content.image.filename = st.content?.image?.is_external_url
       ? st.content?.image?.filename
       : st.content?.image?.filename +
         "/m/fit-in/455x256/smart/filters:format(webp):quality(100)";
   });
+
 } catch (error) {
+  console.error(error);
   return Astro.redirect("/400");
 }
 ---
@@ -54,7 +60,7 @@ try {
   </section>
   <section class="flex flex-col mt-10 gap-y-4">
     {
-      stories.map((st, index) => (
+      storiesMapped.map((st, index) => (
         <a
           data-astro-prefetch
           href={fullSlugToUri(st.full_slug)}

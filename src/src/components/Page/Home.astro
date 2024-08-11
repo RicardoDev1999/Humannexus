@@ -17,6 +17,7 @@ try {
   const storyblokApi = useStoryblokApi();
   homeStory = await getStory("home", storyblokApi, {}, context);
 } catch (error) {
+  console.error(error);
   return Astro.redirect("/400");
 }
 ---

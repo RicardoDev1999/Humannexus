@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/pages/team/index.astro",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1723409616215,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1723409616215,
+            "name": "Commit-0",
+            "content": "---\r\nimport Layout from \"@layouts/Layout.astro\";\r\nimport Page from \"@components/Page/Team.astro\";\r\n---\r\n\r\n<Layout title=\"Equipa\">\r\n  <Page>\r\n</BaseLayout>"
+        }
+    ]
+}

@@ -1,0 +1,30 @@
+{
+    "sourceFile": "src/pages/IndexPagePartial.astro",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1723397787081,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1723399043622,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,6 +3,6 @@\n import Page from \"@components/Page/Home.astro\";\r\n ---\r\n \r\n <Layout title=\"Início\">\r\n-    <Page />\r\n-  </Layout>\n\\ No newline at end of file\n+  <Page />\r\n+</Layout>\r\n"
+                },
+                {
+                    "date": 1723399064907,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,7 @@\n ---\r\n+export const partial = true;\r\n+\r\n import Layout from \"@layouts/Layout.astro\";\r\n import Page from \"@components/Page/Home.astro\";\r\n ---\r\n \r\n"
+                },
+                {
+                    "date": 1723402053932,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,7 @@\n+---\r\n+export const partial = true;\r\n+\r\n+import Page from \"@components/Page/Home.astro\";\r\n+---\r\n+\r\n+<Page />\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1723397787081,
+            "name": "Commit-0",
+            "content": "---\r\nimport Layout from \"@layouts/Layout.astro\";\r\nimport Page from \"@components/Page/Home.astro\";\r\n---\r\n\r\n<Layout title=\"Início\">\r\n    <Page />\r\n  </Layout>"
+        }
+    ]
+}

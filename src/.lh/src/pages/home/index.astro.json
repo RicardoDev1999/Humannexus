@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/pages/home/index.astro",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1723411073663,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1723411090321,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,17 +1,12 @@\n ---\r\n-import ContextLayout from \"@layouts/ContextLayout.astro\";\r\n+import Layout from \"@layouts/Layout.astro\";\r\n+import Page from \"@components/Page/Home.astro\";\r\n+\r\n+if(Astro.request.method !== \"POST\") {\r\n+  return Astro.redirect(\"/context\");\r\n+}\r\n ---\r\n \r\n-<ContextLayout title=\"Início\">\r\n-  <main class=\"w-full h-full\">\r\n-    <div class=\"flex w-full h-full justify-center align-middle flex-col gap-8\">\r\n-      <form action=\"/\" method=\"post\">\r\n-        <button type=\"submit\">Humannexus</button>\r\n-      </form>\r\n-\r\n-      <form action=\"/studio\" method=\"post\">\r\n-        <button type=\"submit\">Humannexus Studio</button>\r\n-      </form>\r\n-    </div>\r\n-  </main>\r\n-</ContextLayout>\r\n+<Layout title=\"Início\">\r\n+  <Page />\r\n+</Layout>\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1723411073663,
+            "name": "Commit-0",
+            "content": "---\r\nimport ContextLayout from \"@layouts/ContextLayout.astro\";\r\n---\r\n\r\n<ContextLayout title=\"Início\">\r\n  <main class=\"w-full h-full\">\r\n    <div class=\"flex w-full h-full justify-center align-middle flex-col gap-8\">\r\n      <form action=\"/\" method=\"post\">\r\n        <button type=\"submit\">Humannexus</button>\r\n      </form>\r\n\r\n      <form action=\"/studio\" method=\"post\">\r\n        <button type=\"submit\">Humannexus Studio</button>\r\n      </form>\r\n    </div>\r\n  </main>\r\n</ContextLayout>\r\n"
+        }
+    ]
+}

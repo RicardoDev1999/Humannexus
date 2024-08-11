@@ -1,0 +1,42 @@
+{
+    "sourceFile": "src/pages/IndexContextPartial.astro",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1723395145840,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1723395249950,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,13 @@\n+---\r\n+export const partial = true;\r\n+---\r\n+\r\n+<div>Hello !</div>\r\n+\r\n+<form id=\"home-form\" action=\"/\" method=\"POST\">\r\n+  <button type=\"submit\">Humannexus</button>\r\n+</form>\r\n+\r\n+<form id=\"home-form\" action=\"/studio\" method=\"GET\">\r\n+  <button type=\"submit\">Humannexus Studio</button>\r\n+</form>\r\n"
+                },
+                {
+                    "date": 1723395258390,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,13 @@\n+---\r\n+export const partial = true;\r\n+---\r\n+\r\n+<div>Hello !</div>\r\n+\r\n+<form id=\"home-form\" action=\"/\" method=\"POST\">\r\n+  <button type=\"submit\">Humannexus</button>\r\n+</form>\r\n+\r\n+<form id=\"home-form\" action=\"/studio\" method=\"GET\">\r\n+  <button type=\"submit\">Humannexus Studio</button>\r\n+</form>\r\n"
+                },
+                {
+                    "date": 1723395296968,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,13 @@\n+---\r\n+export const partial = true;\r\n+---\r\n+\r\n+<div>Hello !</div>\r\n+\r\n+<form id=\"home-form\" action=\"/\" method=\"POST\">\r\n+  <button type=\"submit\">Humannexus</button>\r\n+</form>\r\n+\r\n+<form id=\"home-form\" action=\"/studio/\" method=\"GET\">\r\n+  <button type=\"submit\">Humannexus Studio</button>\r\n+</form>\r\n"
+                },
+                {
+                    "date": 1723395304768,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,13 @@\n+---\r\n+export const partial = true;\r\n+---\r\n+\r\n+<div>Hello !</div>\r\n+\r\n+<form id=\"home-form\" action=\"/\" method=\"POST\">\r\n+  <button type=\"submit\">Humannexus</button>\r\n+</form>\r\n+\r\n+<form id=\"home-form\" action=\"/studio\" method=\"GET\">\r\n+  <button type=\"submit\">Humannexus Studio</button>\r\n+</form>\r\n"
+                },
+                {
+                    "date": 1723395400368,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,18 @@\n ---\r\n export const partial = true;\r\n ---\r\n \r\n-<div>Hello !</div>\r\n+<main class=\"w-full h-full\">\r\n+    <div class=\"w-full h-full\">\r\n \r\n-<form id=\"home-form\" action=\"/\" method=\"POST\">\r\n-  <button type=\"submit\">Humannexus</button>\r\n-</form>\r\n+    </div>\r\n+    <div>Hello !</div>\r\n \r\n-<form id=\"home-form\" action=\"/studio\" method=\"POST\">\r\n-  <button type=\"submit\">Humannexus Studio</button>\r\n-</form>\r\n+    <form action=\"/\" method=\"POST\">\r\n+      <button type=\"submit\">Humannexus</button>\r\n+    </form>\r\n+    \r\n+    <form action=\"/studio\" method=\"POST\">\r\n+      <button type=\"submit\">Humannexus Studio</button>\r\n+    </form>    \r\n+</main>\r\n"
+                },
+                {
+                    "date": 1723395423841,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,15 @@\n+---\r\n+export const partial = true;\r\n+---\r\n+\r\n+<main class=\"w-full h-full\">\r\n+  <div class=\"flex w-full h-full justify-center align-middle\">\r\n+    <form action=\"/\" method=\"POST\">\r\n+        <button type=\"submit\">Humannexus</button>\r\n+      </form>\r\n+    \r\n+      <form action=\"/studio\" method=\"POST\">\r\n+        <button type=\"submit\">Humannexus Studio</button>\r\n+      </form>\r\n+  </div>\r\n+</main>\r\n"
+                }
+            ],
+            "date": 1723395145840,
+            "name": "Commit-0",
+            "content": "---\r\nexport const partial = true;\r\n---\r\n\r\n<div>Hello !</div>\r\n\r\n<form id=\"home-form\" action=\"/\" method=\"POST\">\r\n  <button type=\"submit\">Humannexus</button>\r\n</form>\r\n\r\n<form id=\"home-form\" action=\"/\" method=\"POST\">\r\n  <button type=\"submit\">Humannexus Studio</button>\r\n</form>\r\n"
+        }
+    ]
+}
