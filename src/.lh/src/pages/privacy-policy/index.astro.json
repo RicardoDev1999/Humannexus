@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/pages/privacy-policy/index.astro",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1723390034170,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1723390034170,
+            "name": "Commit-0",
+            "content": "---\r\nimport BaseLayout from \"@layouts/BaseLayout.astro\";\r\n\r\nimport { renderRichText, useStoryblokApi } from \"@storyblok/astro\";\r\nimport { getStory } from \"@scripts/astro/services\";\r\n\r\nlet story;\r\n\r\ntry {\r\n  const storyblokApi = useStoryblokApi();\r\n  story = await getStory(\"privacy-policy\", storyblokApi);\r\n} catch (error) {\r\n  return Astro.redirect(\"/400\");\r\n}\r\n---\r\n\r\n<BaseLayout title=\"Política de privacidade\">\r\n  <section class=\"flex flex-col justify-center items-center gap-y-3\">\r\n    <h1 class=\"text-h-800 text-center text-2xl font-bold\">Política de privacidade</h1>\r\n  </section>\r\n  <section>\r\n    <div\r\n      class=\"max-w-full mx-8 prose prose-md lg:prose-lg prose-headings:text-h-800\"\r\n      set:html={renderRichText(story.content.content)}\r\n    />\r\n  </section>\r\n</BaseLayout>\r\n\r\n<style scoped>\r\n  .prose :is(:where(b):not(:where([class~=\"not-prose\"] *))) {\r\n    @apply text-h-500;\r\n  }\r\n</style>\r\n"
+        }
+    ]
+}

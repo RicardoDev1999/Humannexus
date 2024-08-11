@@ -1,19 +1,25 @@
 ---
-import HomeCard from "../HomeCard.astro";
+import HomeCard from "@components/HomeCard.astro";
 
-import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+import { getLangFromUrl, useTranslations } from "@i18n/utils";
 
-const asParam = Astro.url.searchParams.get("as")! || "";
-const isStudio = asParam === "studio";
+const { context } = Astro.params;
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
 <section class="w-full m-auto p-1 md:w-10/12 md:p-0">
-  <form action="/contacts" method="get" data-astro-reload>
-    {isStudio && <input type="hidden" name="as" value="studio" />}
+  <form
+    action={context ? `${context}/contacts` : "/contacts"}
+    method="get"
+    data-astro-reload
+  >
     <input type="hidden" name="ref" value="schedule" />
-    <HomeCard title={t('home.scheduleSection.title')} description={t('home.scheduleSection.description')} buttonText="Marcar" />
+    <HomeCard
+      title={t("home.scheduleSection.title")}
+      description={t("home.scheduleSection.description")}
+      buttonText="Marcar"
+    />
   </form>
 </section>

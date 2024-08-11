@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/components/Home/StudioSection.astro",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1723390066524,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1723391953712,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,20 @@\n+---\r\n+import Button from \"@components/Button.astro\";\r\n+\r\n+const { homeStory } = Astro.props;\r\n+---\r\n+\r\n+<section class=\"flex flex-row w-full m-auto p-1 items-center md:w-8/12 md:p-0\">\r\n+  <div class=\"hidden md:block md:w-1/2\">\r\n+    <img src={homeStory.content.studio_image.filename} alt=\"Pilates\" />\r\n+  </div>\r\n+  <div class=\"w-full flex flex-col items-center gap-y-3 md:w-1/2\">\r\n+    <h1 class=\"text-2xl text-center text-black font-bold\">\r\n+      Venha conhecer o nosso studio!\r\n+    </h1>\r\n+    <form action=\"/studio\">\r\n+      <input type=\"hidden\" name=\"as\" value=\"studio\" />\r\n+      <Button text=\"Navegar\" variant=\"light\" />\r\n+    </form>\r\n+  </div>\r\n+</section>\r\n"
+                }
+            ],
+            "date": 1723390066524,
+            "name": "Commit-0",
+            "content": "---\r\nimport Button from \"@components/Button.astro\";\r\n\r\nconst { homeStory } = Astro.props;\r\n---\r\n\r\n<section class=\"flex flex-row w-full m-auto p-1 items-center md:w-8/12 md:p-0\">\r\n  <div class=\"hidden md:block md:w-1/2\">\r\n    <img src={homeStory.content.studio_image.filename} alt=\"Pilates\" />\r\n  </div>\r\n  <div class=\"w-full flex flex-col items-center gap-y-3 md:w-1/2\">\r\n    <h1 class=\"text-2xl text-center text-black font-bold\">\r\n      Venha conhecer o nosso studio!\r\n    </h1>\r\n    <form action=\"/\">\r\n      <input type=\"hidden\" name=\"as\" value=\"studio\" />\r\n      <Button text=\"Navegar\" variant=\"light\" />\r\n    </form>\r\n  </div>\r\n</section>\r\n"
+        }
+    ]
+}

@@ -1,26 +1,27 @@
 ---
 import "flowbite";
 
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import Toast from "../components/Toast.astro";
-import Loading from "../components/Loading.astro";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+import Toast from "@components/Toast.astro";
+import Loading from "@components/Loading.astro";
 
 import { ViewTransitions } from "astro:transitions";
 
 import { useStoryblokApi } from "@storyblok/astro";
-import { getStory } from "../scripts/astro/services";
+import { getStory } from "@scripts/astro/services";
 
 let headerStory, footerStory;
 
-const asParam = Astro.url.searchParams.get("as")! || "";
-const isStudio = asParam === "studio";
+const { context } = Astro.params;
 
 try {
   const storyblokApi = useStoryblokApi();
   headerStory = await getStory(
-    isStudio ? "studio/header" : "header",
-    storyblokApi
+    "header",
+    storyblokApi,
+    {},
+    context
   );
 } catch (error) {
   console.error(error);
@@ -30,8 +31,10 @@ try {
 try {
   const storyblokApi = useStoryblokApi();
   footerStory = await getStory(
-    isStudio ? "studio/footer" : "footer",
-    storyblokApi
+    "footer",
+    storyblokApi,
+    {},
+    context
   );
 } catch (error) {
   console.error(error);
@@ -54,6 +57,7 @@ const { title } = Astro.props;
       name="description"
       content="Humannexus - Saúde & Performance Desportiva"
     />
+    <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="icon" type="image/jpg" href="/favicon.png" slot="header" />
     <slot name="header" />
     <!-- Google Font -->

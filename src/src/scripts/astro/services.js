@@ -7,12 +7,12 @@ const getDefaultParams = () => {
   };
 };
 
-const getDefaultStoriesParams = (isStudio = false) => {
+const getDefaultStoriesParams = (context = null) => {
   return {
     ...getDefaultParams(),
     ...{
-      excluding_slugs: isStudio ? "" : "studio/*",
-      by_slugs: isStudio ? "studio/*" : "",
+      excluding_slugs: context ? "" : `*/*/**`,
+      by_slugs: context ? `${context}/*` : "",
     },
   };
 };
@@ -24,9 +24,10 @@ const getDefaultStoryParams = () => {
 export const getStory = async (
   slug,
   storyBlokApi,
-  params = {}
+  params = {},
+  context = null
 ) => {
-  const { data } = await storyBlokApi.get(`cdn/stories/${slug}`, {
+  const { data } = await storyBlokApi.get(context ? `cdn/stories/${context}/${slug}` : `cdn/stories/${slug}`, {
     ...getDefaultStoryParams(),
     ...params,
   });
@@ -49,10 +50,10 @@ export const getDatasourceEntries = async (
 export const getStories = async (
   storyBlokApi,
   params = {},
-  isStudio = false
+  context = null
 ) => {
   const { data } = await storyBlokApi.get("cdn/stories", {
-    ...getDefaultStoriesParams(isStudio),
+    ...getDefaultStoriesParams(context),
     ...params,
   });
 

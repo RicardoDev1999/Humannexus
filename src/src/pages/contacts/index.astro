@@ -1,12 +1,12 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import Button from "../../components/Button.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Button from "@components/Button.astro";
 
-import { getLangFromUrl, useTranslations } from "../../i18n/utils";
-import { sendEmail } from "../../scripts/sendEmail";
-import { POST as turnstile } from "../turnstile";
+import { getLangFromUrl, useTranslations } from "@i18n/utils";
+import { sendEmail } from "@scripts/sendEmail";
+import { POST as turnstile } from "@pages/turnstile";
 
-import { showDialog } from "../../stores/ToastStore";
+import { showDialog } from "@stores/ToastStore";
 
 const reference = Astro.url.searchParams.get("ref")! || "";
 

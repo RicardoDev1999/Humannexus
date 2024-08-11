@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/components/Page/Home.astro",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1723392085179,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1723392097966,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,28 @@\n+---\r\n+import { useStoryblokApi } from \"@storyblok/astro\";\r\n+import { getStory } from \"@scripts/astro/services\";\r\n+\r\n+import CarouselSection from \"@components/Home/CarouselSection.astro\";\r\n+import VoucherSection from \"@components/Home/VoucherSection.astro\";\r\n+import StudioSection from \"@components/Home/StudioSection.astro\";\r\n+import ScheduleSection from \"@components/Home/ScheduleSection.astro\";\r\n+import ServicesSection from \"@components/Home/ServicesSection.astro\";\r\n+\r\n+let homeStory;\r\n+\r\n+const { context } = Astro.params;\r\n+const isStudio = context === \"studio\";\r\n+\r\n+try {\r\n+  const storyblokApi = useStoryblokApi();\r\n+  homeStory = await getStory(\"home\", context, storyblokApi);\r\n+} catch (error) {\r\n+  return Astro.redirect(\"/400\");\r\n+}\r\n+---\r\n+\r\n+<CarouselSection homeStory={homeStory} />\r\n+<ScheduleSection />\r\n+{!isStudio && <StudioSection homeStory={homeStory} />}\r\n+<VoucherSection homeStory={homeStory} />\r\n+<ServicesSection homeStory={homeStory} />\r\n"
+                },
+                {
+                    "date": 1723392148620,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,28 @@\n+---\r\n+import { useStoryblokApi } from \"@storyblok/astro\";\r\n+import { getStory } from \"@scripts/astro/services\";\r\n+\r\n+import CarouselSection from \"@components/Home/CarouselSection.astro\";\r\n+import VoucherSection from \"@components/Home/VoucherSection.astro\";\r\n+import StudioSection from \"@components/Home/StudioSection.astro\";\r\n+import ScheduleSection from \"@components/Home/ScheduleSection.astro\";\r\n+import ServicesSection from \"@components/Home/ServicesSection.astro\";\r\n+\r\n+let homeStory;\r\n+\r\n+const { context } = Astro.params;\r\n+const isStudio = context === \"studio\";\r\n+\r\n+try {\r\n+  const storyblokApi = useStoryblokApi();\r\n+  homeStory = await getStory(\"home\", storyblokApi, {}, context);\r\n+} catch (error) {\r\n+  return Astro.redirect(\"/400\");\r\n+}\r\n+---\r\n+\r\n+<CarouselSection homeStory={homeStory} />\r\n+<ScheduleSection />\r\n+{!isStudio && <StudioSection homeStory={homeStory} />}\r\n+<VoucherSection homeStory={homeStory} />\r\n+<ServicesSection homeStory={homeStory} />\r\n"
+                }
+            ],
+            "date": 1723392085179,
+            "name": "Commit-0",
+            "content": "---\r\nimport { useStoryblokApi } from \"@storyblok/astro\";\r\nimport { getStory } from \"@scripts/astro/services\";\r\n\r\nimport CarouselSection from \"@components/Home/CarouselSection.astro\";\r\nimport VoucherSection from \"@components/Home/VoucherSection.astro\";\r\nimport StudioSection from \"@components/Home/StudioSection.astro\";\r\nimport ScheduleSection from \"@components/Home/ScheduleSection.astro\";\r\nimport ServicesSection from \"@components/Home/ServicesSection.astro\";\r\n\r\nlet homeStory;\r\n\r\nconst { context } = Astro.params;\r\nconst isStudio = context === \"studio\";\r\n\r\ntry {\r\n  const storyblokApi = useStoryblokApi();\r\n  homeStory = await getStory(context, storyblokApi);\r\n} catch (error) {\r\n  return Astro.redirect(\"/400\");\r\n}\r\n---\r\n\r\n<CarouselSection homeStory={homeStory} />\r\n<ScheduleSection />\r\n{!isStudio && <StudioSection homeStory={homeStory} />}\r\n<VoucherSection homeStory={homeStory} />\r\n<ServicesSection homeStory={homeStory} />\r\n"
+        }
+    ]
+}

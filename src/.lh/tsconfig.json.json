@@ -1,0 +1,22 @@
+{
+    "sourceFile": "tsconfig.json",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1723389941685,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1723390014387,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,21 @@\n+{\r\n+  \"extends\": \"astro/tsconfigs/base\",\r\n+  \"compilerOptions\": {\r\n+    \"strict\": true,\r\n+    \"baseUrl\": \".\",\r\n+    \"paths\": {\r\n+      \"@/*\": [\"src/*\"],\r\n+      \"@pages/*\": [\"src/pages/*\"],\r\n+      \"@layouts/*\": [\"src/layouts/*\"],\r\n+      \"@components/*\": [\"src/components/*\"],\r\n+      \"@scripts/*\": [\"src/scripts/*\"],\r\n+      \"@styles/*\": [\"src/styles/*\"],\r\n+      \"@utils/*\": [\"src/utils/*\"],\r\n+      \"@i18n/*\": [\"src/i18n/*\"],\r\n+      \"@stores/*\": [\"src/stores/*\"],\r\n+      \"@hooks/*\": [\"src/hooks/*\"],\r\n+      \"@types/*\": [\"src/types/*\"],\r\n+      \"@public/*\": [\"public/*\"]\r\n+    }\r\n+  }\r\n+}\r\n"
+                }
+            ],
+            "date": 1723389941685,
+            "name": "Commit-0",
+            "content": "{\r\n  \"extends\": \"astro/tsconfigs/base\",\r\n  \"compilerOptions\": {\r\n    \"strict\": true,\r\n    \"baseUrl\": \".\",\r\n    \"paths\": {\r\n      \"@/*\": [\"src/*\"],\r\n      \"@pages/*\": [\"src/pages/*\"],\r\n      \"@layouts/*\": [\"src/layouts/*\"],\r\n      \"@components/*\": [\"src/components/*\"],\r\n      \"@scripts/*\": [\"src/scripts/*\"],\r\n      \"@styles/*\": [\"src/styles/*\"],\r\n      \"@utils/*\": [\"src/utils/*\"],\r\n      \"@i18n/*\": [\"src/i18n/*\"],\r\n      \"@hooks/*\": [\"src/hooks/*\"],\r\n      \"@types/*\": [\"src/types/*\"],\r\n      \"@public/*\": [\"public/*\"]\r\n    }\r\n  }\r\n}\r\n"
+        }
+    ]
+}

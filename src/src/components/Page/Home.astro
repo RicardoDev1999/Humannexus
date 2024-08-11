@@ -1,0 +1,28 @@
+---
+import { useStoryblokApi } from "@storyblok/astro";
+import { getStory } from "@scripts/astro/services";
+
+import CarouselSection from "@components/Home/CarouselSection.astro";
+import VoucherSection from "@components/Home/VoucherSection.astro";
+import StudioSection from "@components/Home/StudioSection.astro";
+import ScheduleSection from "@components/Home/ScheduleSection.astro";
+import ServicesSection from "@components/Home/ServicesSection.astro";
+
+let homeStory;
+
+const { context } = Astro.params;
+const isStudio = context === "studio";
+
+try {
+  const storyblokApi = useStoryblokApi();
+  homeStory = await getStory("home", storyblokApi, {}, context);
+} catch (error) {
+  return Astro.redirect("/400");
+}
+---
+
+<CarouselSection homeStory={homeStory} />
+<ScheduleSection />
+{!isStudio && <StudioSection homeStory={homeStory} />}
+<VoucherSection homeStory={homeStory} />
+<ServicesSection homeStory={homeStory} />

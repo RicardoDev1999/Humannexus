@@ -1,0 +1,87 @@
+---
+import { Image } from "astro:assets";
+
+import { useStoryblokApi, renderRichText } from "@storyblok/astro";
+import { getStories } from "@scripts/astro/services";
+
+import { fullSlugToUri } from "@utils/urlUtils.js";
+
+let stories;
+
+const { context } = Astro.params;
+
+try {
+  const storyblokApi = useStoryblokApi();
+  stories = await getStories(
+    storyblokApi,
+    {
+      content_type: "program",
+    },
+    context
+  );
+  stories.map((st) => {
+    if (!st.content?.image) return;
+    st.content.image.filename = st.content?.image?.is_external_url
+      ? st.content?.image?.filename
+      : st.content?.image?.filename +
+        "/m/fit-in/455x256/filters:format(webp):quality(100)";
+  });
+} catch (error) {
+  return Astro.redirect("/400");
+}
+
+stories = stories.sort((a, b) => {
+  const nameA = a.name.toUpperCase();
+  const nameB = b.name.toUpperCase();
+
+  if (nameA < nameB) {
+    return -1;
+  }
+  if (nameA > nameB) {
+    return 1;
+  }
+
+  return 0;
+});
+---
+
+<main class="px-2">
+  <section class="flex flex-col justify-center items-center gap-y-3">
+    <h1 class="text-h-800 text-center text-2xl font-bold">Programas</h1>
+    <p class="text-h-600 text-center text-base font-medium">
+      Conheça os nossos programas!
+    </p>
+  </section>
+  <section class="flex flex-col mt-10 gap-y-4">
+    {
+      stories.map((st, index) => (
+        <a
+          data-astro-prefetch
+          href={fullSlugToUri(st.full_slug)}
+          class:list={[
+            "flex flex-col lg:flex-row gap-4 cursor-pointer transition duration-[350ms] hover:scale-90",
+            index % 2 === 1 ? "lg:flex-row-reverse" : "",
+          ]}
+          transition:name={"program-image-" + st.content._uid}
+        >
+          <Image
+            class="flex flex-1 w-full h-64 rounded-[2rem] object-center object-cover shadow-lg"
+            src={st.content?.image?.filename}
+            alt={st.name}
+            width="455"
+            height="256"
+            decoding="async"
+            loading="lazy"
+          />
+          <div class="flex flex-1 flex-col my-auto justify-cemter items-start gap-y-2">
+            <h1 class="text-h-800 text-2xl font-bold">{st.name}</h1>
+            <p
+              class="text-h-600 text-sm font-normal"
+              set:html={renderRichText(st.content.short_description)}
+            />
+          </div>
+        </a>
+      ))
+    }
+  </section>
+</main>

@@ -1,12 +1,13 @@
 ---
 import { Image } from "astro:assets";
-import Button from "../Button.astro";
+import Button from "@components/Button.astro";
 
 import { useStoryblokApi } from "@storyblok/astro";
-import { getStories } from "../../scripts/astro/services";
+import { getStories } from "@scripts/astro/services";
 
-const asParam = Astro.url.searchParams.get("as")! || "";
-const isStudio = asParam === "studio";
+import { fullSlugToUri } from "@utils/urlUtils.js";
+
+const { context } = Astro.params;
 
 const { homeStory } = Astro.props;
 
@@ -19,7 +20,7 @@ try {
   servicesStories = await getStories(
     storyblokApi,
     { by_uuids: String(servicesIds) },
-    isStudio
+    context
   );
   servicesStories = servicesStories
     .sort((a, b) => servicesIds.indexOf(a.uuid) - servicesIds.indexOf(b.uuid))
@@ -40,7 +41,11 @@ try {
     <div class="flex flex-col md:flex-row items-center gap-5">
       {
         servicesStories.map((service) => (
-          <a class="relative" href={service.full_slug} data-astro-prefetch>
+          <a
+            class="relative"
+            href={fullSlugToUri(service.full_slug)}
+            data-astro-prefetch
+          >
             <div class="rounded-full shadow-md">
               <button class="flex flex-col w-[170px] h-[159px] bg-gray-200 rounded-xl">
                 <Image
@@ -62,8 +67,7 @@ try {
       }
     </div>
     <div class="flex w-full justify-end">
-      <form action="/services" method="get">
-        {isStudio && <input type="hidden" name="as" value="studio" />}
+      <form action={context ? `${context}/services` : "/services"} method="get">
         <Button text="Ver mais" variant="light" />
       </form>
     </div>
