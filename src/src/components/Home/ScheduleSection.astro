@@ -1,12 +1,11 @@
 ---
 import HomeCard from "@components/HomeCard.astro";
 
-import { getLangFromUrl, useTranslations } from "@i18n/utils";
-
 const { context } = Astro.params;
 
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
+const { homeStory } = Astro.props;
+
+const scheduleCard = homeStory.content.schedule_card[0];
 ---
 
 <section class="w-full m-auto p-1 md:w-10/12 md:p-0">
@@ -17,9 +16,9 @@ const t = useTranslations(lang);
   >
     <input type="hidden" name="ref" value="schedule" />
     <HomeCard
-      title={t("home.scheduleSection.title")}
-      description={t("home.scheduleSection.description")}
-      buttonText="Marcar"
+      title={scheduleCard.title}
+      description={scheduleCard.description}
+      buttonText={scheduleCard.button}
     />
   </form>
 </section>

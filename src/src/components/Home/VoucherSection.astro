@@ -3,24 +3,29 @@ import HomeCard from "@components/HomeCard.astro";
 
 const { homeStory } = Astro.props;
 
-const { context } = Astro.params;
-
-const t = "Ofereça um voucher!";
-const d =
-  "Sessões de fisioterapia especializada, massagens desportivas, massagens terapêuticas, tratamentos de estética, drenagens, sessões de osteopatia ou acupuntura, aulas de Yoga, aulas de Pilates para Grávidas, aulas de Yoga baby, aulas de Preparação para o Parto ou de de Recuperação do Parto… são muitas as ideias de ofertas que serão garantidamente um sucesso!";
+const voucherCard = homeStory.content.voucher_card[0];
 ---
 
 <section
   class="flex flex-row m-auto p-1 items-center justify-center md:p-0 lg:w-10/12"
 >
-  <form class="w-full md:w-2/3" action="/contacts" method="get" data-astro-reload>
+  <form
+    class="w-full md:w-2/3"
+    action="/contacts"
+    method="get"
+    data-astro-reload
+  >
     <input type="hidden" name="ref" value="voucher" />
-    <HomeCard title={t} description={d} buttonText="Oferecer" />
+    <HomeCard
+      title={voucherCard.title}
+      description={voucherCard.description}
+      buttonText={voucherCard.button}
+    />
   </form>
   <div class="hidden md:block w-1/3">
     <img
       class="object-center object-contain"
-      src={homeStory.content?.voucher_image?.filename}
+      src={homeStory.content.voucher_image.filename}
       alt="Voucher"
     />
   </div>
