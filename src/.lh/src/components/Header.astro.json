@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 4,
+            "activePatchIndex": 5,
             "patches": [
                 {
                     "date": 1723388186715,
@@ -24,6 +24,10 @@
                 {
                     "date": 1723409254305,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -74,9 +74,9 @@\n       <ul\r\n         class=\"flex flex-col gap-y-0.5 items-center font-semibold text-sm lg:p-0 lg:gap-4 border border-gray-100 bg-white lg:flex-row lg:mt-0 lg:border-0\"\r\n       >\r\n         {\r\n-          headerStory?.content?.items.map((item) => (\r\n+          headerItems.map((item) => (\r\n             <li class=\"flex items-center justify-center align-middle bg-h-700 lg:bg-transparent h-16 w-full whitespace-nowrap\">\r\n               <a\r\n                 href={item.url}\r\n                 data-astro-prefetch=\"hover\"\r\n"
+                },
+                {
+                    "date": 1726172043377,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,15 +10,15 @@\n \r\n const logo = headerStory?.content?.image?.filename;\r\n \r\n const { default: facebookIcon } = await import(\r\n-  `@public/icons/facebook.svg?raw`\r\n+  `/icons/facebook.svg?raw`\r\n );\r\n const { default: instagramIcon } = await import(\r\n-  `@public/icons/instagram.svg?raw`\r\n+  `/icons/instagram.svg?raw`\r\n );\r\n const { default: whatsappIcon } = await import(\r\n-  `@public/icons/whatsapp.svg?raw`\r\n+  `/icons/whatsapp.svg?raw`\r\n );\r\n \r\n const headerItems = structuredClone(headerStory?.content?.items);\r\n ---\r\n"
                 }
             ],
             "date": 1723388186715,

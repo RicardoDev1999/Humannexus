@@ -8,6 +8,10 @@ import basicSsl from "@vitejs/plugin-basic-ssl";
 import sentry from "@sentry/astro";
 import spotlightjs from "@spotlightjs/astro";
 
+import allowedContextPages from "./src/contextPages";
+
+const allowedContextPagesMapped = allowedContextPages.map(x => `https://humannexus.pt${x}/`);
+
 // https://astro.build/config
 export default defineConfig({
   prefetch: true,
@@ -30,7 +34,7 @@ export default defineConfig({
     bridge: import.meta.env.MODE === "development" ? true : false
   }), tailwind(), sitemap({
     filter: (page) => page !== "https://humannexus.pt/404/" && page !== "https://humannexus.pt/400/",
-    customPages: ["https://humannexus.pt/studio/", "https://humannexus.pt/studio/partners", "https://humannexus.pt/studio/services", "https://humannexus.pt/studio/team"],
+    customPages: [...allowedContextPagesMapped]
   }), sentry(), spotlightjs()],
   vite: {
     define: {

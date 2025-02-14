@@ -11,12 +11,13 @@ const { context } = Astro.params;
 
 const { homeStory } = Astro.props;
 
-const servicesIds = homeStory?.content?.services || [];
+const servicesIds =
+  homeStory?.content?.services?.length > 0 ? homeStory?.content?.services : [];
 
 let servicesMapped = [];
 
-try {
-  const storyblokApi = useStoryblokApi();
+const getServicesMapped = async (storyblokApi) => {
+  if (!servicesIds || servicesIds.length === 0) return;
 
   const services = await getStories(
     storyblokApi,
@@ -37,46 +38,55 @@ try {
       : service.content?.image?.filename + "/m/170x159";
     return service;
   });
+};
+
+try {
+  const storyblokApi = useStoryblokApi();
+  await getServicesMapped(storyblokApi);
 } catch (error) {
   console.error(error);
-  return Astro.redirect("/400");
 }
 ---
 
-<section class="flex justify-center w-full mt-4 mx-auto p-1 md:p-0">
-  <div class="w-auto inline-flex flex-col items-center gap-y-9">
-    <div class="flex flex-col md:flex-row items-center gap-5">
-      {
-        servicesMapped.map((service) => (
-          <a
-            class="relative"
-            href={fullSlugToUri(service.full_slug)}
-            data-astro-prefetch
-          >
-            <div class="rounded-full shadow-md">
-              <button class="flex flex-col w-[170px] h-[159px] bg-gray-200 rounded-xl">
-                <Image
-                  class="w-full h-full object-center object-cover rounded-xl"
-                  src={service.content?.image?.filename}
-                  alt={service.name}
-                  width="170"
-                  height="159"
-                  decoding="async"
-                  loading="lazy"
-                />
-              </button>
-              <div class="absolute flex opacity-0 hover:opacity-100 backdrop-blur-sm bg-h-800 bg-opacity-50 duration-500 inset-0 z-10 text-center justify-center items-center text-xl text-white font-semibold rounded-xl">
-                {service.name}
+{
+  servicesMapped.length > 0 && (
+    <section class="flex justify-center w-full mt-4 mx-auto p-1 md:p-0">
+      <div class="w-auto inline-flex flex-col items-center gap-y-9">
+        <div class="flex flex-col md:flex-row items-center gap-5">
+          {servicesMapped.map((service) => (
+            <a
+              class="relative"
+              href={fullSlugToUri(service.full_slug)}
+              data-astro-prefetch
+            >
+              <div class="rounded-full shadow-md">
+                <button class="flex flex-col w-[170px] h-[159px] bg-gray-200 rounded-xl">
+                  <Image
+                    class="w-full h-full object-center object-cover rounded-xl"
+                    src={service.content?.image?.filename}
+                    alt={service.name}
+                    width="170"
+                    height="159"
+                    decoding="async"
+                    loading="lazy"
+                  />
+                </button>
+                <div class="absolute flex opacity-0 hover:opacity-100 backdrop-blur-sm bg-h-800 bg-opacity-50 duration-500 inset-0 z-10 text-center justify-center items-center text-xl text-white font-semibold rounded-xl">
+                  {service.name}
+                </div>
               </div>
-            </div>
-          </a>
-        ))
-      }
-    </div>
-    <div class="flex w-full justify-end">
-      <form action={context ? `${context}/services` : "/services"} method="get">
-        <Button text="Ver mais" variant="light" />
-      </form>
-    </div>
-  </div>
-</section>
+            </a>
+          ))}
+        </div>
+        <div class="flex w-full justify-end">
+          <form
+            action={context ? `${context}/services` : "/services"}
+            method="get"
+          >
+            <Button text="Ver mais" variant="light" />
+          </form>
+        </div>
+      </div>
+    </section>
+  )
+}

@@ -3,30 +3,35 @@ import HomeCard from "@components/HomeCard.astro";
 
 const { homeStory } = Astro.props;
 
-const voucherCard = homeStory.content.voucher_card[0];
+const voucherCard =
+  homeStory?.content?.voucher_card?.length > 0
+    ? homeStory.content.voucher_card[0]
+    : null;
 ---
 
-<section
-  class="flex flex-row m-auto p-1 items-center justify-center md:p-0 lg:w-10/12"
->
-  <form
-    class="w-full md:w-2/3"
-    action="/contacts"
-    method="get"
-    data-astro-reload
-  >
-    <input type="hidden" name="ref" value="voucher" />
-    <HomeCard
-      title={voucherCard.title}
-      description={voucherCard.description}
-      buttonText={voucherCard.button}
-    />
-  </form>
-  <div class="hidden md:block w-1/3">
-    <img
-      class="object-center object-contain"
-      src={homeStory.content.voucher_image.filename}
-      alt="Voucher"
-    />
-  </div>
-</section>
+{
+  voucherCard && (
+    <section class="flex flex-row m-auto p-1 items-center justify-center md:p-0 lg:w-10/12">
+      <form
+        class="w-full md:w-2/3"
+        action="/contacts"
+        method="get"
+        data-astro-reload
+      >
+        <input type="hidden" name="ref" value="voucher" />
+        <HomeCard
+          title={voucherCard.title}
+          description={voucherCard.description}
+          buttonText={voucherCard.button}
+        />
+      </form>
+      <div class="hidden md:block w-1/3">
+        <img
+          class="object-center object-contain"
+          src={homeStory.content.voucher_image.filename}
+          alt="Voucher"
+        />
+      </div>
+    </section>
+  )
+}

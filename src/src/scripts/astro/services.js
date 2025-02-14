@@ -34,6 +34,7 @@ export const getStory = async (
     }
   );
 
+
   return data?.story;
 };
 

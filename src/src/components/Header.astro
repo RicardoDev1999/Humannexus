@@ -8,19 +8,21 @@ const currentPath = Astro.url.pathname;
 const isMenuSelected = (path): boolean =>
   currentPath != "/" && currentPath != "/home" && path.endsWith(currentPath);
 
-const logo = headerStory?.content?.image?.filename;
+const logo = headerStory?.content?.image?.filename !== "" 
+  ? headerStory?.content?.image?.filename + "/m/fit-in/800x360/filters:format(webp):quality(100)"
+  : null;
 
 const { default: facebookIcon } = await import(
-  `@public/icons/facebook.svg?raw`
+  `/icons/facebook.svg?raw`
 );
 const { default: instagramIcon } = await import(
-  `@public/icons/instagram.svg?raw`
+  `/icons/instagram.svg?raw`
 );
 const { default: whatsappIcon } = await import(
-  `@public/icons/whatsapp.svg?raw`
+  `/icons/whatsapp.svg?raw`
 );
 
-const headerItems = structuredClone(headerStory?.content?.items);
+let headerItems = structuredClone(headerStory?.content?.items);
 ---
 
 <nav class="bg-white border-gray-200 shadow-header z-50">
@@ -36,10 +38,10 @@ const headerItems = structuredClone(headerStory?.content?.items);
       >
         <Image
           src={logo}
-          class="max-w-[17.5rem] max-h-[4.25rem] mr-3 transition duration-850 hover:scale-90"
+          class="max-w-[10rem] max-h-[4.25rem] mr-3 transition duration-850 hover:scale-90"
           alt="Humannexus Logo"
-          width="280"
-          height="68"
+          width="800"
+          height="360"
         />
       </a>
       <button
