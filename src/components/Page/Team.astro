@@ -1,0 +1,86 @@
+---
+import { Image } from "astro:assets";
+
+import { useStoryblokApi } from "@storyblok/astro";
+import { getStories } from "@scripts/astro/services";
+
+import { fullSlugToUri } from "@utils/urlUtils.js";
+
+let storiesMapped;
+
+const { context } = Astro.params;
+
+try {
+  const storyblokApi = useStoryblokApi();
+  const stories = await getStories(
+    storyblokApi,
+    {
+      content_type: "team-member",
+    },
+    context
+  );
+
+  storiesMapped = structuredClone(stories);
+
+  storiesMapped.sort((a, b) => {
+    const roleA = a.content?.role?.toUpperCase() || "ZZZ";
+    const roleB = b.content?.role?.toUpperCase() || "ZZZ";
+    const nameA = a.name?.toUpperCase();
+    const nameB = b.name?.toUpperCase();
+
+    if (roleA !== roleB) {
+      return roleA < roleB ? -1 : 1;
+    }
+
+    if (nameA !== nameB) {
+      return nameA < nameB ? -1 : 1;
+    }
+
+    return 0;
+  });
+
+  storiesMapped.map((st) => {
+    if (!st.content?.photo?.filename) return st;
+    st.content.photo.filename = st.content?.photo?.is_external_url
+      ? st.content?.photo?.filename
+      : st.content?.photo?.filename +
+        "/m/192x144/filters:format(webp):quality(100)";
+    return st;
+  });
+} catch (error) {
+  console.error(error);
+  return Astro.redirect("/400");
+}
+---
+
+<section class="flex flex-col justify-center items-center gap-y-3">
+  <h1 class="text-h-800 text-center text-2xl font-bold">A nossa equipa</h1>
+  <p class="text-h-600 text-center text-base font-medium">
+    Vem conhecer a nossa equipa de técnicos especializados!
+  </p>
+</section>
+<section
+  class="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3 gap-x-5 gap-y-3 justify-items-center mt-10"
+>
+  {
+    storiesMapped.map((st, _) => (
+      <a href={fullSlugToUri(st.full_slug)} data-astro-prefetch>
+        <div class="cursor-pointer w-48 h-full p-2 shadow-lg rounded-xl transition duration-[350ms] hover:scale-105">
+          <Image
+            class="w-full h-36 mb-3 rounded-xl object-center object-cover"
+            width="192"
+            height="144"
+            src={st.content?.photo?.filename ?? "/default-avatar.png"}
+            alt={st.name}
+            decoding="async"
+            loading="lazy"
+          />
+          <h1 class="text-h-800 text-center text-base font-bold">{st.name}</h1>
+          <p class="text-h-600 text-center text-sm font-normal">
+            {st.content?.role}
+          </p>
+        </div>
+      </a>
+    ))
+  }
+</section>

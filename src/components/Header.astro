@@ -1,0 +1,197 @@
+---
+import { Image } from "astro:assets";
+
+const { headerStory } = Astro.props;
+
+const currentPath = Astro.url.pathname;
+
+const isMenuSelected = (path): boolean =>
+  currentPath != "/" && currentPath != "/home" && path.endsWith(currentPath);
+
+const logo = headerStory?.content?.image?.filename !== "" 
+  ? headerStory?.content?.image?.filename + "/m/fit-in/800x360/filters:format(webp):quality(100)"
+  : null;
+
+const { default: facebookIcon } = await import(
+  `/icons/facebook.svg?raw`
+);
+const { default: instagramIcon } = await import(
+  `/icons/instagram.svg?raw`
+);
+const { default: whatsappIcon } = await import(
+  `/icons/whatsapp.svg?raw`
+);
+
+let headerItems = structuredClone(headerStory?.content?.items);
+---
+
+<nav class="bg-white border-gray-200 shadow-header z-50">
+  <div
+    class="flex flex-1 flex-wrap lg:flex-nowrap max-w-screen-2xl h-20.5 items-center justify-between md:mx-auto lg:px-2"
+  >
+    <div
+      class="inline-flex flex-1 flex-row items-center justify-between w-full"
+    >
+      <a
+        href={headerStory.content.logo_redirect}
+        class="inline-flex items-center"
+      >
+        <Image
+          src={logo}
+          class="max-w-[10rem] max-h-[4.25rem] mr-3 transition duration-850 hover:scale-90"
+          alt="Humannexus Logo"
+          width="800"
+          height="360"
+        />
+      </a>
+      <button
+        id="navbar-default-trigger"
+        data-collapse-toggle="navbar-default"
+        type="button"
+        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+        aria-controls="navbar-default"
+        aria-expanded="false"
+      >
+        <span class="sr-only">Abrir o menu</span>
+        <svg
+          class="w-5 h-5"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 17 14"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M1 1h15M1 7h15M1 13h15"></path>
+        </svg>
+      </button>
+    </div>
+    <div
+      class="hidden w-full lg:inline-flex lg:w-auto lg:flex-2 z-40"
+      id="navbar-default"
+    >
+      <ul
+        class="flex flex-col gap-y-0.5 items-center font-semibold text-sm lg:p-0 lg:gap-4 border border-gray-100 bg-white lg:flex-row lg:mt-0 lg:border-0"
+      >
+        {
+          headerItems.map((item) => (
+            <li class="flex items-center justify-center align-middle bg-h-700 lg:bg-transparent h-16 w-full whitespace-nowrap">
+              <a
+                href={item.url}
+                data-astro-prefetch="hover"
+                data-astro-reload={item.isDataReload ? "true" : undefined}
+                class:list={[
+                  "block py-2 text-white rounded lg:bg-transparent lg:p-0",
+                  isMenuSelected(item.url) ? "lg:text-h-800" : "lg:text-black",
+                ]}
+                aria-current="page"
+              >
+                {item.name}
+              </a>
+            </li>
+          ))
+        }
+        <li
+          class="flex items-center justify-center align-middle bg-h-700 lg:bg-transparent h-16 w-full"
+        >
+          <div class="flex flex-row gap-x-3">
+            <a
+              href="https://www.facebook.com/Humannexuslda/"
+              target="_blank"
+              class="social-icon block py-2 text-white transition duration-850 hover:scale-90"
+              aria-current="page"
+            >
+              <div
+                class="block w-[22px] h-[22px] object-center object-contain bg-transparent"
+                set:html={facebookIcon}
+                style="opacity:inherit;"
+              />
+            </a>
+            <a
+              href="https://www.instagram.com/humannexus.pt/"
+              target="_blank"
+              class="block py-2 text-whitetransition duration-850 hover:scale-90"
+              aria-current="page"
+              ><div
+                class="social-icon block w-[22px] h-[22px] object-center object-contain bg-transparent"
+                set:html={instagramIcon}
+                style="opacity:inherit;"
+              />
+            </a>
+            <a
+              href="https://wa.me/939036298"
+              class="block py-2 text-white transition duration-850 hover:scale-90"
+              aria-current="page"
+              ><div
+                class="social-icon block w-[22px] h-[22px] object-center object-contain bg-transparent"
+                set:html={whatsappIcon}
+                style="opacity:inherit;"
+              />
+            </a>
+          </div>
+        </li>
+        <li
+          class="flex items-center justify-center align-middle bg-h-700 lg:bg-transparent h-16 w-full"
+        >
+          <form action="/contacts" method="get" data-astro-reload>
+            <input type="hidden" name="ref" value="pricing" />
+            <button
+              type="submit"
+              class="block bg-h-900 text-white text-xs h-8 px-3 py-2 content-center align-baseline rounded-lg"
+            >
+              Preçário
+            </button>
+          </form>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section
+  id="navbar-fade-screen"
+  class="pointer-events-none fixed flex items-center justify-center inset-0 w-screen h-screen backdrop-blur-md bg-h-400 bg-opacity-40 transition-opacity ease-in-out duration-500 z-[40] lg:hidden"
+  style="opacity: 0"
+>
+</section>
+
+<script>
+  document.addEventListener("astro:page-load", async () => {
+    const { initCollapses, Collapse } = await import("flowbite");
+
+    initCollapses();
+
+    const navbarTrigger = document.getElementById("navbar-default-trigger");
+    const navbarFadeScreen = document.getElementById("navbar-fade-screen");
+    const navbar = document.getElementById("navbar-default");
+
+    const options = {
+      onCollapse: () => {
+        navbarFadeScreen.style.opacity = "0";
+      },
+      onExpand: () => {
+        navbarFadeScreen.style.opacity = "100";
+      },
+    };
+
+    const instanceOptions = {
+      id: "navbar-default",
+      override: true,
+    };
+
+    const collapse = new Collapse(
+      navbar,
+      navbarTrigger,
+      options,
+      instanceOptions
+    );
+
+    document.querySelectorAll(".social-icon svg path").forEach((e) => {
+      e.classList.add("fill-white");
+      e.classList.add("lg:fill-black");
+    });
+  });
+</script>

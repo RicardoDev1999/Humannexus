@@ -1,0 +1,26 @@
+---
+import Button from "@components/Button.astro";
+
+const { homeStory } = Astro.props;
+
+const hasStudioImage = homeStory?.content?.studio_image?.filename !== ""
+---
+
+{
+  hasStudioImage && (
+    <section class="flex flex-row w-full m-auto p-1 items-center md:w-8/12 md:p-0">
+      <div class="hidden md:block md:w-1/2">
+        <img src={homeStory.content.studio_image.filename} alt="Pilates" />
+      </div>
+      <div class="w-full flex flex-col items-center gap-y-3 md:w-1/2">
+        <h1 class="text-2xl text-center text-black font-bold">
+          Venha conhecer o nosso studio!
+        </h1>
+        <form action="/studio">
+          <Button text="Navegar" variant="light" />
+        </form>
+      </div>
+    </section>
+  )
+}
+

@@ -1,4 +1,7 @@
 # Local Netlify folder
 .netlify
 .lh/*
-src/.lh/*
+.git/*
+.vscode/*
+node_modules/*
+.env
