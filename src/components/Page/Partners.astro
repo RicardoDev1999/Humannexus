@@ -1,6 +1,7 @@
 ---
 import { useStoryblokApi } from "@storyblok/astro";
 import { getStories } from "@scripts/astro/services";
+import { Image } from "astro:assets";
 
 import { fullSlugToUri } from "@utils/urlUtils.js";
 
@@ -46,12 +47,16 @@ try {
     storiesMapped.map((st) => (
       <a href={fullSlugToUri(st.full_slug)} data-astro-prefetch>
         <div class="cursor-pointer w-48 h-full p-2 shadow-lg rounded-xl transition duration-[350ms] hover:scale-105">
-          <img
-            class="w-full h-36 mb-3 rounded-xl object-center object-contain"
-            src={st.content.photo?.filename}
-            alt={st.content.name}
-            transition:name={"partner-" + st.content._uid}
-          />
+          {st.content.photo?.filename && (
+            <Image
+              class="w-full h-36 mb-3 rounded-xl object-center object-contain"
+              src={st.content.photo?.filename}
+              alt={st.content.name}
+              width={192}
+              height={144}
+              transition:name={"partner-" + st.content._uid}
+            />
+          )}
           <h1 class="text-h-800 text-center text-base font-bold">{st.name}</h1>
           <p class="text-h-600 text-center text-sm font-normal">
             {st.content.role}

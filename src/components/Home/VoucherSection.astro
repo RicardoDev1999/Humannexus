@@ -1,5 +1,6 @@
 ---
 import HomeCard from "@components/HomeCard.astro";
+import { Image } from "astro:assets";
 
 const { homeStory } = Astro.props;
 
@@ -26,10 +27,12 @@ const voucherCard =
         />
       </form>
       <div class="hidden md:block w-1/3">
-        <img
+        <Image
           class="object-center object-contain"
           src={homeStory.content.voucher_image.filename}
           alt="Voucher"
+          width={300}
+          height={200}
         />
       </div>
     </section>

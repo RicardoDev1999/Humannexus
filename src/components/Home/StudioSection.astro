@@ -1,5 +1,6 @@
 ---
 import Button from "@components/Button.astro";
+import { Image } from "astro:assets";
 
 const { homeStory } = Astro.props;
 
@@ -10,7 +11,7 @@ const hasStudioImage = homeStory?.content?.studio_image?.filename !== ""
   hasStudioImage && (
     <section class="flex flex-row w-full m-auto p-1 items-center md:w-8/12 md:p-0">
       <div class="hidden md:block md:w-1/2">
-        <img src={homeStory.content.studio_image.filename} alt="Pilates" />
+        <Image src={homeStory.content.studio_image.filename} alt="Pilates" width={400} height={300} />
       </div>
       <div class="w-full flex flex-col items-center gap-y-3 md:w-1/2">
         <h1 class="text-2xl text-center text-black font-bold">

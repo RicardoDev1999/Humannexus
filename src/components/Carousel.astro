@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+
 const { showArrows, showSliders, items } = Astro.props;
 
 let itemsMapped = structuredClone(items);
@@ -25,10 +27,15 @@ itemsMapped.map(item => {
             <div
               data-carousel-item
               class="hidden duration-700 ease-in-out">
-                <img
-                  src={item.image.filename}
-                  class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                />
+                {item.image.filename && (
+                  <Image
+                    src={item.image.filename}
+                    alt={item.title || "Carousel image"}
+                    width={800}
+                    height={384}
+                    class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                  />
+                )}
             </div>
           ))}
       </div>

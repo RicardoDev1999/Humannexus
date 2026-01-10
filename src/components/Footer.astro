@@ -1,5 +1,6 @@
 ---
 import { renderRichText } from "@storyblok/astro";
+import { Image } from "astro:assets";
 
 const { footerStory } = Astro.props;
 
@@ -24,11 +25,16 @@ const year = new Date().getFullYear();
       {
         footerSections.map((section) => (
           <div class="footer--section">
-            <img
-              class="footer--section-image"
-              src={section?.icon?.filename}
-              loading="lazy"
-            />
+            {section?.icon?.filename && (
+              <Image
+                class="footer--section-image"
+                src={section?.icon?.filename}
+                alt={section?.title}
+                width={50}
+                height={50}
+                loading="lazy"
+              />
+            )}
             <p class="footer--section-title">{section?.title}</p>
             <div
               class="footer--section-item"
@@ -61,6 +67,7 @@ const year = new Date().getFullYear();
 </footer>
 
 <style scoped>
+  @reference "tailwindcss";
   .footer--section {
     @apply flex flex-col justify-self-center text-center;
   }

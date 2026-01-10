@@ -38,6 +38,7 @@ let headerItems = structuredClone(headerStory?.content?.items);
       >
         <Image
           src={logo}
+          loading={"eager"}
           class="max-w-[10rem] max-h-[4.25rem] mr-3 transition duration-850 hover:scale-90"
           alt="Humannexus Logo"
           width="800"
@@ -70,7 +71,7 @@ let headerItems = structuredClone(headerStory?.content?.items);
       </button>
     </div>
     <div
-      class="hidden w-full lg:inline-flex lg:w-auto lg:flex-2 z-40"
+      class="hidden w-full justify-end lg:inline-flex lg:w-auto lg:flex-2 z-40"
       id="navbar-default"
     >
       <ul

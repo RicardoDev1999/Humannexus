@@ -1,4 +1,4 @@
-const version = "draft";
+const version = import.meta.env.MODE === "development" ? "draft" : "published";
 
 const getDefaultParams = () => {
   return {

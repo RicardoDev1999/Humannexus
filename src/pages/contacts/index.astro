@@ -251,6 +251,7 @@ if (Astro.request.method === "POST") {
 </Layout>
 
 <style scoped>
+  @reference "tailwindcss";
   .mapouter {
     display: flex;
     justify-self: center;
@@ -277,7 +278,8 @@ if (Astro.request.method === "POST") {
   }
 
   .directions--grid-item-title {
-    @apply text-lg font-semibold text-h-600;
+    @apply text-lg font-semibold;
+    color: var(--color-h-600);
   }
 
   .directions--grid-item-description {

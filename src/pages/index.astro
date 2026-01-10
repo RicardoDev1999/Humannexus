@@ -1,6 +1,7 @@
 ---
 import ContextLayout from "@layouts/ContextLayout.astro";
 import VideoPlayer from "@/components/VideoPlayer.astro";
+import { Image } from "astro:assets";
 
 import { useStoryblokApi } from "@storyblok/astro";
 import { getStory } from "@scripts/astro/services";
@@ -72,8 +73,9 @@ try {
                 w-[21rem] h-[8.5rem]
                 hover:drop-shadow-2xl"
               >
-                <img
+                <Image
                   class="w-full h-full object-contain shadow-inner"
+                  loading={"eager"}
                   width="800"
                   height="360"
                   src={section.image.filename}
