@@ -5,6 +5,6 @@ export default [
     "/studio/team",
     "/life",
     "/life/partners",
-    "/life/services",
+    "/life/packs",
     "/life/team",
   ];

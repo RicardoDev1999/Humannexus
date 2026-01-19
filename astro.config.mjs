@@ -31,7 +31,8 @@ export default defineConfig({
       service: "storyBlok/Service",
       program: "storyBlok/Program",
       teamMember: "storyBlok/TeamMember",
-      partner: "storyBlok/Partner"
+      partner: "storyBlok/Partner",
+      pack: "storyBlok/Pack"
     },
   }), sitemap({
     filter: (page) => page !== "https://humannexus.pt/404/" && page !== "https://humannexus.pt/400/",
