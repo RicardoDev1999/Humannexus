@@ -7,4 +7,11 @@ export default [
     "/life/partners",
     "/life/packs",
     "/life/team",
+    "/life/services",
+    "/humannexus",
+    "/humannexus/partners",
+    "/humannexus/services",
+    "/humannexus/programs",
+    "/humannexus/team",
+    "/humannexus/services"
   ];

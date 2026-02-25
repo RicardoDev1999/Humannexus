@@ -26,8 +26,10 @@ export const getStory = async (
   params = {},
   context = null
 ) => {
+  const url = context ? `cdn/stories/${context}/${slug}` : `cdn/stories/${slug}`;
+  console.log(context, url);
   const { data } = await storyBlokApi.get(
-    context ? `cdn/stories/${context}/${slug}` : `cdn/stories/${slug}`,
+    url,
     {
       ...getDefaultStoryParams(),
       ...params,

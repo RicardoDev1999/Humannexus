@@ -23,7 +23,33 @@ const { default: whatsappIcon } = await import(
 );
 
 let headerItems = structuredClone(headerStory?.content?.items);
+let colorSchema = headerStory?.content?.color_schema?.[0];
+
+const colorData = colorSchema ? JSON.stringify({
+  color900: colorSchema?.color900?.color || 'rgb(0, 104, 56)',
+  color800: colorSchema?.color800?.color || 'rgb(0, 148, 68)',
+  color700: colorSchema?.color700?.color || 'rgb(38, 164, 96)',
+  color600: colorSchema?.color600?.color || 'rgb(43, 182, 115)',
+  color500: colorSchema?.color500?.color || 'rgb(191, 233, 213)',
+  color400: colorSchema?.color400?.color || 'rgb(217, 217, 217)',
+  color300: colorSchema?.color300?.color || 'rgb(197, 197, 198)',
+}) : '{}';
+
 ---
+
+<script define:vars={{colorData}}>
+  const colors = JSON.parse(colorData);
+  if (Object.keys(colors).length > 0) {
+    const root = document.documentElement;
+    root.style.setProperty('--color-h-900', colors.color900, 'important');
+    root.style.setProperty('--color-h-800', colors.color800, 'important');
+    root.style.setProperty('--color-h-700', colors.color700, 'important');
+    root.style.setProperty('--color-h-600', colors.color600, 'important');
+    root.style.setProperty('--color-h-500', colors.color500, 'important');
+    root.style.setProperty('--color-h-400', colors.color400, 'important');
+    root.style.setProperty('--color-h-300', colors.color300, 'important');
+  }
+</script>
 
 <nav class="bg-white border-gray-200 shadow-header z-50">
   <div

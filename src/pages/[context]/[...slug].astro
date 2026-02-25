@@ -5,13 +5,14 @@ import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
 
 import Layout from "@layouts/Layout.astro";
 
+const context = Astro.params.context;
 const slug = Astro.params.slug === undefined ? "home" : Astro.params.slug;
 
 let story;
 
 try {
   const storyblokApi = useStoryblokApi();
-  story = await getStory(slug, storyblokApi);
+  story = await getStory(slug, storyblokApi, {}, context);
 } catch (error) {
   console.error(error);
   return Astro.redirect("/404");

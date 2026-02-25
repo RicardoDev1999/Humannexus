@@ -16,10 +16,11 @@ import { getStory } from "@scripts/astro/services";
 let headerStory, footerStory;
 
 const { context } = Astro.params;
+const { forceContext } = Astro.props;
 
 try {
   const storyblokApi = useStoryblokApi();
-  headerStory = await getStory("header", storyblokApi, {}, context);
+  headerStory = await getStory("header", storyblokApi, {}, forceContext || context);
 } catch (error) {
   console.error(error);
   return Astro.redirect("/400");
@@ -27,7 +28,7 @@ try {
 
 try {
   const storyblokApi = useStoryblokApi();
-  footerStory = await getStory("footer", storyblokApi, {}, context);
+  footerStory = await getStory("footer", storyblokApi, {}, forceContext || context);
 } catch (error) {
   console.error(error);
   return Astro.redirect("/400");
