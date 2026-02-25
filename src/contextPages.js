@@ -3,15 +3,18 @@ export default [
     "/studio/partners",
     "/studio/services",
     "/studio/team",
+    "/studio/contacts",
     "/life",
     "/life/partners",
     "/life/packs",
     "/life/team",
     "/life/services",
+    "/life/contacts",
     "/humannexus",
     "/humannexus/partners",
     "/humannexus/services",
     "/humannexus/programs",
     "/humannexus/team",
-    "/humannexus/services"
+    "/humannexus/services",
+    "/humannexus/contacts"
   ];

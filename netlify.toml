@@ -9,3 +9,33 @@
    from = "/online/*"
    to = "/"
    status = 301
+
+[[redirects]]
+   from = "/home"
+   to = "/humannexus"
+   status = 301
+
+[[redirects]]
+   from = "/services"
+   to = "/humannexus/services"
+   status = 301
+
+[[redirects]]
+   from = "/programs"
+   to = "/humannexus/programs"
+   status = 301
+
+[[redirects]]
+   from = "/team"
+   to = "/humannexus/team"
+   status = 301
+
+[[redirects]]
+   from = "/partners"
+   to = "/humannexus/partners"
+   status = 301
+
+[[redirects]]
+   from = "/contacts"
+   to = "/humannexus/contacts"
+   status = 301
