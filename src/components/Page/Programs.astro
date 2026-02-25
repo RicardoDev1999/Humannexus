@@ -72,7 +72,7 @@ try {
           <Image
             class="flex flex-1 w-full h-64 rounded-[2rem] object-center object-cover shadow-lg"
             src={st.content?.image?.filename}
-            alt={st.name}
+            alt={st.name ?? "Program Image"}
             width="455"
             height="256"
             decoding="async"

@@ -20,7 +20,7 @@ const description = renderRichText(blok.description);
       <Image
         class="w-auto lg:h-80 md:h-64 sm:h-48 h-36 object-contain rounded-md shadow-md shadow-slate-300"
         src={image}
-        alt={story.name}
+        alt={story.name ?? "Pack image"}
         width={320}
         height={320}
         transition:name={"pack-" + blok._uid}

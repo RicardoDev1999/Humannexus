@@ -42,7 +42,7 @@ const sizes = {
     <video
         class="video-background"
         crossorigin="anonymous"
-        preload="auto"
+        preload="none"
         muted
         loop
         playsinline
@@ -87,12 +87,25 @@ class VideoBackgroundManager {
     }
 
     private startVideoLoad(videoCache: AbortController) {
-        // Start playing video immediately with streaming (frame-by-frame)
-        this.video.addEventListener('loadeddata', () => {
-            this.thumbnail.classList.add('fade-out');
-        }, { once: true });
-        
-        this.video.play().catch(console.warn);
+        fetch(this.video.querySelector('source')!.src, {
+            signal: videoCache.signal,
+        }).then(response => response.blob())
+          .then(blob => {
+            const url = URL.createObjectURL(blob);
+            this.video.src = url;
+            
+            const source = this.video.querySelector('source');
+            if (source) source.remove();
+            
+            this.video.play().catch(console.warn);
+            
+            this.video.addEventListener('loadeddata', () => {
+                this.thumbnail.classList.add('fade-out');
+            });
+        }).catch(error => {
+            if (error.name === 'AbortError') return;
+            console.error('Error caching video:', error);
+        });
     }
 
     private handleResize() {

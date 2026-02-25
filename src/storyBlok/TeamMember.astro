@@ -17,15 +17,19 @@ const description = renderRichText(blok.description);
 
 <main {...storyblokEditable(blok)}>
   <div class="flex flex-col items-center">
-    <Image
-      class="md:w-64 md:h-64 sm:w-48 sm:h-48 w-36 h-36 object-center object-cover rounded-3xl shadow-md shadow-slate-300"
-      width="256"
-      height="256"
-      alt={story.name}
-      src={image}
-      decoding="async"
-      loading="lazy"
-    />
+    {
+      image && (
+        <Image
+          class="md:w-64 md:h-64 sm:w-48 sm:h-48 w-36 h-36 object-center object-cover rounded-3xl shadow-md shadow-slate-300"
+          width="256"
+          height="256"
+          alt={story.name}
+          src={image}
+          decoding="async"
+          loading="lazy"
+        />
+      )
+    }
     <span class="flex mt-4 text-2xl text-h-800 font-semibold">{story.name}</span
     >
     <span class="flex mt-1 text-sm text-h-600 font-light">{blok.role}</span>
@@ -35,5 +39,3 @@ const description = renderRichText(blok.description);
     />
   </div>
 </main>
-
-

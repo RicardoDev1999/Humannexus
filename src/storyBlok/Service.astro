@@ -15,22 +15,24 @@ const image = blok.image
 const descriptionIsEmpty =
   !blok.description || blok.description?.content[0].content === undefined;
 const description = renderRichText(
-  !descriptionIsEmpty ? blok.description : blok.short_description
+  !descriptionIsEmpty ? blok.description : blok.short_description,
 );
 ---
 
 <section {...storyblokEditable(blok)}>
   <div class="flex flex-col items-center">
-    {image && (
-      <Image
-        class="w-auto lg:h-80 h-auto object-cover rounded-3xl shadow-md shadow-slate-300"
-        transition:name={"service-image-" + blok._uid}
-        src={image}
-        alt={story.name}
-        width={320}
-        height={320}
-      />
-    )}
+    {
+      image && (
+        <Image
+          class="w-auto lg:h-80 h-auto object-cover rounded-3xl shadow-md shadow-slate-300"
+          transition:name={"service-image-" + blok._uid}
+          src={image}
+          alt={story.name ?? "Service Image"}
+          width={320}
+          height={320}
+        />
+      )
+    }
     <div class="text-center mt-8 text-2xl text-h-800 font-semibold">
       {story.name}
     </div>
@@ -40,5 +42,3 @@ const description = renderRichText(
     />
   </div>
 </section>
-
-

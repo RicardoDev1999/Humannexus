@@ -71,7 +71,7 @@ try {
             width="192"
             height="144"
             src={st.content?.photo?.filename ?? "/default-avatar.png"}
-            alt={st.name}
+            alt={st.name ?? "Team Member"}
             decoding="async"
             loading="lazy"
           />

@@ -64,7 +64,7 @@ try {
                   <Image
                     class="w-full h-full object-center object-cover rounded-xl"
                     src={service.content?.image?.filename}
-                    alt={service.name}
+                    alt={service?.name ?? ""}
                     width="170"
                     height="159"
                     decoding="async"

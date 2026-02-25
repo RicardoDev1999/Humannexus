@@ -73,7 +73,7 @@ try {
           <Image
             class="flex flex-1 w-full h-64 rounded-[2rem] object-center object-cover shadow-lg"
             src={st.content?.image?.filename}
-            alt={st.name}
+            alt={st.name ?? "Service Image"}
             height="256"
             width="455"
             decoding="async"

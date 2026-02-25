@@ -8,15 +8,12 @@ import { getStory } from "@scripts/astro/services";
 
 const { default: backgroundMovie } = await import(`/index.mp4?url`);
 
-const { default: backgroundMovieThumbnailSmall } = await import(
-  "/index-thumb@0.5x.jpg?url"
-);
-const { default: backgroundMovieThumbnailMedium } = await import(
-  "/index-thumb.jpg?url"
-);
-const { default: backgroundMovieThumbnailLarge } = await import(
-  "/index-thumb@2x.jpg?url"
-);
+const { default: backgroundMovieThumbnailSmall } =
+  await import("/index-thumb@0.5x.jpg?url");
+const { default: backgroundMovieThumbnailMedium } =
+  await import("/index-thumb.jpg?url");
+const { default: backgroundMovieThumbnailLarge } =
+  await import("/index-thumb@2x.jpg?url");
 
 const { context } = Astro.params;
 
@@ -60,7 +57,7 @@ try {
       {
         sectionsMapped.map((section) => (
           <div
-            class="flex justify-center align-middle xl:m-0 mx-auto my-8 border-2 bg-[#ffffffbb] hover:bg-white border-[ffffffbb] rounded-2xl hover:scale-95 transition duration-850"
+            class="flex justify-center align-middle xl:m-0 mx-auto border-2 bg-[#ffffffbb] hover:bg-white border-[ffffffbb] rounded-2xl hover:scale-95 transition duration-850"
             aria-label={section.name}
           >
             <form action={section.href} method="post">
@@ -73,14 +70,16 @@ try {
                 w-[21rem] h-[8.5rem]
                 hover:drop-shadow-2xl"
               >
-                <Image
-                  class="w-full h-full object-contain shadow-inner"
-                  loading={"eager"}
-                  width="800"
-                  height="360"
-                  src={section.image.filename}
-                  alt={section.name}
-                />
+                {section.image?.filename && (
+                  <Image
+                    class="w-full h-full object-contain shadow-inner"
+                    loading={"eager"}
+                    width="800"
+                    height="360"
+                    src={section.image?.filename}
+                    alt={section.name ?? "Section Image"}
+                  />
+                )}
                 {/* <span>{section.name}</span> */}
               </button>
             </form>

@@ -51,7 +51,7 @@ try {
             <Image
               class="w-full h-36 mb-3 rounded-xl object-center object-contain"
               src={st.content.photo?.filename}
-              alt={st.content.name}
+              alt={st.content?.name ?? ""}
               width={192}
               height={144}
               transition:name={"partner-" + st.content._uid}
