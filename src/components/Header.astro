@@ -38,17 +38,22 @@ const colorData = colorSchema ? JSON.stringify({
 ---
 
 <script define:vars={{colorData}}>
-  const colors = JSON.parse(colorData);
-  if (Object.keys(colors).length > 0) {
-    const root = document.documentElement;
-    root.style.setProperty('--color-h-900', colors.color900, 'important');
-    root.style.setProperty('--color-h-800', colors.color800, 'important');
-    root.style.setProperty('--color-h-700', colors.color700, 'important');
-    root.style.setProperty('--color-h-600', colors.color600, 'important');
-    root.style.setProperty('--color-h-500', colors.color500, 'important');
-    root.style.setProperty('--color-h-400', colors.color400, 'important');
-    root.style.setProperty('--color-h-300', colors.color300, 'important');
+  function applyColors() {
+    const colors = JSON.parse(colorData);
+    if (Object.keys(colors).length > 0) {
+      const root = document.documentElement;
+      root.style.setProperty('--color-h-900', colors.color900, 'important');
+      root.style.setProperty('--color-h-800', colors.color800, 'important');
+      root.style.setProperty('--color-h-700', colors.color700, 'important');
+      root.style.setProperty('--color-h-600', colors.color600, 'important');
+      root.style.setProperty('--color-h-500', colors.color500, 'important');
+      root.style.setProperty('--color-h-400', colors.color400, 'important');
+      root.style.setProperty('--color-h-300', colors.color300, 'important');
+    }
   }
+  
+  applyColors();
+  document.addEventListener('astro:page-load', applyColors);
 </script>
 
 <nav class="bg-white border-gray-200 shadow-header z-50">
