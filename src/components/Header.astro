@@ -169,7 +169,7 @@ const colorData = colorSchema ? JSON.stringify({
         <li
           class="flex items-center justify-center align-middle bg-h-700 lg:bg-transparent h-16 w-full"
         >
-          <form action={`/${context}/contacts`} method="get" data-astro-reload>
+          <form action={`/${context ?? "humannexus"}/contacts`} method="get" data-astro-reload>
             <input type="hidden" name="ref" value="pricing" />
             <button
               type="submit"
