@@ -2,7 +2,6 @@ import { defineConfig, passthroughImageService } from 'astro/config'
 import netlify from "@astrojs/netlify";
 import node from "@astrojs/node";
 import tailwindcss from "@tailwindcss/vite";
-import sitemap from "@astrojs/sitemap";
 import { storyblok } from "@storyblok/astro";
 import basicSsl from "@vitejs/plugin-basic-ssl";
 
@@ -16,7 +15,12 @@ const mode = import.meta.env.VITE_FORCE_MODE || import.meta.env.MODE;
 export default defineConfig({
   prefetch: true,
   site: "https://humannexus.pt",
-  image: { service: passthroughImageService() },
+  image: {
+    service: passthroughImageService(), remotePatterns: [
+      {
+        protocol: 'https', hostname: 'a.storyblok.com', port: '', pathname: '/**'
+      }]
+  },
   integrations: [storyblok({
     accessToken: import.meta.env.VITE_STORYBLOK_TOKEN,
     apiOptions: {
@@ -32,11 +36,12 @@ export default defineConfig({
       program: "storyBlok/Program",
       teamMember: "storyBlok/TeamMember",
       partner: "storyBlok/Partner",
-      pack: "storyBlok/Pack"
+      pack: "storyBlok/Pack",
+      "card-w-button": "storyBlok/components/CardWithButtonComponent",
+      row: "storyBlok/components/RowComponent",
+      image: "storyBlok/components/ImageComponent",
+      'row-container': "storyBlok/components/RowGrouoContainer",
     },
-  }), sitemap({
-    filter: (page) => page !== "https://humannexus.pt/404/" && page !== "https://humannexus.pt/400/",
-    customPages: [...allowedContextPagesMapped]
   })],
   vite: {
     define: {
@@ -53,7 +58,7 @@ export default defineConfig({
   },
   server: mode === 'development' ? {} : { https: true },
   output: "server",
-  adapter: mode === "development" 
-    ? node({ mode: "standalone" }) 
+  adapter: mode === "development"
+    ? node({ mode: "standalone" })
     : netlify({ functionsDirectory: 'netlify/functions', imageCDN: false })
 });

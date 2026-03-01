@@ -1,0 +1,15 @@
+---
+import { storyblokEditable } from "@storyblok/astro";
+import { Image } from "astro:assets";
+
+const { blok } = Astro.props;
+
+console.log(blok.image);
+---
+
+<main {...storyblokEditable(blok)} class="w-fit h-fit">
+    <Image style={
+        `width: ${blok.width ? blok.width + 'px' : 'auto'}; 
+        height: ${blok.height ? blok.height + 'px' : 'auto'}; `
+    } src={blok.image.filename} alt={blok.image?.alt ?? "Image"} inferSize={true} />
+</main>

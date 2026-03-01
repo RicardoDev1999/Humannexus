@@ -1,0 +1,15 @@
+---
+import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
+
+const { homeStory } = Astro.props;
+
+const content = homeStory?.content?.content?.[0];
+---
+
+{
+  content && (
+    <section class="w-full m-auto p-1 md:w-10/12 md:p-0">
+      <StoryblokComponent blok={content} />
+    </section>
+  )
+}

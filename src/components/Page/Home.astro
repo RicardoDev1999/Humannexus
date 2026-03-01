@@ -3,9 +3,7 @@ import { useStoryblokApi } from "@storyblok/astro";
 import { getStory } from "@scripts/astro/services";
 
 import CarouselSection from "@components/Home/CarouselSection.astro";
-import VoucherSection from "@components/Home/VoucherSection.astro";
-import StudioSection from "@components/Home/StudioSection.astro";
-import ScheduleSection from "@components/Home/ScheduleSection.astro";
+import ContentSection from "@components/Home/ContentSection.astro";
 import ServicesSection from "@components/Home/ServicesSection.astro";
 
 let homeStory;
@@ -22,6 +20,5 @@ try {
 ---
 
 <CarouselSection homeStory={homeStory} />
-<ScheduleSection homeStory={homeStory} />
-<VoucherSection homeStory={homeStory} />
+<ContentSection homeStory={homeStory} />
 <ServicesSection homeStory={homeStory} />
