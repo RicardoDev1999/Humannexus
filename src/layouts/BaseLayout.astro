@@ -1,5 +1,5 @@
 ---
-import '@styles/global.css';
+import "@styles/global.css";
 
 const { title, hideMain } = Astro.props;
 ---
@@ -33,13 +33,26 @@ const { title, hideMain } = Astro.props;
 
     <slot name="header" />
   </head>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S8RDYV5CQB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-S8RDYV5CQB');
+  </script>
+
   <body>
     <slot name="beforeMain" />
-    {!hideMain && <main
-      class="flex flex-col max-w-screen-xl mt-8 mx-auto gap-y-8"
-    >
-      <slot />
-    </main>}
+    {
+      !hideMain && (
+        <main class="flex flex-col max-w-screen-xl mt-8 mx-auto gap-y-8">
+          <slot />
+        </main>
+      )
+    }
     <slot name="afterMain" />
     <style>
       html {

@@ -23,6 +23,7 @@ const description = renderRichText(blok.description);
           class="md:w-64 md:h-64 sm:w-48 sm:h-48 w-36 h-36 object-center object-cover rounded-3xl shadow-md shadow-slate-300"
           width="256"
           height="256"
+          transition:name={"team-image-" + blok._uid}
           alt={story.name}
           src={image}
           decoding="async"
