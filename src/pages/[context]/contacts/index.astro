@@ -8,6 +8,20 @@ import { POST as turnstile } from "@pages/turnstile";
 
 import { showDialog } from "@stores/ToastStore";
 
+import { getStory } from "@scripts/astro/services";
+import { useStoryblokApi } from "@storyblok/astro";
+const { context } = Astro.params;
+
+let story;
+
+try {
+  const storyblokApi = useStoryblokApi();
+  story = await getStory("contacts", storyblokApi, {}, context);
+} catch (error) {
+  console.error(error);
+  return Astro.redirect("/400");
+}
+
 const reference = Astro.url.searchParams.get("ref")! || "";
 
 const lang = getLangFromUrl(Astro.url);
@@ -218,7 +232,7 @@ if (Astro.request.method === "POST") {
         <iframe
           height="500"
           id="gmap_canvas"
-          src="https://maps.google.com/maps?q=Humannexus&t=&z=15&ie=UTF8&iwloc=&output=embed"
+          src={story?.content?.body?.[0]?.src ?? ""}
         ></iframe>
       </div>
     </div>

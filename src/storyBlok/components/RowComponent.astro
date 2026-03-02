@@ -12,7 +12,7 @@ const { blok } = Astro.props;
   flex flex-row 
   max-h-fit 
   gap-${blok.gap ?? 0} 
-  w-${blok.size ?? "12"}/12`}
+  lg:w-${blok.size ?? "12"}/12`}
 >
   {blok.items && blok.items.map((item) => <StoryblokComponent blok={item} />)}
 </main>

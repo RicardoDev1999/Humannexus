@@ -2,16 +2,21 @@
 import defaultTheme from "tailwindcss/defaultTheme";
 import typography from "@tailwindcss/typography";
 
+const fractions = Array.from({ length: 12 }, (_, i) => `${i+1}/12`);
+const breakpoints = ['', 'sm:', 'md:', 'lg:', 'xl:', '2xl:'];
+
+const widthClasses = breakpoints.flatMap(bp =>
+  fractions.map(f => `${bp}w-${f}`)
+);
+
 export default {
   content: [
     "./src/**/*.{astro,html,js,jsx,md,mdx}"
   ],
   safelist: [
-    'w-1/12', 'w-2/12', 'w-3/12', 'w-4/12', 'w-5/12', 'w-6/12',
-    'w-7/12', 'w-8/12', 'w-9/12', 'w-10/12', 'w-11/12', 'w-12/12',
-    'gap-0', 'gap-2', 'gap-4', 'gap-6', 'gap-8', 'gap-10', 'gap-12',
-    'gap-14', 'gap-16', 'gap-18', 'gap-20', 'gap-22', 'gap-24', 'gap-26', 
-    'gap-28', 'gap-30'
+    ...widthClasses,
+    'sm','lg','xl','2xl',
+    'gap-2', 'gap-4', 'gap-6', 'gap-8', 'gap-10', 'gap-12', 'gap-14', 'gap-16', 'gap-18', 'gap-20', 'gap-22', 'gap-24', 'gap-26', 'gap-28', 'gap-30',
   ],
   theme: {
     extend: {
