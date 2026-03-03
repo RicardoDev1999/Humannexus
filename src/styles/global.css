@@ -1,6 +1,9 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
+@source inline('gap-{2,{2..32..2},32}');
+@source inline('{sm:,lg:,xl:,2xl:,}w-{1,{1..12..1},12}/12');
+
 @theme {
   --color-h-900: #006838;
   --color-h-800: #009444;

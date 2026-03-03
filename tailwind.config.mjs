@@ -13,11 +13,6 @@ export default {
   content: [
     "./src/**/*.{astro,html,js,jsx,md,mdx}"
   ],
-  safelist: [
-    ...widthClasses,
-    'sm','lg','xl','2xl',
-    'gap-2', 'gap-4', 'gap-6', 'gap-8', 'gap-10', 'gap-12', 'gap-14', 'gap-16', 'gap-18', 'gap-20', 'gap-22', 'gap-24', 'gap-26', 'gap-28', 'gap-30',
-  ],
   theme: {
     extend: {
       width: {

@@ -1,4 +1,3 @@
-import allowedContextPages from "../contextPages";
 import { getStories } from "@scripts/astro/services";
 import { StoryblokClient } from "@storyblok/js";
 
@@ -31,11 +30,8 @@ async function generateSitemap() {
     "/terms-and-conditions",
   ];
 
-  // Context pages from contextPages.js (the index pages)
-  const contextPages = allowedContextPages.map(path => path);
-
   // Extract unique contexts from contextPages
-  const contexts = [...new Set(allowedContextPages.map(page => page.split('/')[1]))].filter(Boolean);
+  const contexts = ["humannexus", "life", "studio"];
 
   // Fetch dynamic content for each context
   const dynamicPages = [];
@@ -47,7 +43,7 @@ async function generateSitemap() {
         getStories(storyblokApi, { content_type: "partner" }, context),
         getStories(storyblokApi, { content_type: "program" }, context),
         getStories(storyblokApi, { content_type: "pack" }, context),
-        getStories(storyblokApi, { content_type: "teamMember" }, context),
+        getStories(storyblokApi, { content_type: "team-member" }, context),
       ]);
 
       // Build context-specific dynamic URLs with content type
@@ -64,7 +60,6 @@ async function generateSitemap() {
   // Combine all pages
   const allPages = [
     ...staticPages,
-    ...contextPages,
     ...dynamicPages,
   ];
 

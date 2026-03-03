@@ -5,10 +5,6 @@ import tailwindcss from "@tailwindcss/vite";
 import { storyblok } from "@storyblok/astro";
 import basicSsl from "@vitejs/plugin-basic-ssl";
 
-import allowedContextPages from "./src/contextPages";
-
-const allowedContextPagesMapped = allowedContextPages.map(x => `https://humannexus.pt${x}/`);
-
 const mode = import.meta.env.VITE_FORCE_MODE || import.meta.env.MODE;
 
 // https://astro.build/config
