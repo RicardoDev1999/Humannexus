@@ -1,4 +1,4 @@
-name: 'Netlify Deploy'
+name: Deploy to Netlify
 
 on:
   release:
@@ -6,9 +6,26 @@ on:
 
 jobs:
   deploy:
-    name: 'Deploy to Netlify'
+    runs-on: ubuntu-latest
+
     steps:
-      - uses: jsmrcaga/action-netlify-deploy@v2.0.0
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.MY_TOKEN_SECRET }}
-          NETLIFY_DEPLOY_TO_PROD: true
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Deploy to Netlify
+        run: npx netlify deploy --prod --dir=dist
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
