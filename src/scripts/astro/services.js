@@ -50,12 +50,28 @@ export const getDatasourceEntries = async (storyBlokApi, params = {}) => {
 };
 
 export const getStories = async (storyBlokApi, params = {}, context = null) => {
-  const { data } = await storyBlokApi.get("cdn/stories", {
-    ...getDefaultStoriesParams(context),
-    ...params,
-  });
+  const pageSize = Math.min(Number(params.per_page) || 100, 100);
+  const stories = [];
+  let page = Number(params.page) || 1;
+  let total = Infinity;
 
-  return data?.stories;
+  while (stories.length < total) {
+    const { data } = await storyBlokApi.get("cdn/stories", {
+      ...getDefaultStoriesParams(context),
+      ...params,
+      page,
+      per_page: pageSize,
+    });
+
+    const pageStories = data?.stories || [];
+    stories.push(...pageStories);
+    total = Number(data?.total) || stories.length;
+
+    if (pageStories.length === 0 || pageStories.length < pageSize) break;
+    page += 1;
+  }
+
+  return stories;
 };
 
 export const getLocalizationFromDatasource = async (storyBlokApi) => {
