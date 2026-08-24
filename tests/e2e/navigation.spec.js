@@ -39,6 +39,11 @@ test("contact page mounts a Turnstile container", async ({ page }) => {
   await expect(turnstile).not.toHaveClass(/cf-turnstile/);
 });
 
+test("packs listing renders pack photos", async ({ page }) => {
+  await page.goto("/life/packs", { waitUntil: "domcontentloaded" });
+  await expect(page.locator('a[href*="/life/pack/"] img').first()).toBeVisible();
+});
+
 test("service image uses Astro shared transition and survives back navigation", async ({ page }) => {
   const errors = collectRuntimeErrors(page);
 

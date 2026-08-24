@@ -22,10 +22,11 @@ try {
   storiesMapped = structuredClone(stories);
 
   storiesMapped.map((st) => {
-    if (!st.content?.image) return st;
-    st.content.image.filename = st.content?.image?.is_external_url
-      ? st.content?.image?.filename
-      : st.content?.image?.filename + "/m/800x450/filters:format(webp):quality(85)";
+    const image = st.content?.photo ?? st.content?.image;
+    if (!image) return st;
+    image.filename = image.is_external_url
+      ? image.filename
+      : image.filename + "/m/800x450/filters:format(webp):quality(85)";
     return st;
   });
 } catch (error) {
@@ -46,11 +47,11 @@ try {
     storiesMapped.map((st) => (
       <a href={fullSlugToUri(st.full_slug)} data-astro-prefetch>
         <div class="cursor-pointer w-48 h-full p-2 shadow-lg rounded-xl transition duration-[350ms] hover:scale-105">
-          {st.content.image?.filename && (
+          {(st.content.photo ?? st.content.image)?.filename && (
             <Image
               class="w-full h-36 mb-3 rounded-xl object-center object-contain"
               transition:name={"pack-" + st.content._uid}
-              src={st.content.image?.filename}
+              src={(st.content.photo ?? st.content.image)?.filename}
               alt={st.content.name ?? "Pack"}
               width={400}
               height={300}
