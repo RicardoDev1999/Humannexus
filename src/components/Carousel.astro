@@ -127,8 +127,20 @@ itemsMapped = itemsMapped.map((item: CarouselItem) => {
 }
 
 <script>
-  document.addEventListener("astro:page-load", async () => {
-    const { initCarousels } = await import('flowbite');
-    initCarousels();
+  import { Carousel } from 'flowbite';
+  
+  document.addEventListener("astro:page-load", () => {
+    const carouselElement = document.getElementById('my-carousel');
+    if (carouselElement) {
+      new Carousel(carouselElement);
+    }
+  });
+
+  // Also reinitialize on navigation (view transitions)
+  document.addEventListener("astro:after-swap", () => {
+    const carouselElement = document.getElementById('my-carousel');
+    if (carouselElement) {
+      new Carousel(carouselElement);
+    }
   });
 </script>

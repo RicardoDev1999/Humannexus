@@ -27,7 +27,8 @@ const description = renderRichText(blok.description);
           alt={story.name}
           src={image}
           decoding="async"
-          loading="lazy"
+          loading="eager"
+          fetchpriority="high"
         />
       )
     }

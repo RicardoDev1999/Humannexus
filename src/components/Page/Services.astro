@@ -68,10 +68,10 @@ try {
             "flex flex-col lg:flex-row gap-4 cursor-pointer transition duration-[350ms] hover:scale-90",
             index % 2 === 1 ? "lg:flex-row-reverse" : "",
           ]}
-          transition:name={"service-image-" + st.content._uid}
         >
           <Image
             class="flex flex-1 w-full h-64 rounded-[2rem] object-center object-cover shadow-lg"
+            transition:name={"service-image-" + st.content._uid}
             src={st.content?.image?.filename}
             alt={st.name ?? "Service Image"}
             height={450}
@@ -79,7 +79,8 @@ try {
             widths={[360, 768, 1024, 1280, 1600]}
             sizes="(max-width: 640px) 90vw, (max-width: 1024px) 50vw, 45vw"
             decoding="async"
-            loading="lazy"
+            loading="eager"
+            fetchpriority="high"
           />
           <div class="flex flex-1 flex-col my-auto justify-center items-start gap-y-2">
             <h1 class="text-h-800 text-2xl font-bold">{st.name}</h1>

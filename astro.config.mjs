@@ -11,11 +11,19 @@ const mode = import.meta.env.VITE_FORCE_MODE || import.meta.env.MODE;
 export default defineConfig({
   prefetch: true,
   site: "https://humannexus.pt",
+  devToolbar: {
+    enabled: false
+  },
   image: {
-    service: passthroughImageService(), remotePatterns: [
+    service: passthroughImageService(), 
+    remotePatterns: [
       {
-        protocol: 'https', hostname: 'a.storyblok.com', port: '', pathname: '/**'
-      }]
+        protocol: 'https', 
+        hostname: 'a.storyblok.com', 
+        port: '', 
+        pathname: '/**'
+      }
+    ]
   },
   integrations: [storyblok({
     accessToken: import.meta.env.VITE_STORYBLOK_TOKEN,

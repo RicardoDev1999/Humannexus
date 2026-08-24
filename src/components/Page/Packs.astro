@@ -22,10 +22,10 @@ try {
   storiesMapped = structuredClone(stories);
 
   storiesMapped.map((st) => {
-    if (!st.content?.photo) return st;
-    st.content.photo.filename = st.content?.photo?.is_external_url
-      ? st.content?.photo?.filename
-      : st.content?.photo?.filename + "/m/400x300/filters:format(webp):quality(85)";
+    if (!st.content?.image) return st;
+    st.content.image.filename = st.content?.image?.is_external_url
+      ? st.content?.image?.filename
+      : st.content?.image?.filename + "/m/800x450/filters:format(webp):quality(85)";
     return st;
   });
 } catch (error) {
@@ -46,16 +46,18 @@ try {
     storiesMapped.map((st) => (
       <a href={fullSlugToUri(st.full_slug)} data-astro-prefetch>
         <div class="cursor-pointer w-48 h-full p-2 shadow-lg rounded-xl transition duration-[350ms] hover:scale-105">
-          {st.content.photo?.filename && (
+          {st.content.image?.filename && (
             <Image
               class="w-full h-36 mb-3 rounded-xl object-center object-contain"
-              src={st.content.photo?.filename}
+              transition:name={"pack-" + st.content._uid}
+              src={st.content.image?.filename}
               alt={st.content.name ?? "Pack"}
               width={400}
               height={300}
               widths={[200, 300, 400]}
               sizes="(max-width: 768px) 80vw, (max-width: 1024px) 25vw, 20vw"
-              transition:name={"pack-" + st.content._uid}
+              loading="eager"
+              fetchpriority="high"
             />
           )}
           <h1 class="text-h-800 text-center text-base font-bold">{st.name}</h1>

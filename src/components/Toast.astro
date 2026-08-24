@@ -49,15 +49,20 @@ hideDialog();
   </div>
 </main>
 
-<script>
-  document.addEventListener("astro:page-load", () => {
+<script is:inline>
+  const setupToast = () => {
     const toastSection = document.getElementById("toast--section");
     const toastCloseBt = document.getElementById("toast--close");
 
+    if (!toastSection || !toastCloseBt || toastCloseBt.dataset.bound === "true") return;
+
+    toastCloseBt.dataset.bound = "true";
     toastCloseBt.addEventListener("click", () => {
       toastSection.classList.remove("opacity-100");
       toastSection.classList.add("opacity-0");
     });
-  });
-  1;
+  };
+
+  document.addEventListener("astro:page-load", setupToast);
+  setupToast();
 </script>

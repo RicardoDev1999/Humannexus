@@ -108,6 +108,7 @@ if (Astro.request.method === "POST") {
   <section aria-labelledby="Formulário Contactar" class="mx-2">
     <form
       method="POST"
+      data-astro-reload
       name="contact-form"
       class="relative flex flex-col gap-y-3 flex-1 w-full p-8 pb-12 rounded-lg border-2 border-h-900"
     >
@@ -191,12 +192,12 @@ if (Astro.request.method === "POST") {
         <label
           class="cursor-pointer text-sm font-medium text-h-800"
           for="terms-and-policy-plus-privacy-policy"
-          >Aceito os
+          >Aceito os&nbsp;
           <a
             class="font-semibold hover:font-bold"
             href="/terms-and-conditions"
             target="_blank">termos e condições</a
-          > e a
+          > e a&nbsp;
           <a
             class="font-semibold hover:font-bold"
             href="/privacy-policy"
@@ -205,19 +206,68 @@ if (Astro.request.method === "POST") {
         </label>
       </div>
       <div
+        id="contact-turnstile"
         class="cf-turnstile"
         data-theme="light"
-        data-size="compact"
+        data-size="normal"
         data-appearance="interaction-only"
-        data-language="pt-PT"
+        data-language="pt-br"
         data-sitekey="0x4AAAAAAARBXvF-JfG3UnQv"
       >
       </div>
+      <p id="contact-turnstile-error" class="hidden text-sm text-red-600" role="alert">
+        Confirme que é humano antes de enviar o formulário.
+      </p>
       <div class="absolute right-3 -bottom-7">
         <Button text="Enviar" />
       </div>
     </form>
   </section>
+  <script is:inline data-astro-rerun>
+    const renderContactTurnstile = () => {
+      const container = document.getElementById("contact-turnstile");
+      if (!container || !window.turnstile) return false;
+
+      if (container.dataset.turnstileRendered === "true") return true;
+
+      window.turnstile.render(container, {
+        sitekey: container.dataset.sitekey,
+        theme: container.dataset.theme,
+        size: container.dataset.size,
+        appearance: container.dataset.appearance,
+        language: container.dataset.language,
+        callback: () => {
+          document.getElementById("contact-turnstile-error")?.classList.add("hidden");
+        },
+        "expired-callback": () => {
+          document.getElementById("contact-turnstile-error")?.classList.remove("hidden");
+        },
+        "error-callback": () => {
+          document.getElementById("contact-turnstile-error")?.classList.remove("hidden");
+        },
+      });
+      container.dataset.turnstileRendered = "true";
+      return true;
+    };
+
+    const setupContactTurnstile = () => {
+      if (renderContactTurnstile()) return;
+
+      let attempts = 0;
+      const retry = window.setInterval(() => {
+        attempts += 1;
+        if (renderContactTurnstile() || attempts >= 40) {
+          window.clearInterval(retry);
+          if (attempts >= 40 && !window.turnstile) {
+            document.getElementById("contact-turnstile-error")?.classList.remove("hidden");
+          }
+        }
+      }, 250);
+    };
+
+    document.addEventListener("astro:page-load", setupContactTurnstile);
+    setupContactTurnstile();
+  </script>
   <section aria-labelledby="Como Chegar" class="mt-12">
     <div class="mx-auto text-center mb-8 lg:mb-8">
       <p

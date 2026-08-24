@@ -38,26 +38,10 @@ const colorData = colorSchema ? JSON.stringify({
 
 ---
 
-<script define:vars={{colorData}}>
-  function applyColors() {
-    const colors = JSON.parse(colorData);
-    if (Object.keys(colors).length > 0) {
-      const root = document.documentElement;
-      root.style.setProperty('--color-h-900', colors.color900, 'important');
-      root.style.setProperty('--color-h-800', colors.color800, 'important');
-      root.style.setProperty('--color-h-700', colors.color700, 'important');
-      root.style.setProperty('--color-h-600', colors.color600, 'important');
-      root.style.setProperty('--color-h-500', colors.color500, 'important');
-      root.style.setProperty('--color-h-400', colors.color400, 'important');
-      root.style.setProperty('--color-h-300', colors.color300, 'important');
-    }
-  }
-  
-  applyColors();
-  document.addEventListener('astro:page-load', applyColors);
-</script>
-
-<nav class="bg-white border-gray-200 shadow-header z-50">
+<nav
+  class="bg-white border-gray-200 shadow-header z-50"
+  data-humannexus-colors={colorData}
+>
   <div
     class="flex flex-1 flex-wrap lg:flex-nowrap max-w-screen-2xl h-20.5 items-center justify-between md:mx-auto lg:px-2"
   >
@@ -66,6 +50,7 @@ const colorData = colorSchema ? JSON.stringify({
     >
       <a
         href={headerStory.content.logo_redirect}
+        data-astro-reload
         class="inline-flex items-center"
       >
         <Image

@@ -30,6 +30,8 @@ const description = renderRichText(
           alt={story.name ?? "Service Image"}
           width={640}
           height={640}
+          loading="eager"
+          fetchpriority="high"
         />
       )
     }

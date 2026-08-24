@@ -8,8 +8,6 @@ import Footer from "@components/Footer.astro";
 import Toast from "@components/Toast.astro";
 import Loading from "@components/Loading.astro";
 
-import { ViewTransitions } from "astro:transitions";
-
 import { useStoryblokApi } from "@storyblok/astro";
 import { getStory } from "@scripts/astro/services";
 
@@ -42,11 +40,8 @@ try {
     async
     defer
     slot="header"></script>
-  <ViewTransitions slot="header" />
   <Header
     headerStory={headerStory}
-    transition:name="header"
-    transition:persist
     slot="beforeMain"
   />
   <Loading slot="beforeMain" />
@@ -54,19 +49,58 @@ try {
   <slot />
   <Footer
     footerStory={footerStory}
-    transition:name="footer"
-    transition:persist
     slot="afterMain"
   />
   <script is:inline slot="afterMain">
-    document.addEventListener("astro:before-preparation", () => {
-      //Restart loading animation
-      document.querySelector("#loading svg image").style.transform = null;
-      document.querySelector("#loading").style.opacity = 100;
+    if (!window.__humannexusLoadingHandlers) {
+      window.__humannexusLoadingHandlers = true;
+      let loadingTimeout;
+
+    const showLoading = () => {
+      const loadingElement = document.querySelector("#loading");
+      if (loadingElement) loadingElement.style.opacity = "1";
+      if (loadingTimeout) clearTimeout(loadingTimeout);
+      loadingTimeout = setTimeout(hideLoading, 10000);
+    };
+
+    const hideLoading = () => {
+      if (loadingTimeout) clearTimeout(loadingTimeout);
+      const loadingElement = document.querySelector("#loading");
+      if (loadingElement) loadingElement.style.opacity = "0";
+    };
+
+    const applyContextColors = () => {
+      const header = document.querySelector("[data-humannexus-colors]");
+      if (!header) return;
+
+      try {
+        const colors = JSON.parse(header.getAttribute("data-humannexus-colors") || "{}");
+        for (const [name, value] of Object.entries(colors)) {
+          document.documentElement.style.setProperty(`--color-h-${name.replace("color", "")}`, value, "important");
+        }
+      } catch (error) {
+        console.error("Unable to apply context colors", error);
+      }
+    };
+
+    document.addEventListener("astro:before-preparation", showLoading);
+    document.addEventListener("astro:after-preparation", hideLoading);
+    document.addEventListener("astro:after-swap", applyContextColors);
+    document.addEventListener("astro:page-load", () => {
+      applyContextColors();
+      hideLoading();
     });
-    document.addEventListener("astro:after-preparation", () => {
-      document.querySelector("#loading").style.opacity = 0;
+    window.addEventListener("pageshow", () => {
+      applyContextColors();
+      hideLoading();
     });
+    window.addEventListener("pagehide", () => {
+      if (loadingTimeout) clearTimeout(loadingTimeout);
+    });
+
+      hideLoading();
+      applyContextColors();
+    }
   </script>
   <script
     src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"

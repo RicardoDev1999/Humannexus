@@ -68,10 +68,10 @@ try {
         class="cursor-pointer w-48 h-full p-2 shadow-lg rounded-xl transition duration-[350ms] hover:scale-105"
         data-astro-prefetch
         href={fullSlugToUri(st.full_slug)}
-        transition:name={"team-image-" + st.content._uid}
       >
         <Image
           class="w-full h-36 mb-3 rounded-xl object-center object-cover"
+          transition:name={"team-image-" + st.content._uid}
           src={st.content?.photo?.filename ?? "/default-avatar.png"}
           alt={st.name ?? "Team Member"}
           width={320}
@@ -79,7 +79,8 @@ try {
           widths={[160, 240, 320]}
           sizes="(max-width: 768px) 75vw, (max-width: 1024px) 30vw, 22vw"
           decoding="async"
-          loading="lazy"
+          loading="eager"
+          fetchpriority="high"
         />
         <div class="flex flex-1 flex-col my-auto justify-center items-center gap-y-2">
           <h1 class="text-h-800 text-center text-base font-bold">{st.name}</h1>
