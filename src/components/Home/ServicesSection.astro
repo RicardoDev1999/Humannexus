@@ -35,7 +35,7 @@ const getServicesMapped = async (storyblokApi) => {
     if (!service.content?.image) return service;
     service.content.image.filename = service.content?.image?.is_external_url
       ? service.content?.image?.filename
-      : service.content?.image?.filename + "/m/170x159";
+      : service.content?.image?.filename + "/m/400x375/filters:format(webp):quality(85)";
     return service;
   });
 };

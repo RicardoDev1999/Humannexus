@@ -44,7 +44,7 @@ try {
     st.content.photo.filename = st.content?.photo?.is_external_url
       ? st.content?.photo?.filename
       : st.content?.photo?.filename +
-        "/m/192x144/filters:format(webp):quality(100)";
+        "/m/320x320/filters:format(webp):quality(85)";
     return st;
   });
 } catch (error) {
@@ -74,8 +74,10 @@ try {
           class="w-full h-36 mb-3 rounded-xl object-center object-cover"
           src={st.content?.photo?.filename ?? "/default-avatar.png"}
           alt={st.name ?? "Team Member"}
-          width="192"
-          height="144"
+          width={320}
+          height={320}
+          widths={[160, 240, 320]}
+          sizes="(max-width: 768px) 75vw, (max-width: 1024px) 30vw, 22vw"
           decoding="async"
           loading="lazy"
         />

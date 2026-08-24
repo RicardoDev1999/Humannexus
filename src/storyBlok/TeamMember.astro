@@ -9,7 +9,7 @@ const { story, blok } = Astro.props;
 const image = blok.photo?.filename
   ? blok.photo?.is_external_url
     ? blok.photo.filename
-    : blok.photo.filename + "/m/256x256/smart/filters:format(webp):quality(100)"
+    : blok.photo.filename + "/m/256x256/filters:format(webp):quality(85)"
   : "/default-avatar.png";
 
 const description = renderRichText(blok.description);

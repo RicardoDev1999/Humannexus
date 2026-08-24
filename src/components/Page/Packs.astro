@@ -25,7 +25,7 @@ try {
     if (!st.content?.photo) return st;
     st.content.photo.filename = st.content?.photo?.is_external_url
       ? st.content?.photo?.filename
-      : st.content?.photo?.filename + "/m/fit-in/192x144";
+      : st.content?.photo?.filename + "/m/400x300/filters:format(webp):quality(85)";
     return st;
   });
 } catch (error) {
@@ -51,8 +51,10 @@ try {
               class="w-full h-36 mb-3 rounded-xl object-center object-contain"
               src={st.content.photo?.filename}
               alt={st.content.name ?? "Pack"}
-              width={192}
-              height={144}
+              width={400}
+              height={300}
+              widths={[200, 300, 400]}
+              sizes="(max-width: 768px) 80vw, (max-width: 1024px) 25vw, 20vw"
               transition:name={"pack-" + st.content._uid}
             />
           )}

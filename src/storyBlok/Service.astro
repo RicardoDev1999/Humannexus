@@ -7,8 +7,8 @@ const { story, blok } = Astro.props;
 
 const image = blok.image
   ? blok.image.is_external_url
-    ? blok.image?.filename
-    : blok.image?.filename + "/m/0x320/filters:format(webp):quality(100)"
+    ? blok.image.filename
+    : blok.image.filename + "/m/640x640/filters:format(webp):quality(85)"
   : null;
 
 //If there isn't a description set then let's use the short description
@@ -28,8 +28,8 @@ const description = renderRichText(
           transition:name={"service-image-" + blok._uid}
           src={image}
           alt={story.name ?? "Service Image"}
-          width={320}
-          height={320}
+          width={640}
+          height={640}
         />
       )
     }

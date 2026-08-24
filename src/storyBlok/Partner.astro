@@ -8,7 +8,7 @@ const { story, blok } = Astro.props;
 const image = blok.photo
   ? blok.photo.is_external_url
     ? blok.photo?.filename
-    : blok.photo?.filename + "/m/0x320/filters:format(webp):quality(100)"
+    : blok.photo?.filename + "/m/640x640/filters:format(webp):quality(85)"
   : null;
 
 const description = renderRichText(blok.description);
@@ -19,11 +19,11 @@ const description = renderRichText(blok.description);
     {
       image && (
         <Image
-          class="w-auto lg:h-80 md:h-64 sm:h-48 h-36 object-contain rounded-md shadow-md shadow-slate-300"
+          class="w-auto lg:h-80 h-auto object-cover rounded-3xl shadow-md shadow-slate-300"
           src={image}
           alt={story.name ?? "Partner image"}
-          width={320}
-          height={320}
+          width={640}
+          height={640}
           transition:name={"partner-" + blok._uid}
         />
       )

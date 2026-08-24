@@ -3,11 +3,38 @@ import { storyblokEditable } from "@storyblok/astro";
 import { Image } from "astro:assets";
 
 const { blok } = Astro.props;
+
+const baseWidth = blok.width || 1200;
+const baseHeight = blok.height || 1200;
+
+const imageUrl = blok.image
+  ? blok.image.is_external_url
+    ? blok.image.filename
+    : blok.image.filename + `/m/${Math.round(baseWidth * 1.5)}x${Math.round(baseHeight * 1.5)}/filters:format(webp):quality(85)`
+  : null;
+
+// Responsive widths based on the image's intended display size
+const widths = baseWidth > 600 
+  ? [400, 600, 800, 1000, 1200, 1600]
+  : baseWidth > 300
+  ? [300, 400, 600, 800]
+  : [200, 300, 400, 600];
 ---
 
 <main {...storyblokEditable(blok)} class="w-fit h-fit">
-    <Image style={
-        `width: ${blok.width ? blok.width + 'px' : 'auto'}; 
-        height: ${blok.height ? blok.height + 'px' : 'auto'}; `
-    } src={blok.image.filename} alt={blok.image?.alt ?? "Image"} inferSize={true} />
+  {
+    imageUrl && (
+      <Image
+        src={imageUrl}
+        alt={blok.image?.alt ?? "Image"}
+        width={baseWidth}
+        height={baseHeight}
+        widths={widths}
+        sizes={`(max-width: 640px) ${baseWidth * 0.9}px, (max-width: 1024px) ${baseWidth * 0.8}px, ${baseWidth}px`}
+        style={`width: ${blok.width ? blok.width + 'px' : 'auto'}; height: ${blok.height ? blok.height + 'px' : 'auto'};`}
+        decoding="async"
+        loading="lazy"
+      />
+    )
+  }
 </main>

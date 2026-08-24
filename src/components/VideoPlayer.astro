@@ -20,24 +20,31 @@ const sizes = {
     '1x': baseWidth,
     '2x': baseWidth * 2
 };
+
+// Use smallest thumbnail as default for fastest initial load
+const defaultThumbnail = thumbnailSmall;
+
+// Detect if mobile to optimize loading strategy
+const isMobileOptimized = true; // Will be detected client-side
 ---
 
 <div class="video-background-container">
     <img 
-        src={thumbnailNormal}
+        src={defaultThumbnail}
         srcset={`
             ${thumbnailSmall} ${sizes['0.5x']}w,
             ${thumbnailNormal} ${sizes['1x']}w,
             ${thumbnailLarge} ${sizes['2x']}w
         `}
-        sizes="(max-width: 640px) 50vw,
+        sizes="(max-width: 640px) 100vw,
                (max-width: 1200px) 100vw,
-               200vw"
+               100vw"
         class="thumbnail-overlay"
         alt="Main page thumbnail"
         aria-hidden="true"
         loading="eager"
         decoding="sync"
+        fetchpriority="high"
     />
     <video
         class="video-background"
@@ -56,16 +63,117 @@ const sizes = {
 class VideoBackgroundManager {
     private video: HTMLVideoElement;
     private thumbnail: HTMLImageElement;
+    private container: HTMLElement;
+    private videoStarted: boolean = false;
+    private isMobile: boolean;
 
     constructor(container: HTMLElement) {
+        this.container = container;
         this.video = container.querySelector('video')!;
         this.thumbnail = container.querySelector('img')!;
+        this.isMobile = window.innerWidth <= 768;
         
+        this.setupMobileOptimization();
         this.initializeVideo();
         this.handleResize();
     }
 
+    private setupMobileOptimization() {
+        // On mobile, only load video on user interaction or after a delay
+        if (this.isMobile) {
+            // Add visual indicator
+            this.container.style.cursor = 'pointer';
+            
+            // Optimize thumbnail display for slow networks
+            this.optimizeThumbnailLoading();
+            
+            // Start loading after 2 seconds (non-blocking)
+            setTimeout(() => {
+                if (!this.videoStarted) {
+                    this.preloadVideo();
+                }
+            }, 2000);
+            
+            // Also load on first user interaction
+            this.container.addEventListener('click', () => {
+                if (!this.videoStarted) {
+                    this.startVideoPlayback();
+                }
+            }, { once: true });
+            
+            this.container.addEventListener('touchstart', () => {
+                if (!this.videoStarted) {
+                    this.startVideoPlayback();
+                }
+            }, { once: true });
+        } else {
+            // Desktop: load video immediately
+            this.initializeVideoLoad();
+        }
+    }
+
+    private optimizeThumbnailLoading() {
+        // Show a low-quality placeholder while thumbnail loads
+        const thumbnail = this.thumbnail;
+        
+        // Create a very small blurred version as placeholder
+        thumbnail.style.filter = 'blur(8px)';
+        thumbnail.style.willChange = 'filter';
+        
+        // When thumbnail fully loads, remove blur
+        if (thumbnail.complete) {
+            thumbnail.style.filter = 'blur(0)';
+        } else {
+            thumbnail.onload = () => {
+                thumbnail.style.filter = 'blur(0)';
+                thumbnail.style.transition = 'filter 0.3s ease-out';
+            };
+        }
+    }
+
+    private preloadVideo() {
+        // Progressive download without playing
+        this.video.src = this.video.querySelector('source')!.src;
+        this.video.load();
+    }
+
+    private startVideoPlayback() {
+        if (!this.videoStarted) {
+            this.videoStarted = true;
+            this.initializeVideoLoad();
+        }
+    }
+
     private initializeVideo() {
+        const videoCache = new AbortController();
+        
+        // Ensure thumbnail is loaded first
+        if (this.thumbnail.complete) {
+            if (!this.isMobile) {
+                this.startVideoLoad(videoCache);
+            }
+        } else {
+            this.thumbnail.onload = () => {
+                if (!this.isMobile) {
+                    this.startVideoLoad(videoCache);
+                }
+            };
+        }
+
+        // Cleanup on page leave
+        window.addEventListener('beforeunload', () => {
+            videoCache.abort();
+        });
+
+        // Handle mobile autoplay (after interaction)
+        if (this.isMobile) {
+            this.container.addEventListener('touchstart', () => {
+                this.video.play().catch(console.warn);
+            }, { once: true });
+        }
+    }
+
+    private initializeVideoLoad() {
         const videoCache = new AbortController();
         
         // Ensure thumbnail is loaded first
@@ -79,33 +187,34 @@ class VideoBackgroundManager {
         window.addEventListener('beforeunload', () => {
             videoCache.abort();
         });
-
-        // Handle mobile autoplay
-        document.addEventListener('touchstart', () => {
-            this.video.play().catch(console.warn);
-        }, { once: true });
     }
 
     private startVideoLoad(videoCache: AbortController) {
-        fetch(this.video.querySelector('source')!.src, {
-            signal: videoCache.signal,
-        }).then(response => response.blob())
-          .then(blob => {
-            const url = URL.createObjectURL(blob);
-            this.video.src = url;
-            
-            const source = this.video.querySelector('source');
-            if (source) source.remove();
-            
-            this.video.play().catch(console.warn);
-            
-            this.video.addEventListener('loadeddata', () => {
-                this.thumbnail.classList.add('fade-out');
-            });
-        }).catch(error => {
-            if (error.name === 'AbortError') return;
-            console.error('Error caching video:', error);
+        // Use streaming instead of downloading entire file
+        // This allows playback to start before download completes
+        const videoElement = this.video.querySelector('source') as HTMLSourceElement;
+        
+        if (!videoElement) return;
+
+        // Set video source for streaming playback
+        this.video.src = videoElement.src;
+        
+        // Attempt to play immediately (streaming)
+        this.video.play().catch(() => {
+            // If autoplay fails, it will play on first interaction
         });
+        
+        // Monitor when video has buffered enough to fade thumbnail
+        this.video.addEventListener('playing', () => {
+            this.thumbnail.classList.add('fade-out');
+        }, { once: true });
+
+        // Fallback: if video hasn't started after buffering some data
+        this.video.addEventListener('canplay', () => {
+            if (!this.thumbnail.classList.contains('fade-out')) {
+                this.thumbnail.classList.add('fade-out');
+            }
+        }, { once: true });
     }
 
     private handleResize() {
@@ -134,7 +243,7 @@ class VideoBackgroundManager {
 document.addEventListener('DOMContentLoaded', () => {
     const containers = document.querySelectorAll('.video-background-container');
     containers.forEach(container => {
-        new VideoBackgroundManager(container);
+        new VideoBackgroundManager(container as HTMLElement);
     });
 });
 </script>
