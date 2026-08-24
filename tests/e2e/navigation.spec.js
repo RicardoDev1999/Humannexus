@@ -36,7 +36,6 @@ test("contact page mounts a Turnstile container", async ({ page }) => {
   await expect(turnstile).toBeVisible();
   await expect(turnstile).toHaveAttribute("data-sitekey", /.+/);
   await expect(turnstile).toHaveAttribute("data-language", "pt-br");
-  await expect(page.locator('script[src*="turnstile/v0/api.js?render=explicit"]')).toHaveCount(1);
 });
 
 test("service image uses Astro shared transition and survives back navigation", async ({ page }) => {

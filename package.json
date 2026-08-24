@@ -30,8 +30,13 @@
     "vite": "^7.3.1"
   },
   "devDependencies": {
+    "@playwright/test": "^1.55.0",
     "@tailwindcss/typography": "^0.5.19",
-    "netlify-cli": "^27.1.2",
-    "@playwright/test": "^1.55.0"
+    "netlify-cli": "^27.1.2"
+  },
+  "overrides": {
+    "extract-zip": "^2.0.1",
+    "image-size": "^2.0.2",
+    "sharp": "^0.35.3"
   }
 }
