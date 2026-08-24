@@ -1,0 +1,33 @@
+name: Purge Netlify CDN Cache
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  purge-cache:
+    name: Purge Netlify cache
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Purge site cache
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        run: |
+          set -euo pipefail
+
+          if [ -z "$NETLIFY_AUTH_TOKEN" ] || [ -z "$NETLIFY_SITE_ID" ]; then
+            echo "NETLIFY_AUTH_TOKEN and NETLIFY_SITE_ID repository secrets are required."
+            exit 1
+          fi
+
+          curl --fail-with-body --silent --show-error \
+            --request POST \
+            --header "Authorization: Bearer $NETLIFY_AUTH_TOKEN" \
+            --header "Content-Type: application/json" \
+            "https://api.netlify.com/api/v1/sites/$NETLIFY_SITE_ID/purge_cache"
+
+          echo "Netlify CDN cache purged successfully."
