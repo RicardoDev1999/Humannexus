@@ -36,6 +36,7 @@ test("contact page mounts a Turnstile container", async ({ page }) => {
   await expect(turnstile).toBeVisible();
   await expect(turnstile).toHaveAttribute("data-sitekey", /.+/);
   await expect(turnstile).toHaveAttribute("data-language", "pt-br");
+  await expect(turnstile).not.toHaveClass(/cf-turnstile/);
 });
 
 test("service image uses Astro shared transition and survives back navigation", async ({ page }) => {
@@ -71,6 +72,22 @@ test("service image uses Astro shared transition and survives back navigation", 
   await expectLoaderHidden(page);
 
   expect(errors).toEqual([]);
+});
+
+test("carousel restores a visible slide after returning home", async ({ page }) => {
+  await page.goto(contextPath, { waitUntil: "domcontentloaded" });
+  await expect(page.locator("#my-carousel")).toBeVisible();
+  await expect(page.locator("#my-carousel [data-carousel-item]").first()).toBeVisible();
+
+  const servicesLink = page.locator('a[href*="/services"]').first();
+  await expect(servicesLink).toBeVisible();
+  await servicesLink.click();
+  await expect(page).toHaveURL(/\/humannexus\/services\/?$/);
+
+  await page.goBack();
+  await expect(page).toHaveURL(/\/humannexus\/?$/);
+  await expect(page.locator("#my-carousel")).toBeVisible();
+  await expect(page.locator("#my-carousel [data-carousel-item]").first()).toBeVisible();
 });
 
 test("context theme does not leak between Humannexus and Studio", async ({ page }) => {

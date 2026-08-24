@@ -128,19 +128,33 @@ itemsMapped = itemsMapped.map((item: CarouselItem) => {
 
 <script>
   import { Carousel } from 'flowbite';
-  
-  document.addEventListener("astro:page-load", () => {
-    const carouselElement = document.getElementById('my-carousel');
-    if (carouselElement) {
-      new Carousel(carouselElement);
-    }
-  });
 
-  // Also reinitialize on navigation (view transitions)
-  document.addEventListener("astro:after-swap", () => {
+  const initializeCarousel = () => {
     const carouselElement = document.getElementById('my-carousel');
-    if (carouselElement) {
-      new Carousel(carouselElement);
-    }
-  });
+    if (!carouselElement) return;
+
+    const items = Array.from(
+      carouselElement.querySelectorAll('[data-carousel-item]')
+    ).map((element, position) => ({ position, el: element }));
+
+    const indicators = Array.from(
+      carouselElement.querySelectorAll('[data-carousel-slide-to]')
+    ).map((element) => ({
+      position: Number(element.getAttribute('data-carousel-slide-to')),
+      el: element,
+    }));
+
+    if (!items.length) return;
+
+    const carousel = new Carousel(
+      carouselElement,
+      items,
+      { indicators },
+      { id: carouselElement.id, override: true }
+    );
+    carousel.cycle();
+  };
+
+  document.addEventListener("astro:page-load", initializeCarousel);
+  initializeCarousel();
 </script>

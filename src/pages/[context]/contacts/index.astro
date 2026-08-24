@@ -207,12 +207,12 @@ if (Astro.request.method === "POST") {
       </div>
       <div
         id="contact-turnstile"
-        class="cf-turnstile"
+        class="turnstile-container"
         data-theme="light"
         data-size="normal"
         data-appearance="interaction-only"
         data-language="pt-br"
-        data-sitekey="0x4AAAAAAARBXvF-JfG3UnQv"
+        data-sitekey={import.meta.env.PUBLIC_TURNSTILE_SITE_KEY ?? "0x4AAAAAAARBXvF-JfG3UnQv"}
       >
       </div>
       <p id="contact-turnstile-error" class="hidden text-sm text-red-600" role="alert">
