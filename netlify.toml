@@ -5,6 +5,13 @@
 [dev]
    command = "npm run dev"
 
+# Netlify CDN cache for server-rendered HTML pages
+[[headers]]
+   for = "/*"
+   [headers.values]
+      Cache-Control = "public, max-age=0, s-maxage=300, stale-while-revalidate=86400"
+      Netlify-CDN-Cache-Control = "public, max-age=300, s-maxage=300, stale-while-revalidate=86400"
+
 # Cache headers for static assets
 [[headers]]
    for = "/img/*"
