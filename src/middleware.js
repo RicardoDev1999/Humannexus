@@ -1,9 +1,29 @@
 import { defineMiddleware } from 'astro:middleware';
 
+const excludedExtensions = [
+  '.mp4',
+  '.webm',
+  '.mov',
+  '.jpg',
+  '.jpeg',
+  '.png',
+  '.webp',
+  '.gif',
+  '.svg',
+  '.avif',
+];
+
 export const onRequest = defineMiddleware(async (context, next) => {
   const method = context.request.method;
 
   if (method !== 'GET' && method !== 'HEAD') {
+    return next();
+  }
+
+  const url = new URL(context.request.url);
+  const pathname = url.pathname.toLowerCase();
+
+  if (excludedExtensions.some((ext) => pathname.endsWith(ext))) {
     return next();
   }
 
