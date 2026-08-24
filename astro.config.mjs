@@ -29,8 +29,7 @@ export default defineConfig({
     accessToken: import.meta.env.VITE_STORYBLOK_TOKEN,
     apiOptions: {
       cache: {
-        clear: "manual",
-        type: "memory"
+        type: "none"
       },
       region: 'eu'
     },
