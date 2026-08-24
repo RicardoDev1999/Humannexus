@@ -3,6 +3,8 @@ const version = import.meta.env.MODE === "production" ? "published" : "draft";
 const getDefaultParams = () => {
   return {
     version,
+    // Refresh Storyblok CDN data at most five minutes after a publish.
+    cv: Math.floor(Date.now() / 300000),
   };
 };
 
