@@ -24,9 +24,16 @@ jobs:
             exit 1
           fi
 
+          echo "Checking Storyblok space access..."
+          curl --fail-with-body --silent --show-error \
+            --request GET \
+            --header "Authorization: $STORYBLOK_MANAGEMENT_TOKEN" \
+            "https://mapi.storyblok.com/v1/spaces/$STORYBLOK_SPACE_ID"
+
+          echo "Purging Storyblok CDN cache..."
           curl --fail-with-body --silent --show-error \
             --request POST \
-            --header "Authorization: Bearer $STORYBLOK_MANAGEMENT_TOKEN" \
+            --header "Authorization: $STORYBLOK_MANAGEMENT_TOKEN" \
             --header "Content-Type: application/json" \
             "https://mapi.storyblok.com/v1/spaces/$STORYBLOK_SPACE_ID/cache-clear"
 
