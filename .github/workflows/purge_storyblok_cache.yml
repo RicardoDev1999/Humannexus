@@ -1,0 +1,33 @@
+name: Purge Storyblok CDN Cache
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  purge-cache:
+    name: Purge Storyblok cache
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Purge Storyblok cache
+        env:
+          STORYBLOK_MANAGEMENT_TOKEN: ${{ secrets.STORYBLOK_MANAGEMENT_TOKEN }}
+          STORYBLOK_SPACE_ID: ${{ secrets.STORYBLOK_SPACE_ID }}
+        run: |
+          set -euo pipefail
+
+          if [ -z "$STORYBLOK_MANAGEMENT_TOKEN" ] || [ -z "$STORYBLOK_SPACE_ID" ]; then
+            echo "STORYBLOK_MANAGEMENT_TOKEN and STORYBLOK_SPACE_ID repository secrets are required."
+            exit 1
+          fi
+
+          curl --fail-with-body --silent --show-error \
+            --request POST \
+            --header "Authorization: Bearer $STORYBLOK_MANAGEMENT_TOKEN" \
+            --header "Content-Type: application/json" \
+            "https://mapi.storyblok.com/v1/spaces/$STORYBLOK_SPACE_ID/cache-clear"
+
+          echo "Storyblok CDN cache purged successfully."

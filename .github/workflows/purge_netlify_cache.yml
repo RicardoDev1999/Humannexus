@@ -24,10 +24,8 @@ jobs:
             exit 1
           fi
 
-          curl --fail-with-body --silent --show-error \
-            --request POST \
-            --header "Authorization: Bearer $NETLIFY_AUTH_TOKEN" \
-            --header "Content-Type: application/json" \
-            "https://api.netlify.com/api/v1/sites/$NETLIFY_SITE_ID/purge_cache"
+          npx --yes netlify-cli api purgeCache \
+            --auth "$NETLIFY_AUTH_TOKEN" \
+            --data "{\"site_id\":\"$NETLIFY_SITE_ID\"}"
 
           echo "Netlify CDN cache purged successfully."
