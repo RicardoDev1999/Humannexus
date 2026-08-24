@@ -87,12 +87,12 @@ class VideoBackgroundManager {
             // Optimize thumbnail display for slow networks
             this.optimizeThumbnailLoading();
             
-            // Start loading after 2 seconds (non-blocking)
+            // Start loading after a short delay without blocking the page
             setTimeout(() => {
                 if (!this.videoStarted) {
-                    this.preloadVideo();
+                    this.startVideoPlayback();
                 }
-            }, 2000);
+            }, 500);
             
             // Also load on first user interaction
             this.container.addEventListener('click', () => {
@@ -101,11 +101,6 @@ class VideoBackgroundManager {
                 }
             }, { once: true });
             
-            this.container.addEventListener('touchstart', () => {
-                if (!this.videoStarted) {
-                    this.startVideoPlayback();
-                }
-            }, { once: true });
         } else {
             // Desktop: load video immediately
             this.initializeVideoLoad();
@@ -165,12 +160,6 @@ class VideoBackgroundManager {
             videoCache.abort();
         });
 
-        // Handle mobile autoplay (after interaction)
-        if (this.isMobile) {
-            this.container.addEventListener('touchstart', () => {
-                this.video.play().catch(console.warn);
-            }, { once: true });
-        }
     }
 
     private initializeVideoLoad() {
@@ -239,13 +228,19 @@ class VideoBackgroundManager {
     }
 }
 
-// Initialize on page load
-document.addEventListener('DOMContentLoaded', () => {
+// Initialize on first load and after Astro client-side navigation
+const initializeVideos = () => {
     const containers = document.querySelectorAll('.video-background-container');
     containers.forEach(container => {
-        new VideoBackgroundManager(container as HTMLElement);
+        const element = container as HTMLElement;
+        if (element.dataset.videoInitialized === 'true') return;
+        element.dataset.videoInitialized = 'true';
+        new VideoBackgroundManager(element);
     });
-});
+};
+
+document.addEventListener('DOMContentLoaded', initializeVideos);
+document.addEventListener('astro:page-load', initializeVideos);
 </script>
 
 <style>

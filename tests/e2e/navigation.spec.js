@@ -90,6 +90,18 @@ test("carousel restores a visible slide after returning home", async ({ page }) 
   await expect(page.locator("#my-carousel [data-carousel-item]").first()).toBeVisible();
 });
 
+test("homepage video is initialized after returning home", async ({ page }) => {
+  await page.goto("/", { waitUntil: "domcontentloaded" });
+  const video = page.locator(".video-background");
+  await expect(video).toHaveAttribute("muted", "");
+  await expect(video).toHaveAttribute("src", /index\.mp4/);
+
+  await page.goto(`${contextPath}/services`, { waitUntil: "domcontentloaded" });
+  await page.goBack();
+  await expect(page).toHaveURL(/\/$/);
+  await expect(page.locator(".video-background")).toHaveAttribute("src", /index\.mp4/);
+});
+
 test("context theme does not leak between Humannexus and Studio", async ({ page }) => {
   await page.goto(contextPath, { waitUntil: "domcontentloaded" });
 
