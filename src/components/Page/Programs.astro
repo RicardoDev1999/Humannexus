@@ -4,6 +4,7 @@ import { Image } from "astro:assets";
 import { useStoryblokApi, renderRichText } from "@storyblok/astro";
 import { getStories } from "@scripts/astro/services";
 
+import SectionIntro from "@components/SectionIntro.astro";
 import { fullSlugToUri } from "@utils/urlUtils.js";
 
 let storiesMapped;
@@ -51,42 +52,49 @@ try {
 ---
 
 <main class="px-2">
-  <section class="flex flex-col justify-center items-center gap-y-3">
-    <h1 class="text-h-800 text-center text-2xl font-bold">Programas</h1>
-    <p class="text-h-600 text-center text-base font-medium">
-      Conheça os nossos programas!
-    </p>
-  </section>
-  <section class="flex flex-col mt-10 gap-y-4">
+  <SectionIntro
+    title="Programas"
+    description="Conheça os nossos programas!"
+  />
+  <section class="mx-auto mt-10 flex max-w-6xl flex-col gap-y-5">
     {
       storiesMapped.map((st, index) => (
         <a
           data-astro-prefetch
           href={fullSlugToUri(st.full_slug)}
           class:list={[
-            "flex flex-col lg:flex-row gap-4 cursor-pointer transition duration-[350ms] hover:scale-90",
-            index % 2 === 1 ? "lg:flex-row-reverse" : "",
+            "group grid gap-6 rounded-2xl p-3 ring-1 ring-transparent transition duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-xl hover:ring-border lg:grid-cols-2 lg:items-center lg:p-6",
           ]}
         >
-          <Image
-            class="flex flex-1 w-full h-64 rounded-[2rem] object-center object-cover shadow-lg"
-            transition:name={"program-image-" + st.content._uid}
-            src={st.content?.image?.filename}
-            alt={st.name ?? "Program Image"}
-            width={800}
-            height={450}
-            widths={[360, 768, 1024, 1280, 1600]}
-            sizes="(max-width: 640px) 90vw, (max-width: 1024px) 50vw, 45vw"
-            decoding="async"
-            loading="eager"
-            fetchpriority="high"
-          />
-          <div class="flex flex-1 flex-col my-auto justify-center items-start gap-y-2">
-            <h1 class="text-h-800 text-2xl font-bold">{st.name}</h1>
+          <div class:list={["overflow-hidden rounded-2xl", index % 2 === 1 ? "lg:order-2" : "lg:order-1"]}>
+            <Image
+              class="h-64 w-full object-cover transition duration-500 group-hover:scale-105 lg:h-80"
+              transition:name={"program-image-" + st.content._uid}
+              src={st.content?.image?.filename}
+              alt={st.name ?? "Program Image"}
+              width={800}
+              height={450}
+              widths={[360, 768, 1024, 1280, 1600]}
+              sizes="(max-width: 640px) 90vw, (max-width: 1024px) 50vw, 45vw"
+              decoding="async"
+              loading="eager"
+              fetchpriority="high"
+            />
+          </div>
+          <div class:list={["flex flex-col justify-center gap-3", index % 2 === 1 ? "lg:order-1" : "lg:order-2"]}>
+            <h2 class="text-2xl font-extrabold leading-tight text-h-900 md:text-3xl">{st.name}</h2>
             <p
-              class="text-h-600 text-sm font-normal"
+              class="max-w-prose text-sm leading-6 text-muted md:text-base"
               set:html={renderRichText(st.content.short_description)}
             />
+            <span
+              class="mt-1 inline-flex h-9 w-9 items-center justify-center rounded-full bg-h-500/40 text-h-900 transition duration-300 group-hover:bg-h-900 group-hover:text-white"
+              aria-hidden="true"
+            >
+              <svg class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 10h12m0 0-4-4m4 4-4 4" />
+              </svg>
+            </span>
           </div>
         </a>
       ))

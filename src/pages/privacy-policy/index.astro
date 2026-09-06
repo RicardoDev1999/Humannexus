@@ -1,5 +1,6 @@
 ---
 import Layout from "@layouts/Layout.astro";
+import SectionIntro from "@components/SectionIntro.astro";
 
 import { renderRichText, useStoryblokApi } from "@storyblok/astro";
 import { getStory } from "@scripts/astro/services";
@@ -16,12 +17,10 @@ try {
 ---
 
 <Layout title="Política de privacidade" forceContext="humannexus">
-  <section class="flex flex-col justify-center items-center gap-y-3">
-    <h1 class="text-h-800 text-center text-2xl font-bold">Política de privacidade</h1>
-  </section>
-  <section>
+  <SectionIntro title="Política de privacidade" />
+  <section class="mt-10">
     <div
-      class="max-w-full mx-8 prose prose-md lg:prose-lg prose-headings:text-h-800"
+      class="mx-auto max-w-3xl px-4 prose prose-md lg:prose-lg prose-headings:text-h-900"
       set:html={renderRichText(story.content.content)}
     />
   </section>

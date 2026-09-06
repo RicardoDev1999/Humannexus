@@ -39,11 +39,11 @@ const colorData = colorSchema ? JSON.stringify({
 ---
 
 <nav
-  class="bg-white border-gray-200 shadow-header z-50"
+  class="z-50 border-b border-border bg-white/95 shadow-header backdrop-blur"
   data-humannexus-colors={colorData}
 >
   <div
-    class="flex flex-1 flex-wrap lg:flex-nowrap max-w-screen-2xl h-20.5 items-center justify-between md:mx-auto lg:px-2"
+    class="flex h-20.5 max-w-screen-2xl flex-1 flex-wrap items-center justify-between px-4 lg:mx-auto lg:flex-nowrap lg:px-6"
   >
     <div
       class="inline-flex flex-1 flex-row items-center justify-between w-full"
@@ -56,7 +56,7 @@ const colorData = colorSchema ? JSON.stringify({
         <Image
           src={logo}
           loading={"eager"}
-          class="max-w-[10rem] max-h-[4.25rem] mr-3 transition duration-850 hover:scale-90"
+          class="mr-3 max-h-[4.25rem] max-w-[10rem] transition duration-200 hover:scale-[1.02]"
           alt="Humannexus Logo"
           width="800"
           height="360"
@@ -66,7 +66,7 @@ const colorData = colorSchema ? JSON.stringify({
         id="navbar-default-trigger"
         data-collapse-toggle="navbar-default"
         type="button"
-        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+        class="inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-h-900 transition hover:bg-h-500/35 lg:hidden"
         aria-controls="navbar-default"
         aria-expanded="false"
       >
@@ -92,20 +92,22 @@ const colorData = colorSchema ? JSON.stringify({
       id="navbar-default"
     >
       <ul
-        class="flex flex-col gap-y-0.5 items-center font-semibold text-sm lg:p-0 lg:gap-4 border border-gray-100 bg-white lg:flex-row lg:mt-0 lg:border-0"
+        class="flex flex-col items-stretch border-t border-border bg-white py-2 text-sm font-bold lg:flex-row lg:items-center lg:gap-1 lg:border-0 lg:py-0"
       >
         {
           headerItems.map((item) => (
-            <li class="flex items-center justify-center align-middle bg-h-700 lg:bg-transparent h-16 w-full whitespace-nowrap">
+            <li class="flex whitespace-nowrap">
               <a
                 href={item.url}
                 data-astro-prefetch="hover"
                 data-astro-reload={item.isDataReload ? "true" : undefined}
                 class:list={[
-                  "block py-2 text-white rounded lg:bg-transparent lg:p-0",
-                  isMenuSelected(item.url) ? "lg:text-h-800" : "lg:text-black",
+                  "relative flex min-h-11 w-full items-center px-5 text-ink transition-all duration-200 hover:bg-h-500/35 hover:text-h-900 lg:mx-0.5 lg:w-auto lg:rounded-full lg:px-4",
+                  isMenuSelected(item.url)
+                    ? "bg-h-500/25 text-h-900 lg:bg-h-900 lg:text-white lg:hover:bg-h-900 lg:hover:text-white"
+                    : "",
                 ]}
-                aria-current="page"
+                aria-current={isMenuSelected(item.url) ? "page" : undefined}
               >
                 {item.name}
               </a>
@@ -113,14 +115,13 @@ const colorData = colorSchema ? JSON.stringify({
           ))
         }
         <li
-          class="flex items-center justify-center align-middle bg-h-700 lg:bg-transparent h-16 w-full"
+          class="flex items-center justify-center px-5"
         >
-          <div class="flex flex-row gap-x-3">
+          <div class="flex flex-row">
             <a
               href="https://www.facebook.com/Humannexuslda/"
               target="_blank"
-              class="social-icon block py-2 text-white transition duration-850 hover:scale-90"
-              aria-current="page"
+              class="social-icon inline-flex h-10 w-10 items-center justify-center rounded-full text-ink transition hover:bg-h-500/35 hover:text-h-900"
             >
               <div
                 class="block w-[22px] h-[22px] object-center object-contain bg-transparent"
@@ -131,8 +132,7 @@ const colorData = colorSchema ? JSON.stringify({
             <a
               href="https://www.instagram.com/humannexus.pt/"
               target="_blank"
-              class="block py-2 text-whitetransition duration-850 hover:scale-90"
-              aria-current="page"
+              class="social-icon inline-flex h-10 w-10 items-center justify-center rounded-full text-ink transition hover:bg-h-500/35 hover:text-h-900"
               ><div
                 class="social-icon block w-[22px] h-[22px] object-center object-contain bg-transparent"
                 set:html={instagramIcon}
@@ -141,8 +141,7 @@ const colorData = colorSchema ? JSON.stringify({
             </a>
             <a
               href="https://wa.me/939036298"
-              class="block py-2 text-white transition duration-850 hover:scale-90"
-              aria-current="page"
+              class="social-icon inline-flex h-10 w-10 items-center justify-center rounded-full text-ink transition hover:bg-h-500/35 hover:text-h-900"
               ><div
                 class="social-icon block w-[22px] h-[22px] object-center object-contain bg-transparent"
                 set:html={whatsappIcon}
@@ -152,13 +151,13 @@ const colorData = colorSchema ? JSON.stringify({
           </div>
         </li>
         <li
-          class="flex items-center justify-center align-middle bg-h-700 lg:bg-transparent h-16 w-full"
+          class="flex items-center justify-center px-5"
         >
           <form action={`/${context ?? "humannexus"}/contacts`} method="get" data-astro-reload>
             <input type="hidden" name="ref" value="pricing" />
             <button
               type="submit"
-              class="flex items-center justify-center bg-h-900 text-white text-xs h-8 px-3 py-2 rounded-lg"
+              class="inline-flex min-h-10 items-center justify-center rounded-full bg-h-900 px-5 py-2 text-xs font-bold text-white transition hover:bg-h-800"
             >
               Preçário
             </button>
@@ -208,8 +207,7 @@ const colorData = colorSchema ? JSON.stringify({
     );
 
     document.querySelectorAll(".social-icon svg path").forEach((e) => {
-      e.classList.add("fill-white");
-      e.classList.add("lg:fill-black");
+      e.classList.add("fill-h-900");
     });
   });
 </script>

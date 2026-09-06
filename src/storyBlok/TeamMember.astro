@@ -34,7 +34,7 @@ const description = renderRichText(blok.description);
     }
     <span class="flex mt-4 text-2xl text-h-800 font-semibold">{story.name}</span
     >
-    <span class="flex mt-1 text-sm text-h-600 font-light">{blok.role}</span>
+    <span class="flex mt-1 text-sm text-muted font-medium">{blok.role}</span>
     <article
       class="max-w-full m-12 prose prose-md lg:prose-lg prose-headings:text-h-800"
       set:html={description}

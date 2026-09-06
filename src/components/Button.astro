@@ -1,28 +1,28 @@
 ---
 const { text, variant, redirect } = Astro.props;
+
+const buttonClass = [
+  "group inline-flex min-h-11 items-center justify-center gap-2 rounded-xl px-5 py-3 text-sm font-bold tracking-wide shadow-button transition duration-200 ease-out hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0",
+  variant === "light"
+    ? "border-2 border-h-900 bg-white text-h-900 hover:bg-h-900 hover:text-white"
+    : "bg-gradient-to-r from-h-900 to-h-800 text-white hover:from-h-800 hover:to-h-900",
+];
 ---
 
 {
   redirect?.url ? (
-    <a href={redirect.url}>
-      <span
-        class:list={[
-          "flex items-center justify-center w-42.5 h-14 px-3 py-2 rounded-3xl shadow-button hover:brightness-110 hover:shadow-md",
-          variant === "light" ? "bg-h-700" : "bg-h-900",
-        ]}
-      >
-        <span class="text-white text-base font-semibold">{text}</span>
-      </span>
+    <a href={redirect.url} class:list={buttonClass}>
+      {text}
+      <svg class="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 10h12m0 0-4-4m4 4-4 4" />
+      </svg>
     </a>
   ) : (
-    <button
-      type="submit"
-      class:list={[
-        "flex items-center justify-center w-42.5 h-14 px-3 py-2 rounded-3xl shadow-button hover:brightness-110 hover:shadow-md",
-        variant === "light" ? "bg-h-700" : "bg-h-900",
-      ]}
-    >
-      <span class="text-white text-base font-semibold">{text}</span>
+    <button type="submit" class:list={buttonClass}>
+      {text}
+      <svg class="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 10h12m0 0-4-4m4 4-4 4" />
+      </svg>
     </button>
   )
 }

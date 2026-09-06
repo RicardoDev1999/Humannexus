@@ -1,6 +1,7 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import Button from "@components/Button.astro";
+import SectionIntro from "@components/SectionIntro.astro";
 
 import { getLangFromUrl, useTranslations } from "@i18n/utils";
 import { sendEmail } from "@scripts/sendEmail";
@@ -96,28 +97,29 @@ if (Astro.request.method === "POST") {
 ---
 
 <Layout title="Contactos">
-  <section class="flex flex-col justify-center items-center gap-y-3">
-    <h1 class="text-h-800 text-center text-2xl font-bold">
-      Pedido de contacto
-    </h1>
-    <p class="text-h-600 text-center text-base font-medium">
-      Se pretende que entremos em contacto consigo pode enviar um pedido de
-      contacto através do formulário.
-    </p>
-  </section>
-  <section aria-labelledby="Formulário Contactar" class="mx-2">
+  <SectionIntro
+    title="Pedido de contacto"
+    description="Se pretende que entremos em contacto consigo pode enviar um pedido de contacto através do formulário."
+  />
+  <section aria-labelledby="Formulário Contactar" class="mx-2 mt-10">
     <form
       method="POST"
       data-astro-reload
       name="contact-form"
-      class="relative flex flex-col gap-y-3 flex-1 w-full p-8 pb-12 rounded-lg border-2 border-h-900"
+      class="relative mx-auto flex w-full max-w-2xl flex-col gap-5 rounded-2xl border border-border bg-surface p-6 shadow-sm md:p-8"
     >
+      <div
+        class="absolute inset-x-0 top-0 h-1.5 rounded-t-2xl bg-gradient-to-r from-h-500 via-h-700 to-h-900"
+        aria-hidden="true"
+      >
+      </div>
+      <div class="grid gap-5 md:grid-cols-2">
       <div aria-describedby="name">
-        <label for="name" class="block mb-2 text-sm font-medium text-h-800"
+        <label for="name" class="block mb-2 text-sm font-medium text-ink"
           >Nome
         </label>
         <input
-          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          class="form-field"
           type="text"
           name="name"
           required
@@ -129,11 +131,11 @@ if (Astro.request.method === "POST") {
         }
       </div>
       <div aria-describedby="email">
-        <label for="email" class="block mb-2 text-sm font-medium text-h-800"
+        <label for="email" class="block mb-2 text-sm font-medium text-ink"
           >Email
         </label>
         <input
-          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          class="form-field"
           type="email"
           name="email"
           required
@@ -144,14 +146,15 @@ if (Astro.request.method === "POST") {
           )
         }
       </div>
+      </div>
       <div aria-describedby="phonenumber">
         <label
           for="phonenumber"
-          class="block mb-2 text-sm font-medium text-h-800"
+          class="block mb-2 text-sm font-medium text-ink"
           >Telemóvel
         </label>
         <input
-          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          class="form-field"
           type="number"
           name="phonenumber"
           required
@@ -163,11 +166,11 @@ if (Astro.request.method === "POST") {
         }
       </div>
       <div aria-describeby="message">
-        <label for="message" class="block mb-2 text-sm font-medium text-h-800"
+        <label for="message" class="block mb-2 text-sm font-medium text-ink"
           >Mensagem
         </label>
         <textarea
-          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          class="form-field min-h-44 resize-y"
           name="message"
           set:text={presetMessage}
           rows="10"
@@ -190,16 +193,16 @@ if (Astro.request.method === "POST") {
           required
         />
         <label
-          class="cursor-pointer text-sm font-medium text-h-800"
+          class="cursor-pointer text-sm font-medium text-ink"
           for="terms-and-policy-plus-privacy-policy"
           >Aceito os&nbsp;
           <a
-            class="font-semibold hover:font-bold"
+            class="font-semibold text-h-900 hover:font-bold"
             href="/terms-and-conditions"
             target="_blank">termos e condições</a
           > e a&nbsp;
           <a
-            class="font-semibold hover:font-bold"
+            class="font-semibold text-h-900 hover:font-bold"
             href="/privacy-policy"
             target="_blank">política de privacidade.</a
           >
@@ -218,7 +221,7 @@ if (Astro.request.method === "POST") {
       <p id="contact-turnstile-error" class="hidden text-sm text-red-600" role="alert">
         Confirme que é humano antes de enviar o formulário.
       </p>
-      <div class="absolute right-3 -bottom-7">
+      <div class="mt-2 flex justify-end">
         <Button text="Enviar" />
       </div>
     </form>
@@ -271,7 +274,7 @@ if (Astro.request.method === "POST") {
   <section aria-labelledby="Como Chegar" class="mt-12">
     <div class="mx-auto text-center mb-8 lg:mb-8">
       <p
-        class="mb-4 sm:text-2xl text-2xl tracking-tight font-extrabold text-h-600"
+        class="mb-4 sm:text-2xl text-2xl tracking-tight font-extrabold text-h-900"
       >
         {t("contacts.travel.title")}
       </p>

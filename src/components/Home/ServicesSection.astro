@@ -59,20 +59,18 @@ try {
               href={fullSlugToUri(service.full_slug)}
               data-astro-prefetch
             >
-              <div class="rounded-full shadow-md">
-                <button class="flex flex-col w-[170px] h-[159px] bg-gray-200 rounded-xl">
-                  <Image
-                    class="w-full h-full object-center object-cover rounded-xl"
-                    src={service.content?.image?.filename}
-                    alt={service?.name ?? ""}
-                    width="170"
-                    height="159"
-                    decoding="async"
-                    loading="lazy"
-                  />
-                </button>
-                <div class="absolute flex opacity-0 hover:opacity-100 backdrop-blur-sm bg-h-800 bg-opacity-50 duration-500 inset-0 z-10 text-center justify-center items-center text-xl text-white font-semibold rounded-xl">
-                  {service.name}
+              <div class="group relative h-40 w-[170px] overflow-hidden rounded-xl bg-h-900 shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+                <Image
+                  class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                  src={service.content?.image?.filename}
+                  alt={service?.name ?? ""}
+                  width="170"
+                  height="159"
+                  decoding="async"
+                  loading="lazy"
+                />
+                <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-h-900/90 to-transparent px-4 pb-3 pt-10">
+                  <span class="block text-sm font-bold text-white">{service.name}</span>
                 </div>
               </div>
             </a>

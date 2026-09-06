@@ -12,6 +12,10 @@
   --color-h-500: #BFE9D5;
   --color-h-400: #D9D9D9;
   --color-h-300: #C5C5C6;
+  --color-ink: #153026;
+  --color-muted: #527063;
+  --color-surface: #F7FAF8;
+  --color-border: #D8E5DE;
 
   --breakpoint-sm: 356px;
   --breakpoint-md: 756px;
@@ -23,6 +27,35 @@
 
 .prose :is(:where(b):not(:where([class~="not-prose"] *))) {
   color: var(--color-h-500);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-h-900);
+  outline-offset: 2px;
+}
+
+@utility page-heading {
+  @apply text-center text-3xl font-extrabold tracking-tight leading-tight text-h-900 md:text-4xl;
+}
+
+@utility page-intro {
+  @apply mx-auto max-w-2xl text-center text-base font-medium leading-7 text-muted;
+}
+
+@utility hero-glow {
+  @apply relative isolate overflow-hidden rounded-3xl bg-gradient-to-br from-h-500/25 via-white to-white;
+}
+
+@utility eyebrow-bar {
+  @apply mx-auto mb-5 block h-1.5 w-14 rounded-full bg-gradient-to-r from-h-700 to-h-900;
+}
+
+@utility tag-pill {
+  @apply inline-flex items-center rounded-full bg-h-500/40 px-3 py-1 text-xs font-bold uppercase tracking-wide text-h-900;
+}
+
+@utility form-field {
+  @apply block w-full rounded-xl border border-border bg-white px-3.5 py-3 text-sm text-ink shadow-sm transition placeholder:text-muted/70 focus:border-h-700;
 }
 
 button {

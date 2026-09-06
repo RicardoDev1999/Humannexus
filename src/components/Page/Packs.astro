@@ -3,6 +3,7 @@ import { useStoryblokApi } from "@storyblok/astro";
 import { getStories } from "@scripts/astro/services";
 import { Image } from "astro:assets";
 
+import SectionIntro from "@components/SectionIntro.astro";
 import { fullSlugToUri } from "@utils/urlUtils.js";
 
 let storiesMapped;
@@ -34,22 +35,24 @@ try {
 }
 ---
 
-<section class="flex flex-col justify-center items-center gap-y-3">
-  <h1 class="text-h-800 text-center text-2xl font-bold">Os nossos packs</h1>
-  <p class="text-h-600 text-center text-base font-medium">
-    Conjugámos várias sessões e serviços a preºos especiais!
-  </p>
-</section>
+<SectionIntro
+  title="Os nossos packs"
+  description="Conjugámos várias sessões e serviços a preºos especiais!"
+/>
 <section
-  class="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3 gap-x-5 gap-y-3 justify-items-center mt-10"
+  class="mx-auto mt-10 grid max-w-6xl grid-cols-1 gap-5 px-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
 >
   {
     storiesMapped.map((st) => (
-      <a href={fullSlugToUri(st.full_slug)} data-astro-prefetch>
-        <div class="cursor-pointer w-48 h-full p-2 shadow-lg rounded-xl transition duration-[350ms] hover:scale-105">
+      <a
+        href={fullSlugToUri(st.full_slug)}
+        data-astro-prefetch
+        class="group relative overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-border transition duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:ring-h-700/50"
+      >
+        <div class="aspect-4/3 overflow-hidden bg-surface">
           {(st.content.photo ?? st.content.image)?.filename && (
             <Image
-              class="w-full h-36 mb-3 rounded-xl object-center object-contain"
+              class="h-full w-full object-cover transition duration-500 group-hover:scale-110"
               transition:name={"pack-" + st.content._uid}
               src={(st.content.photo ?? st.content.image)?.filename}
               alt={st.content.name ?? "Pack"}
@@ -61,8 +64,8 @@ try {
               fetchpriority="high"
             />
           )}
-          <h1 class="text-h-800 text-center text-base font-bold">{st.name}</h1>
         </div>
+        <h2 class="px-4 py-4 text-center text-base font-extrabold text-h-900">{st.name}</h2>
       </a>
     ))
   }
