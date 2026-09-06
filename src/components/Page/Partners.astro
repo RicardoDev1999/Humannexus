@@ -26,7 +26,7 @@ try {
     if (!st.content?.photo) return st;
     st.content.photo.filename = st.content?.photo?.is_external_url
       ? st.content?.photo?.filename
-      : st.content?.photo?.filename + "/m/400x300/filters:format(webp):quality(85)";
+      : st.content?.photo?.filename + "/m/fit-in/filters:format(webp):quality(85)";
     return st;
   });
 } catch (error) {
@@ -39,7 +39,7 @@ try {
   description="Pretendemos fortalecer as relações institucionais e de favorecer a colaboração entre as organizações."
 />
 <section
-  class="mx-auto mt-10 grid max-w-6xl grid-cols-1 gap-5 px-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+  class="mx-auto mt-10 grid max-w-6xl grid-cols-1 gap-5 px-2 md:grid-cols-3 lg:grid-cols-4"
 >
   {
     storiesMapped.map((st) => (
@@ -51,7 +51,7 @@ try {
         <div class="aspect-4/3 overflow-hidden bg-surface">
           {st.content.photo?.filename && (
             <Image
-              class="h-full w-full object-cover transition duration-500 group-hover:scale-110"
+              class="h-full w-full object-fill transition duration-500 group-hover:scale-110"
               src={st.content.photo?.filename}
               alt={st.content?.name ?? ""}
               width={400}

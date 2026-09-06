@@ -8,11 +8,11 @@ const { blok } = Astro.props;
 
 <main
   {...storyblokEditable(blok)}
-  class={`
-  flex flex-row 
+  class={`flex flex-col md
+  :flex-row
   max-h-fit 
   gap-${blok.gap ?? 0} 
-  lg:w-${blok.size ?? "12"}/12`}
+  w-${blok.size ?? "12"}/12`}
 >
   {blok.items && blok.items.map((item) => <StoryblokComponent blok={item} />)}
 </main>
