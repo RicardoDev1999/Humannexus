@@ -41,9 +41,9 @@ try {
 
 <ContextLayout title="Início">
   <main
-    class="relative bg-black flex flex-1 w-full h-full justify-center align-middle m-auto p-auto overflow-hidden"
+    class="relative isolate flex min-h-dvh w-full items-center overflow-hidden bg-h-900"
   >
-    <div class="opacity-40">
+    <div class="absolute inset-0 opacity-45">
       <VideoPlayer
         videoSrc={backgroundMovie}
         thumbnailSmall={backgroundMovieThumbnailSmall}
@@ -51,41 +51,46 @@ try {
         thumbnailLarge={backgroundMovieThumbnailLarge}
       />
     </div>
-    <section
-      class="flex w-full h-full justify-center items-start m-auto xl:flex-row flex-col gap-16 z-20"
+    <div
+      class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/70"
+      aria-hidden="true"
     >
-      {
-        sectionsMapped.map((section) => (
-          <div
-            class="flex justify-center align-middle xl:m-0 mx-auto border-2 bg-[#ffffffbb] hover:bg-white border-[ffffffbb] rounded-2xl hover:scale-95 transition duration-850"
-            aria-label={section.name}
-          >
+    </div>
+    <section class="relative z-10 mx-auto w-full max-w-6xl px-4 py-16 md:px-8">
+      <div class="reveal mx-auto mb-10 max-w-xl text-center md:mb-14">
+        <span class="mx-auto mb-5 block h-1.5 w-14 rounded-full bg-gradient-to-r from-white/70 to-white" aria-hidden="true"></span>
+        <h1 class="text-2xl font-extrabold tracking-tight text-white md:text-3xl">
+          Escolha o seu espaço
+        </h1>
+        <p class="mt-3 text-sm font-medium text-white/80 md:text-base">
+          Selecione a área da Humannexus que pretende visitar.
+        </p>
+      </div>
+      <div class="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
+        {
+          sectionsMapped.map((section) => (
             <form action={section.href} method="post" data-astro-reload>
               <button
                 type="submit"
-                class="
-                2xl:w-[28rem] 2xl:h-[10rem]
-                xl:w-[21rem] xl:h-[8.5rem]
-                md:w-[28rem] md:h-[10rem]
-                w-[21rem] h-[8.5rem]
-                hover:drop-shadow-2xl"
+                aria-label={section.name}
+                class="group reveal flex w-full flex-col items-center gap-4 rounded-2xl border border-white/25 bg-white/95 p-6 shadow-xl backdrop-blur-sm transition duration-300 hover:-translate-y-1.5 hover:bg-white hover:shadow-2xl focus-visible:-translate-y-1.5"
               >
                 {section.image?.filename && (
                   <Image
-                    class="w-full h-full object-contain shadow-inner"
+                    class="h-24 w-full object-contain transition duration-300 group-hover:scale-[1.03]"
                     loading={"eager"}
                     width="800"
                     height="360"
                     src={section.image?.filename}
-                    alt={section.name ?? "Section Image"}
+                    alt=""
                   />
                 )}
-                {/* <span>{section.name}</span> */}
+                <span class="text-sm font-bold text-h-900">{section.name}</span>
               </button>
             </form>
-          </div>
-        ))
-      }
+          ))
+        }
+      </div>
     </section>
   </main>
 </ContextLayout>
