@@ -39,11 +39,11 @@ const colorData = colorSchema ? JSON.stringify({
 ---
 
 <nav
-  class="z-50 border-b border-border bg-white/95 shadow-header backdrop-blur"
+  class="sticky top-0 z-50"
   data-humannexus-colors={colorData}
 >
   <div
-    class="flex h-20.5 max-w-screen-2xl flex-1 flex-wrap items-center justify-between px-4 lg:mx-auto lg:flex-nowrap lg:px-6"
+    class="header-surface flex h-20.5 max-w-screen-2xl flex-1 flex-wrap items-center justify-between border-b border-border bg-white/95 px-4 shadow-header backdrop-blur transition-shadow duration-300 lg:mx-auto lg:flex-nowrap lg:px-6"
   >
     <div
       class="inline-flex flex-1 flex-row items-center justify-between w-full"
@@ -177,6 +177,14 @@ const colorData = colorSchema ? JSON.stringify({
 
 <script>
   document.addEventListener("astro:page-load", async () => {
+    const headerSurface = document.querySelector(".header-surface");
+    if (headerSurface && !headerSurface.dataset.stuckBound) {
+      headerSurface.dataset.stuckBound = "true";
+      const updateStuck = () => headerSurface.classList.toggle("is-stuck", window.scrollY > 4);
+      updateStuck();
+      window.addEventListener("scroll", updateStuck, { passive: true });
+    }
+
     const { initCollapses, Collapse } = await import("flowbite");
 
     initCollapses();

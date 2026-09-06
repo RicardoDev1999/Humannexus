@@ -15,12 +15,12 @@ const image = blok.photo?.filename
 const description = renderRichText(blok.description);
 ---
 
-<main {...storyblokEditable(blok)}>
-  <div class="flex flex-col items-center">
+<main {...storyblokEditable(blok)} class="mx-auto max-w-3xl px-4 py-10">
+  <div class="flex flex-col items-center gap-4">
     {
       image && (
         <Image
-          class="md:w-64 md:h-64 sm:w-48 sm:h-48 w-36 h-36 object-center object-cover rounded-3xl shadow-md shadow-slate-300"
+          class="md:h-64 md:w-64 sm:h-48 sm:w-48 h-36 w-36 rounded-2xl object-cover object-center shadow-lg ring-1 ring-border"
           width="256"
           height="256"
           transition:name={"team-image-" + blok._uid}
@@ -32,11 +32,12 @@ const description = renderRichText(blok.description);
         />
       )
     }
-    <span class="flex mt-4 text-2xl text-h-800 font-semibold">{story.name}</span
-    >
-    <span class="flex mt-1 text-sm text-muted font-medium">{blok.role}</span>
+    <div class="flex flex-col items-center gap-2">
+      <h1 class="page-heading">{story.name}</h1>
+      {blok.role && <span class="tag-pill">{blok.role}</span>}
+    </div>
     <article
-      class="max-w-full m-12 prose prose-md lg:prose-lg prose-headings:text-h-800"
+      class="prose prose-md w-full max-w-none rounded-2xl border border-border bg-white p-6 shadow-sm prose-headings:text-h-900 md:p-8 lg:prose-lg"
       set:html={description}
     />
   </div>

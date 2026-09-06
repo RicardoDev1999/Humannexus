@@ -34,8 +34,33 @@
   outline-offset: 2px;
 }
 
+/* Elevate the sticky header once the page has scrolled past it (toggled by Header.astro's script) */
+.header-surface.is-stuck {
+  background-color: rgb(255 255 255 / 0.98);
+  box-shadow: 0 12px 30px -14px rgb(0 0 0 / 0.3);
+}
+
+/* Scroll-driven fade/rise reveal, progressively enhanced; no-op without support or with reduced motion */
+@media (prefers-reduced-motion: no-preference) {
+  @supports ((animation-timeline: view()) and (animation-range: entry)) {
+    @keyframes reveal-up {
+      from {
+        opacity: 0;
+        translate: 0 1.25rem;
+      }
+    }
+
+    .reveal {
+      animation: reveal-up 0.6s ease-out backwards;
+      animation-timeline: view();
+      animation-range: entry 0% entry 40%;
+    }
+  }
+}
+
 @utility page-heading {
   @apply text-center text-3xl font-extrabold tracking-tight leading-tight text-h-900 md:text-4xl;
+  text-wrap: balance;
 }
 
 @utility page-intro {
@@ -56,6 +81,30 @@
 
 @utility form-field {
   @apply block w-full rounded-xl border border-border bg-white px-3.5 py-3 text-sm text-ink shadow-sm transition placeholder:text-muted/70 focus:border-h-700;
+}
+
+/* Diagonal light sweep on hover for solid CTAs; purely decorative, so it's simply absent for reduced-motion users */
+@utility btn-shine {
+  @apply relative isolate overflow-hidden;
+}
+
+.btn-shine::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, transparent 20%, rgb(255 255 255 / 0.35) 40%, transparent 60%);
+  translate: -120% 0;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .btn-shine::after {
+    transition: translate 0.6s ease;
+  }
+
+  .btn-shine:hover::after {
+    translate: 120% 0;
+  }
 }
 
 button {
